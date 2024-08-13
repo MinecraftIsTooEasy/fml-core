@@ -1,0 +1,288 @@
+Only blocks and tools with a harvest level greater than 0 are listed.
+
+Block Harvest Level
+-------------------
+Block[1] 石头: 2
+Block[4] 圆石: 2
+Block[7] 基岩: 100
+Block[14][0] 金矿石: 2
+Block[14][2] 金矿石: 2
+Block[15] 铁矿石: 2
+Block[16] 煤矿石: 2
+Block[17][0] 橡木 (log): 1
+Block[17][1] 云杉木 (log): 1
+Block[17][2] 桦木 (log): 1
+Block[17][3] 丛林木 (log): 1
+Block[20] 玻璃: 1
+Block[21] 青金石矿石: 2
+Block[22] 青金石块: 2
+Block[23] 发射器: 2
+Block[24][0] 沙石: 1
+Block[24][1] 錾制沙石: 1
+Block[24][2] 平滑沙石: 1
+Block[24][3] 神圣沙石: 1
+Block[41] 金块: 3
+Block[42] 铁块: 4
+Block[43][0] 石台阶 (double): 2
+Block[43][1] 沙石台阶 (double): 1
+Block[43][3] 圆石台阶 (double): 2
+Block[43][4] 砖台阶 (double): 2
+Block[43][5] 石砖台阶 (double): 2
+Block[43][6] 地狱砖台阶 (double): 2
+Block[43][7] 石英台阶 (double): 2
+Block[44][0] 石台阶 (single): 2
+Block[44][1] 沙石台阶 (single): 1
+Block[44][3] 圆石台阶 (single): 2
+Block[44][4] 砖台阶 (single): 2
+Block[44][5] 石砖台阶 (single): 2
+Block[44][6] 地狱砖台阶 (single): 2
+Block[44][7] 石英台阶 (single): 2
+Block[45] 砖块: 2
+Block[48] 苔石: 2
+Block[49] 黑曜石: 3
+Block[52] 刷怪箱: 2
+Block[56] 钻石矿石: 4
+Block[57] 钻石块: 5
+Block[61] 石熔炉 (idle): 2
+Block[62] 石熔炉 (active): 2
+Block[67] 石楼梯: 2
+Block[70] 压力板 (stone): 2
+Block[71] 铁门: 3
+Block[73] 红石矿石 (unlit): 2
+Block[74] 红石矿石 (lit): 2
+Block[79] 冰: 1
+Block[87] 地狱岩: 2
+Block[95][0] 地幔: 100
+Block[95][1] 地核: 100
+Block[98][0] 石砖: 2
+Block[98][1] 苔石砖: 2
+Block[98][2] 裂石砖: 2
+Block[98][3] 錾制石砖: 2
+Block[101] 铁栏杆: 3
+Block[108] 砖楼梯: 2
+Block[109] 石砖楼梯: 2
+Block[112] 地狱砖块: 2
+Block[113] 地狱砖栅栏: 2
+Block[114] 地狱砖楼梯: 2
+Block[116] 附魔台 (diamond): 2
+Block[117] 酿造台: 3
+Block[118] 炼药锅: 3
+Block[120] 末地传送门 (frame): 2
+Block[121] 末地石: 2
+Block[128] 沙石楼梯: 2
+Block[129] 绿宝石矿石: 3
+Block[130] 末影箱: 2
+Block[133] 绿宝石块: 4
+Block[137] 命令方块: 100
+Block[139][0] 圆石墙: 2
+Block[139][1] 苔石墙: 2
+Block[147] 测重压力板 (轻质): 2
+Block[148] 测重压力板 (重质): 3
+Block[152] 红石块: 3
+Block[153] 下界石英矿石: 2
+Block[154] 漏斗: 3
+Block[155][0] 石英块: 2
+Block[155][1] 錾制石英块: 2
+Block[155][2] 竖纹石英块: 2
+Block[156] 石英楼梯: 2
+Block[158] 投掷器: 2
+Block[159][0] 白色染色粘土 (colored): 1
+Block[159][1] 橙色染色粘土 (colored): 1
+Block[159][2] 品红色染色粘土 (colored): 1
+Block[159][3] 淡蓝色染色粘土 (colored): 1
+Block[159][4] 黄色染色粘土 (colored): 1
+Block[159][5] 黄绿色染色粘土 (colored): 1
+Block[159][6] 粉红色染色粘土 (colored): 1
+Block[159][7] 灰色染色粘土 (colored): 1
+Block[159][8] 淡灰色染色粘土 (colored): 1
+Block[159][9] 青色染色粘土 (colored): 1
+Block[159][10] 紫色染色粘土 (colored): 1
+Block[159][11] 蓝色染色粘土 (colored): 1
+Block[159][12] 棕色染色粘土 (colored): 1
+Block[159][13] 绿色染色粘土 (colored): 1
+Block[159][14] 红色染色粘土 (colored): 1
+Block[159][15] 黑色染色粘土 (colored): 1
+Block[172] 硬化粘土: 1
+Block[198][0] 符文石 "Nul" (adamantium): 3
+Block[198][1] 符文石 "Quas" (adamantium): 3
+Block[198][2] 符文石 "Por" (adamantium): 3
+Block[198][3] 符文石 "An" (adamantium): 3
+Block[198][4] 符文石 "Nox" (adamantium): 3
+Block[198][5] 符文石 "Flam" (adamantium): 3
+Block[198][6] 符文石 "Vas" (adamantium): 3
+Block[198][7] 符文石 "Des" (adamantium): 3
+Block[198][8] 符文石 "Ort" (adamantium): 3
+Block[198][9] 符文石 "Tym" (adamantium): 3
+Block[198][10] 符文石 "Corp" (adamantium): 3
+Block[198][11] 符文石 "Lor" (adamantium): 3
+Block[198][12] 符文石 "Mani" (adamantium): 3
+Block[198][13] 符文石 "Jux" (adamantium): 3
+Block[198][14] 符文石 "Ylem" (adamantium): 3
+Block[198][15] 符文石 "Sanct" (adamantium): 3
+Block[199] 远古金属栅栏: 3
+Block[200] 铜矿: 2
+Block[201] 银矿: 2
+Block[202] 秘银矿: 3
+Block[203] 艾德曼矿: 4
+Block[204] 铜块: 3
+Block[205] 银块: 3
+Block[206] 秘银块: 5
+Block[207] 艾德曼块: 6
+Block[208] 铜门: 2
+Block[209] 银门: 2
+Block[210] 金门: 2
+Block[211] 秘银门: 4
+Block[212] 艾德曼门: 5
+Block[213] 铜栅栏: 2
+Block[214] 银栅栏: 2
+Block[215] 金栅栏: 2
+Block[216] 秘银栅栏: 4
+Block[217] 艾德曼栅栏: 5
+Block[222] 黑曜石熔炉 (idle): 3
+Block[223] 黑曜石熔炉 (active): 3
+Block[224] 地狱岩熔炉 (idle): 2
+Block[225] 地狱岩熔炉 (active): 2
+Block[226] 黑曜石台阶 (double): 3
+Block[227] 黑曜石台阶 (single): 3
+Block[228] 黑曜石楼梯: 3
+Block[239] 铜箱子: 3
+Block[240] 银箱子: 3
+Block[241] 金箱子: 3
+Block[242] 铁箱子: 4
+Block[243] 秘银箱子: 5
+Block[244] 艾德曼箱子: 6
+Block[245] 附魔台 (emerald): 2
+Block[247][0] 符文石 "Nul" (mithril): 3
+Block[247][1] 符文石 "Quas" (mithril): 3
+Block[247][2] 符文石 "Por" (mithril): 3
+Block[247][3] 符文石 "An" (mithril): 3
+Block[247][4] 符文石 "Nox" (mithril): 3
+Block[247][5] 符文石 "Flam" (mithril): 3
+Block[247][6] 符文石 "Vas" (mithril): 3
+Block[247][7] 符文石 "Des" (mithril): 3
+Block[247][8] 符文石 "Ort" (mithril): 3
+Block[247][9] 符文石 "Tym" (mithril): 3
+Block[247][10] 符文石 "Corp" (mithril): 3
+Block[247][11] 符文石 "Lor" (mithril): 3
+Block[247][12] 符文石 "Mani" (mithril): 3
+Block[247][13] 符文石 "Jux" (mithril): 3
+Block[247][14] 符文石 "Ylem" (mithril): 3
+Block[247][15] 符文石 "Sanct" (mithril): 3
+Block[252] 远古金属块: 4
+Block[253] 远古金属门: 3
+Block[255] 远古金属箱子: 4
+
+Tool Harvest Level
+------------------
+Item[256] 铁锹: 3
+Item[257] 铁镐: 3
+Item[258] 铁斧: 3
+Item[267] 铁剑: 3
+Item[283] 金剑: 2
+Item[284] 金锹: 2
+Item[285] 金镐: 2
+Item[286] 金斧: 2
+Item[292] 铁锄: 3
+Item[294] 金锄: 2
+Item[359] 铁剪刀: 3
+Item[967] 铜镐: 2
+Item[968] 银镐: 2
+Item[969] 秘银镐: 4
+Item[970] 艾德曼镐: 5
+Item[971] 锈铁镐: 2
+Item[972] 燧石锹: 1
+Item[973] 铜锹: 2
+Item[974] 银锹: 2
+Item[975] 秘银锹: 4
+Item[976] 艾德曼锹: 5
+Item[977] 锈铁锹: 2
+Item[978] 燧石短斧: 1
+Item[979] 燧石斧: 1
+Item[980] 铜斧: 2
+Item[981] 银斧: 2
+Item[982] 秘银斧: 4
+Item[983] 艾德曼斧: 5
+Item[984] 锈铁斧: 2
+Item[985] 铜锄: 2
+Item[986] 银锄: 2
+Item[987] 秘银锄: 4
+Item[988] 艾德曼锄: 5
+Item[989] 锈铁锄: 2
+Item[990] 铜战锤: 2
+Item[991] 银战锤: 2
+Item[992] 金战锤: 2
+Item[993] 铁战锤: 3
+Item[994] 秘银战锤: 4
+Item[995] 艾德曼战锤: 5
+Item[996] 锈铁战锤: 2
+Item[997] 铜鸭嘴锄: 2
+Item[998] 银鸭嘴锄: 2
+Item[999] 金鸭嘴锄: 2
+Item[1000] 铁鸭嘴锄: 3
+Item[1001] 秘银鸭嘴锄: 4
+Item[1002] 艾德曼鸭嘴锄: 5
+Item[1003] 锈铁鸭嘴锄: 2
+Item[1004] 铜战斧: 2
+Item[1005] 银战斧: 2
+Item[1006] 金战斧: 2
+Item[1007] 铁战斧: 3
+Item[1008] 秘银战斧: 4
+Item[1009] 艾德曼战斧: 5
+Item[1010] 锈铁战斧: 2
+Item[1011] 铜镰刀: 2
+Item[1012] 银镰刀: 2
+Item[1013] 金镰刀: 2
+Item[1014] 铁镰刀: 3
+Item[1015] 秘银镰刀: 4
+Item[1016] 艾德曼镰刀: 5
+Item[1017] 锈铁镰刀: 2
+Item[1018] 铜剪刀: 2
+Item[1019] 银剪刀: 2
+Item[1020] 金剪刀: 2
+Item[1021] 秘银剪刀: 4
+Item[1022] 艾德曼剪刀: 5
+Item[1023] 燧石小刀: 1
+Item[1028] 铜剑: 2
+Item[1029] 银剑: 2
+Item[1030] 秘银剑: 4
+Item[1031] 艾德曼剑: 5
+Item[1032] 锈铁剑: 2
+Item[1033] 铜短剑: 2
+Item[1034] 银短剑: 2
+Item[1035] 金短剑: 2
+Item[1036] 铁短剑: 3
+Item[1037] 秘银短剑: 4
+Item[1038] 艾德曼短剑: 5
+Item[1039] 锈铁短剑: 2
+Item[1050] 铜小刀: 2
+Item[1051] 银小刀: 2
+Item[1052] 金小刀: 2
+Item[1053] 铁小刀: 3
+Item[1054] 秘银小刀: 4
+Item[1055] 艾德曼小刀: 5
+Item[1056] 锈铁小刀: 2
+Item[1057] 远古金属小刀: 3
+Item[1175] 铜手斧: 2
+Item[1176] 银手斧: 2
+Item[1177] 金手斧: 2
+Item[1178] 铁手斧: 3
+Item[1179] 秘银手斧: 4
+Item[1180] 艾德曼手斧: 5
+Item[1181] 锈铁手斧: 2
+Item[1182] 锈铁剪刀: 2
+Item[1202] 黑曜石锹: 2
+Item[1203] 黑曜石小刀: 2
+Item[1204] 黑曜石短斧: 2
+Item[1205] 黑曜石斧: 2
+Item[1239] 远古金属镐: 3
+Item[1240] 远古金属锹: 3
+Item[1241] 远古金属斧: 3
+Item[1242] 远古金属锄: 3
+Item[1243] 远古金属战锤: 3
+Item[1244] 远古金属鸭嘴锄: 3
+Item[1245] 远古金属战斧: 3
+Item[1246] 远古金属镰刀: 3
+Item[1247] 远古金属剪刀: 3
+Item[1248] 远古金属剑: 3
+Item[1249] 远古金属短剑: 3
+Item[1262] 远古金属手斧: 3

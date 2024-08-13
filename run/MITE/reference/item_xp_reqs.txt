@@ -1,0 +1,167 @@
+Experience Requirements for Item Crafting & Repairing
+-----------------------------------------------------
+Item[256] 铁锹: Fine=340, Excellent=680, Superb=1360, Masterwork=2720
+Item[257] 铁镐: Fine=980, Excellent=1960, Superb=3920, Masterwork=7840
+Item[258] 铁斧: Fine=980, Excellent=1960, Superb=3920, Masterwork=7840
+Item[261] 弓: Fine=60
+Item[267] 铁剑: Fine=650, Excellent=1300, Superb=2600, Masterwork=5200
+Item[269] 木锹: Fine=52
+Item[283] 金剑: Fine=330, Excellent=660, Superb=1320
+Item[284] 金锹: Fine=180, Excellent=360, Superb=720
+Item[285] 金镐: Fine=500, Excellent=1000, Superb=2000
+Item[286] 金斧: Fine=500, Excellent=1000, Superb=2000
+Item[292] 铁锄: Fine=660, Excellent=1320, Superb=2640, Masterwork=5280
+Item[294] 金锄: Fine=340, Excellent=680, Superb=1360
+Item[298] 皮革帽子: Fine=200
+Item[299] 皮革外套: Fine=320
+Item[300] 皮革裤子: Fine=280
+Item[301] 皮革靴子: Fine=160
+Item[302] 铁锁链头盔: Fine=711, Excellent=1422, Superb=2844, Masterwork=5689
+Item[303] 铁锁链胸甲: Fine=1138, Excellent=2276, Superb=4551, Masterwork=9102
+Item[304] 铁锁链护腿: Fine=996, Excellent=1991, Superb=3982, Masterwork=7964
+Item[305] 铁锁链靴子: Fine=569, Excellent=1138, Superb=2276, Masterwork=4551
+Item[306] 铁头盔: Fine=1600, Excellent=3200, Superb=6400, Masterwork=12800
+Item[307] 铁胸甲: Fine=2560, Excellent=5120, Superb=10240, Masterwork=20480
+Item[308] 铁护腿: Fine=2240, Excellent=4480, Superb=8960, Masterwork=17920
+Item[309] 铁靴子: Fine=1280, Excellent=2560, Superb=5120, Masterwork=10240
+Item[314] 金头盔: Fine=800, Excellent=1600, Superb=3200
+Item[315] 金胸甲: Fine=1280, Excellent=2560, Superb=5120
+Item[316] 金护腿: Fine=1120, Excellent=2240, Superb=4480
+Item[317] 黄金靴子: Fine=640, Excellent=1280, Superb=2560
+Item[359] 铁剪刀: Fine=640, Excellent=1280, Superb=2560, Masterwork=5120
+Item[967] 铜镐: Fine=500, Excellent=1000
+Item[968] 银镐: Fine=500, Excellent=1000
+Item[969] 秘银镐: Fine=7700, Excellent=15400, Superb=30800, Masterwork=61600, Legendary=123200
+Item[970] 艾德曼镐: Fine=30740, Excellent=61480, Superb=122960, Masterwork=245920, Legendary=491840
+Item[972] 燧石锹: Fine=70
+Item[973] 铜锹: Fine=180, Excellent=360
+Item[974] 银锹: Fine=180, Excellent=360
+Item[975] 秘银锹: Fine=2580, Excellent=5160, Superb=10320, Masterwork=20640, Legendary=41280
+Item[976] 艾德曼锹: Fine=10260, Excellent=20520, Superb=41040, Masterwork=82080, Legendary=164160
+Item[978] 燧石短斧: Fine=70
+Item[979] 燧石斧: Fine=150
+Item[980] 铜斧: Fine=500, Excellent=1000
+Item[981] 银斧: Fine=500, Excellent=1000
+Item[982] 秘银斧: Fine=7700, Excellent=15400, Superb=30800, Masterwork=61600, Legendary=123200
+Item[983] 艾德曼斧: Fine=30740, Excellent=61480, Superb=122960, Masterwork=245920, Legendary=491840
+Item[985] 铜锄: Fine=340, Excellent=680
+Item[986] 银锄: Fine=340, Excellent=680
+Item[987] 秘银锄: Fine=5140, Excellent=10280, Superb=20560, Masterwork=41120, Legendary=82240
+Item[988] 艾德曼锄: Fine=20500, Excellent=41000, Superb=82000, Masterwork=164000, Legendary=328000
+Item[990] 铜战锤: Fine=820, Excellent=1640
+Item[991] 银战锤: Fine=820, Excellent=1640
+Item[992] 金战锤: Fine=820, Excellent=1640, Superb=3280
+Item[993] 铁战锤: Fine=1620, Excellent=3240, Superb=6480, Masterwork=12960
+Item[994] 秘银战锤: Fine=12820, Excellent=25640, Superb=51280, Masterwork=102560, Legendary=205120
+Item[995] 艾德曼战锤: Fine=51220, Excellent=102440, Superb=204880, Masterwork=409760, Legendary=819520
+Item[997] 铜鸭嘴锄: Fine=660, Excellent=1320
+Item[998] 银鸭嘴锄: Fine=660, Excellent=1320
+Item[999] 金鸭嘴锄: Fine=660, Excellent=1320, Superb=2640
+Item[1000] 铁鸭嘴锄: Fine=1300, Excellent=2600, Superb=5200, Masterwork=10400
+Item[1001] 秘银鸭嘴锄: Fine=10260, Excellent=20520, Superb=41040, Masterwork=82080, Legendary=164160
+Item[1002] 艾德曼鸭嘴锄: Fine=40980, Excellent=81960, Superb=163920, Masterwork=327840, Legendary=655680
+Item[1004] 铜战斧: Fine=660, Excellent=1320
+Item[1005] 银战斧: Fine=660, Excellent=1320
+Item[1006] 金战斧: Fine=660, Excellent=1320, Superb=2640
+Item[1007] 铁战斧: Fine=1300, Excellent=2600, Superb=5200, Masterwork=10400
+Item[1008] 秘银战斧: Fine=10260, Excellent=20520, Superb=41040, Masterwork=82080, Legendary=164160
+Item[1009] 艾德曼战斧: Fine=40980, Excellent=81960, Superb=163920, Masterwork=327840, Legendary=655680
+Item[1011] 铜镰刀: Fine=350, Excellent=700
+Item[1012] 银镰刀: Fine=350, Excellent=700
+Item[1013] 金镰刀: Fine=350, Excellent=700, Superb=1400
+Item[1014] 铁镰刀: Fine=670, Excellent=1340, Superb=2680, Masterwork=5360
+Item[1015] 秘银镰刀: Fine=5150, Excellent=10300, Superb=20600, Masterwork=41200, Legendary=82400
+Item[1016] 艾德曼镰刀: Fine=20510, Excellent=41020, Superb=82040, Masterwork=164080, Legendary=328160
+Item[1018] 铜剪刀: Fine=320, Excellent=640
+Item[1019] 银剪刀: Fine=320, Excellent=640
+Item[1020] 金剪刀: Fine=320, Excellent=640, Superb=1280
+Item[1021] 秘银剪刀: Fine=5120, Excellent=10240, Superb=20480, Masterwork=40960, Legendary=81920
+Item[1022] 艾德曼剪刀: Fine=20480, Excellent=40960, Superb=81920, Masterwork=163840, Legendary=327680
+Item[1023] 燧石小刀: Fine=60
+Item[1024] 小木棒: Fine=42
+Item[1025] 木棒: Fine=74
+Item[1028] 铜剑: Fine=330, Excellent=660
+Item[1029] 银剑: Fine=330, Excellent=660
+Item[1030] 秘银剑: Fine=5130, Excellent=10260, Superb=20520, Masterwork=41040, Legendary=82080
+Item[1031] 艾德曼剑: Fine=20490, Excellent=40980, Superb=81960, Masterwork=163920, Legendary=327840
+Item[1033] 铜短剑: Fine=170, Excellent=340
+Item[1034] 银短剑: Fine=170, Excellent=340
+Item[1035] 金短剑: Fine=170, Excellent=340, Superb=680
+Item[1036] 铁短剑: Fine=330, Excellent=660, Superb=1320, Masterwork=2640
+Item[1037] 秘银短剑: Fine=2570, Excellent=5140, Superb=10280, Masterwork=20560, Legendary=41120
+Item[1038] 艾德曼短剑: Fine=10250, Excellent=20500, Superb=41000, Masterwork=82000, Legendary=164000
+Item[1048] 秘银弓: Fine=2620, Excellent=5240, Superb=10480, Masterwork=20960, Legendary=41920
+Item[1050] 铜小刀: Fine=170, Excellent=340
+Item[1051] 银小刀: Fine=170, Excellent=340
+Item[1052] 金小刀: Fine=170, Excellent=340, Superb=680
+Item[1053] 铁小刀: Fine=330, Excellent=660, Superb=1320, Masterwork=2640
+Item[1054] 秘银小刀: Fine=2570, Excellent=5140, Superb=10280, Masterwork=20560, Legendary=41120
+Item[1055] 艾德曼小刀: Fine=10250, Excellent=20500, Superb=41000, Masterwork=82000, Legendary=164000
+Item[1057] 远古金属小刀: Fine=650, Excellent=1300, Superb=2600, Masterwork=5200
+Item[1067] 铜头盔: Fine=800, Excellent=1600
+Item[1068] 银头盔: Fine=800, Excellent=1600
+Item[1069] 秘银头盔: Fine=12800, Excellent=25600, Superb=51200, Masterwork=102400, Legendary=204800
+Item[1070] 艾德曼头盔: Fine=51200, Excellent=102400, Superb=204800, Masterwork=409600, Legendary=819200
+Item[1071] 铜锁链头盔: Fine=356, Excellent=711
+Item[1072] 银锁链头盔: Fine=356, Excellent=711
+Item[1073] 金锁链头盔: Fine=356, Excellent=711, Superb=1422
+Item[1074] 秘银锁链头盔: Fine=5689, Excellent=11378, Superb=22756, Masterwork=45511, Legendary=91022
+Item[1075] 艾德曼锁链头盔: Fine=22756, Excellent=45511, Superb=91022, Masterwork=182044, Legendary=364089
+Item[1078] 铜胸甲: Fine=1280, Excellent=2560
+Item[1079] 银胸甲: Fine=1280, Excellent=2560
+Item[1080] 秘银胸甲: Fine=20480, Excellent=40960, Superb=81920, Masterwork=163840, Legendary=327680
+Item[1081] 艾德曼胸甲: Fine=81920, Excellent=163840, Superb=327680, Masterwork=655360, Legendary=1310720
+Item[1082] 铜锁链胸甲: Fine=569, Excellent=1138
+Item[1083] 银锁链胸甲: Fine=569, Excellent=1138
+Item[1084] 金锁链胸甲: Fine=569, Excellent=1138, Superb=2276
+Item[1085] 秘银锁链胸甲: Fine=9102, Excellent=18204, Superb=36409, Masterwork=72818, Legendary=145636
+Item[1086] 艾德曼锁链胸甲: Fine=36409, Excellent=72818, Superb=145636, Masterwork=291271, Legendary=582542
+Item[1089] 铜护腿: Fine=1120, Excellent=2240
+Item[1090] 银护腿: Fine=1120, Excellent=2240
+Item[1091] 秘银护腿: Fine=17920, Excellent=35840, Superb=71680, Masterwork=143360, Legendary=286720
+Item[1092] 艾德曼护腿: Fine=71680, Excellent=143360, Superb=286720, Masterwork=573440, Legendary=1146880
+Item[1093] 铜锁链护腿: Fine=498, Excellent=996
+Item[1094] 银锁链护腿: Fine=498, Excellent=996
+Item[1095] 金锁链护腿: Fine=498, Excellent=996, Superb=1991
+Item[1096] 秘银锁链护腿: Fine=7964, Excellent=15929, Superb=31858, Masterwork=63716, Legendary=127431
+Item[1097] 艾德曼锁链护腿: Fine=31858, Excellent=63716, Superb=127431, Masterwork=254862, Legendary=509724
+Item[1100] 铜靴子: Fine=640, Excellent=1280
+Item[1101] 银靴子: Fine=640, Excellent=1280
+Item[1102] 秘银靴子: Fine=10240, Excellent=20480, Superb=40960, Masterwork=81920, Legendary=163840
+Item[1103] 艾德曼靴子: Fine=40960, Excellent=81920, Superb=163840, Masterwork=327680, Legendary=655360
+Item[1104] 铜锁链靴子: Fine=284, Excellent=569
+Item[1105] 银锁链靴子: Fine=284, Excellent=569
+Item[1106] 金锁链靴子: Fine=284, Excellent=569, Superb=1138
+Item[1107] 秘银锁链靴子: Fine=4551, Excellent=9102, Superb=18204, Masterwork=36409, Legendary=72818
+Item[1108] 艾德曼锁链靴子: Fine=18204, Excellent=36409, Superb=72818, Masterwork=145636, Legendary=291271
+Item[1175] 铜手斧: Fine=180, Excellent=360
+Item[1176] 银手斧: Fine=180, Excellent=360
+Item[1177] 金手斧: Fine=180, Excellent=360, Superb=720
+Item[1178] 铁手斧: Fine=340, Excellent=680, Superb=1360, Masterwork=2720
+Item[1179] 秘银手斧: Fine=2580, Excellent=5160, Superb=10320, Masterwork=20640, Legendary=41280
+Item[1180] 艾德曼手斧: Fine=10260, Excellent=20520, Superb=41040, Masterwork=82080, Legendary=164160
+Item[1202] 黑曜石锹: Fine=126
+Item[1203] 黑曜石小刀: Fine=116
+Item[1204] 黑曜石短斧: Fine=126
+Item[1205] 黑曜石斧: Fine=318
+Item[1239] 远古金属镐: Fine=1940, Excellent=3880, Superb=7760, Masterwork=15520
+Item[1240] 远古金属锹: Fine=660, Excellent=1320, Superb=2640, Masterwork=5280
+Item[1241] 远古金属斧: Fine=1940, Excellent=3880, Superb=7760, Masterwork=15520
+Item[1242] 远古金属锄: Fine=1300, Excellent=2600, Superb=5200, Masterwork=10400
+Item[1243] 远古金属战锤: Fine=3220, Excellent=6440, Superb=12880, Masterwork=25760
+Item[1244] 远古金属鸭嘴锄: Fine=2580, Excellent=5160, Superb=10320, Masterwork=20640
+Item[1245] 远古金属战斧: Fine=2580, Excellent=5160, Superb=10320, Masterwork=20640
+Item[1246] 远古金属镰刀: Fine=1310, Excellent=2620, Superb=5240, Masterwork=10480
+Item[1247] 远古金属剪刀: Fine=1280, Excellent=2560, Superb=5120, Masterwork=10240
+Item[1248] 远古金属剑: Fine=1290, Excellent=2580, Superb=5160, Masterwork=10320
+Item[1249] 远古金属短剑: Fine=650, Excellent=1300, Superb=2600, Masterwork=5200
+Item[1251] 远古金属弓: Fine=700, Excellent=1400, Superb=2800, Masterwork=5600
+Item[1252] 远古金属头盔: Fine=3200, Excellent=6400, Superb=12800, Masterwork=25600
+Item[1253] 远古金属锁链头盔: Fine=1422, Excellent=2844, Superb=5689, Masterwork=11378
+Item[1254] 远古金属胸甲: Fine=5120, Excellent=10240, Superb=20480, Masterwork=40960
+Item[1255] 远古金属锁链胸甲: Fine=2276, Excellent=4551, Superb=9102, Masterwork=18204
+Item[1256] 远古金属护腿: Fine=4480, Excellent=8960, Superb=17920, Masterwork=35840
+Item[1257] 远古金属锁链护腿: Fine=1991, Excellent=3982, Superb=7964, Masterwork=15929
+Item[1258] 远古金属靴子: Fine=2560, Excellent=5120, Superb=10240, Masterwork=20480
+Item[1259] 远古金属锁链靴子: Fine=1138, Excellent=2276, Superb=4551, Masterwork=9102
+Item[1262] 远古金属手斧: Fine=660, Excellent=1320, Superb=2640, Masterwork=5280

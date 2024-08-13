@@ -1,0 +1,43 @@
+Item Subtypes
+-------------
+Item[5] 木板: 4 {橡木木板, 云杉木板, 桦木木板, 丛林木板}
+Item[6] 树苗: 4 {橡树树苗, 云杉树苗, 桦木树苗, 丛林树苗}
+Item[13] 沙砾: 2 {沙砾, 地狱砂砾}
+Item[14] 金矿石: 2 {金矿石, 金矿石}
+Item[17] 木头 (log): 4 {橡木 (log), 云杉木 (log), 桦木 (log), 丛林木 (log)}
+Item[18] 树叶: 4 {橡树树叶, 云杉树叶, 白桦树叶, 丛林树叶}
+Item[24] 沙石: 4 {沙石, 錾制沙石, 平滑沙石, 神圣沙石}
+Item[31] 草 (tall): 2 {草 (tall), 蕨 (tall)}
+Item[32] 枯死的灌木: 2 {枯死的灌木, 地狱灌木}
+Item[35] 羊毛: 16 {羊毛, 橙色羊毛, 品红色羊毛, 淡蓝色羊毛, 黄色羊毛, 黄绿色羊毛, 粉红色羊毛, 灰色羊毛, 淡灰色羊毛, 青色羊毛, 紫色羊毛, 蓝色羊毛, 棕色羊毛, 绿色羊毛, 红色羊毛, 黑色羊毛}
+Item[38] 蒲公英: 6 {玫瑰, 兰花, 葱, 郁金香, 大丽花, 雏菊}
+Item[43] 石台阶 (double): 7 {石台阶 (double), 沙石台阶 (double), 圆石台阶 (double), 砖台阶 (double), 石砖台阶 (double), 地狱砖台阶 (double), 石英台阶 (double)}
+Item[44] 石台阶 (single): 7 {石台阶 (single), 沙石台阶 (single), 圆石台阶 (single), 砖台阶 (single), 石砖台阶 (single), 地狱砖台阶 (single), 石英台阶 (single)}
+Item[58] 工作台: 15 {燧石工具台, 燧石工具台, 燧石工具台, 燧石工具台, 铜工作台, 银工作台, 金工作台, 铁工作台, 远古金属工作台, 秘银工作台, 艾德曼工作台, 黑曜石工具台, 黑曜石工具台, 黑曜石工具台, 黑曜石工具台}
+Item[78] 雪 (thin): 2 {雪 (thin), 雪 (slab)}
+Item[95] 地幔: 2 {地幔, 地核}
+Item[97] 蠹虫石砖: 5 {石头怪物蛋, 圆石怪物蛋, 石砖怪物蛋, 地狱岩生怪蛋, 石头怪物蛋}
+Item[98] 石砖: 4 {石砖, 苔石砖, 裂石砖, 錾制石砖}
+Item[125] 木台阶 (double): 4 {橡木台阶 (double), 云杉木台阶 (double), 白桦木台阶 (double), 丛林木台阶 (double)}
+Item[126] 木台阶 (single): 4 {橡木台阶 (single), 云杉木台阶 (single), 白桦木台阶 (single), 丛林木台阶 (single)}
+Item[139] 墙: 2 {圆石墙, 苔石墙}
+Item[145] 铁砧: 3 {铁砧, 轻微受损的铁砧, 严重受损的铁砧}
+Item[155] 石英: 3 {石英块, 錾制石英块, 竖纹石英块}
+Item[159] 硬化粘土 (colored): 16 {白色染色粘土 (colored), 橙色染色粘土 (colored), 品红色染色粘土 (colored), 淡蓝色染色粘土 (colored), 黄色染色粘土 (colored), 黄绿色染色粘土 (colored), 粉红色染色粘土 (colored), 灰色染色粘土 (colored), 淡灰色染色粘土 (colored), 青色染色粘土 (colored), 紫色染色粘土 (colored), 蓝色染色粘土 (colored), 棕色染色粘土 (colored), 绿色染色粘土 (colored), 红色染色粘土 (colored), 黑色染色粘土 (colored)}
+Item[171] 羊毛地毯: 16 {地毯, 橙色地毯, 品红色地毯, 淡蓝色地毯, 黄色地毯, 黄绿色地毯, 粉红色地毯, 灰色地毯, 淡灰色地毯, 青色地毯, 紫色地毯, 蓝色地毯, 棕色地毯, 绿色地毯, 红色地毯, 黑色地毯}
+Item[198] 符文石 (adamantium): 16 {符文石 "Nul" (adamantium), 符文石 "Quas" (adamantium), 符文石 "Por" (adamantium), 符文石 "An" (adamantium), 符文石 "Nox" (adamantium), 符文石 "Flam" (adamantium), 符文石 "Vas" (adamantium), 符文石 "Des" (adamantium), 符文石 "Ort" (adamantium), 符文石 "Tym" (adamantium), 符文石 "Corp" (adamantium), 符文石 "Lor" (adamantium), 符文石 "Mani" (adamantium), 符文石 "Jux" (adamantium), 符文石 "Ylem" (adamantium), 符文石 "Sanct" (adamantium)}
+Item[229] 铜砧: 3 {铜砧, 轻微受损的铜砧, 严重受损的铜砧}
+Item[230] 银砧: 3 {银砧, 轻微受损的银砧, 严重受损的银砧}
+Item[231] 金砧: 3 {金砧, 轻微受损的金砧, 严重受损的金砧}
+Item[232] 秘银砧: 3 {秘银砧, 轻微受损的秘银砧, 严重受损的秘银砧}
+Item[233] 艾德曼砧: 3 {艾德曼砧, 轻微受损的艾德曼砧, 严重受损的艾德曼砧}
+Item[247] 符文石 (mithril): 16 {符文石 "Nul" (mithril), 符文石 "Quas" (mithril), 符文石 "Por" (mithril), 符文石 "An" (mithril), 符文石 "Nox" (mithril), 符文石 "Flam" (mithril), 符文石 "Vas" (mithril), 符文石 "Des" (mithril), 符文石 "Ort" (mithril), 符文石 "Tym" (mithril), 符文石 "Corp" (mithril), 符文石 "Lor" (mithril), 符文石 "Mani" (mithril), 符文石 "Jux" (mithril), 符文石 "Ylem" (mithril), 符文石 "Sanct" (mithril)}
+Item[254] 远古金属砧: 3 {远古金属砧, 轻微受损的远古金属砧, 严重受损的远古金属砧}
+Item[263] 煤炭: 2 {煤炭, 木炭}
+Item[322] 金苹果: 2 {金苹果, 附魔金苹果}
+Item[341] 粘液球: 5 {绿色粘液球, 褐色粘液球, 红色粘液球, 灰色粘液球, 黑色粘液球}
+Item[351] 染料: 16 {墨囊, 玫瑰红, 仙人掌绿, 可可豆, 青金石, 紫色染料, 青色染料, 淡灰色染料, 灰色染料, 粉红色染料, 黄绿色染料, 蒲公英黄, 淡蓝色染料, 品红色染料, 橙色染料, 骨粉}
+Item[358] 地图: * {地图}
+Item[373] 水瓶: 53 {水瓶, Potion of 生命恢复 (0:45), Potion of 生命恢复 II (0:22), Potion of 生命恢复 (2:00), Splash Potion of 生命恢复 (0:33), Splash Potion of 生命恢复 II (0:16), Splash Potion of 生命恢复 (1:30), Potion of 速度 (3:00), Potion of 速度 II (1:30), Potion of 速度 (8:00), Splash Potion of 速度 (2:15), Splash Potion of 速度 II (1:07), Splash Potion of 速度 (6:00), Potion of 防火 (3:00), Potion of 防火 (8:00), Splash Potion of 防火 (2:15), Splash Potion of 防火 (6:00), Potion of 中毒 (0:45), Potion of 中毒 II (0:22), Potion of 中毒 (2:00), Splash Potion of 中毒 (0:33), Splash Potion of 中毒 II (0:16), Splash Potion of 中毒 (1:30), Potion of 瞬间治疗, Potion of 瞬间治疗 II, Splash Potion of 瞬间治疗, Splash Potion of 瞬间治疗 II, Potion of 夜视 (3:00), Potion of 夜视 (8:00), Splash Potion of 夜视 (2:15), Splash Potion of 夜视 (6:00), Potion of 虚弱 (1:30), Potion of 虚弱 (4:00), Splash Potion of 虚弱 (1:07), Splash Potion of 虚弱 (3:00), Potion of 力量 (3:00), Potion of 力量 II (1:30), Potion of 力量 (8:00), Splash Potion of 力量 (2:15), Splash Potion of 力量 II (1:07), Splash Potion of 力量 (6:00), Potion of 缓慢 (1:30), Potion of 缓慢 (4:00), Splash Potion of 缓慢 (1:07), Splash Potion of 缓慢 (3:00), Potion of 瞬间伤害, Potion of 瞬间伤害 II, Splash Potion of 瞬间伤害, Splash Potion of 瞬间伤害 II, Potion of 隐身 (3:00), Potion of 隐身 (8:00), Splash Potion of 隐身 (2:15), Splash Potion of 隐身 (6:00)}
+Item[383] 生成: 53 {生成 爬行者, 生成 骷髅, 生成 蜘蛛, 生成 僵尸, 生成 史莱姆, 生成 恶魂, 生成 僵尸猪人, 生成 末影人, 生成 洞穴蜘蛛, 生成 蠹虫, 生成 烈焰人, 生成 岩浆怪, 生成 蝙蝠, 生成 女巫, 生成 猪, 生成 羊, 生成 牛, 生成 鸡, 生成 鱿鱼, 生成 狼, 生成 哞菇, 生成 豹猫, 生成 马, 生成 食尸鬼, 生成 白色食尸鬼, 生成 隐形潜伏者, 生成 地狱蜘蛛, 生成 地狱犬, 生成 恶狼, 生成 木蜘蛛, 生成 地狱爬行者, 生成 黑色食尸鬼, 生成 火元素, 生成 黑寡妇蜘蛛, 生成 亡灵, 生成 土元素, 生成 褐色史莱姆, 生成 红色史莱姆, 生成 灰色史莱姆, 生成 黑色史莱姆, 生成 吸血蝙蝠, 生成 吸血巨蝠, 生成 古尸, 生成 古尸守卫, 生成 暗影蝙蝠, 生成 爆炸蠹虫, 生成 铜毒蠹虫, 生成 远古蠹虫, 生成 黏土元素, 生成 骷髅领主, 生成 远古骷髅领主, 生成 相位蜘蛛, 生成 村民}
+Item[397] Skull: 5 {骷髅头颅, 凋灵骷髅头颅, 僵尸的头, 头, 爬行者的头}

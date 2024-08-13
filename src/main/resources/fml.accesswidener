@@ -1,0 +1,10 @@
+accessWidener v2 named
+
+accessible field net/minecraft/client/multiplayer/GuiConnecting cancelled Z
+accessible field net/minecraft/client/multiplayer/GuiConnecting clientHandler Lnet/minecraft/client/multiplayer/NetClientHandler;
+accessible method net/minecraft/network/NetLoginHandler getClientUsername (Lnet/minecraft/network/NetLoginHandler;)Ljava/lang/String;
+accessible method net/minecraft/network/NetLoginHandler func_72531_a (Lnet/minecraft/network/NetLoginHandler;Z)Z
+accessible field net/minecraft/client/resources/Locale field_135032_a Ljava/util/Map;
+accessible class net/minecraft/crash/CallableSuspiciousClasses
+accessible class net/minecraft/crash/CallableMinecraftVersion
+accessible class net/minecraft/logging/LogFormatter

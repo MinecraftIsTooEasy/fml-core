@@ -1,0 +1,41 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "huix.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "mixins": [
+    "client.ClientBrandRetrieverMixin",
+    "client.MinecraftMixin",
+    "client.audio.SoundManagerMixin",
+    "client.gui.GuiCreateWorldMixin",
+    "client.gui.GuiMainMenuMixin",
+    "client.multiplayer.GuiConnectingMixin",
+    "client.multiplayer.NetClientHandlerMixin",
+    "client.renderer.RenderBlocksMixin",
+    "client.renderer.entity.RenderVillageMixin",
+    "client.resources.LanguageManagerMixin",
+    "client.settings.GameSettingsMixin",
+    "crash.CallableSuspiciousClassesMixin",
+    "crash.CrashReportMixin",
+    "entity.EntityListMixin",
+    "entity.EntityTrackerEntryMixin",
+    "entity.EntityTrackerMixin",
+    "entity.item.EntityItemMixin",
+    "entity.monster.EntityCubicMixin",
+    "entity.passive.EntityVillagerMixin",
+    "entity.player.EntityPlayerMixin",
+    "inventory.SlotCraftingMixin",
+    "inventory.SlotFurnaceMixin",
+    "item.ItemMapMixin",
+    "item.ItemMixin",
+    "logging.LogAgentMixin",
+    "stats.StatFileWriterMixin",
+    "tileentity.TileEntityFurnaceMixin",
+    "tileentity.TileEntityMixin",
+    "util.CryptManagerMixin",
+    "util.StringTranslateMixin"
+  ]
+}

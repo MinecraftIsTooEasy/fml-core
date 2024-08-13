@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "fml",
+  "version": "${version}",
+  "name": "FML",
+  "description": "fml core on mite",
+  "authors": [
+    "Huix!"
+  ],
+  "license": "CC0-1.0",
+  "environment": "*",
+  "entrypoints": {
+    "server": [
+      "ink.huix.creativeserver.ServerMain"
+    ]
+  },
+  "mixins": [
+    "fml.mixins.json"
+  ],
+  "accessWidener": "fml.accesswidener",
+  "depends": {
+    "lolimodloader": ">=4.0.0"
+  },
+  "custom": {
+    "loom:injected_interfaces": {
+      "net/minecraft/client/audio/SoundManager": ["huix/mixins/client/audio/IISoundManager"],
+      "net/minecraft/client/multiplayer/GuiConnecting": ["huix/mixins/client/multiplayer/IIGuiConnecting"],
+      "net/minecraft/client/multiplayer/NetClientHandler": ["huix/mixins/client/multiplayer/NetClientHandler"],
+      "net/minecraft/entity/player/EntityPlayer": ["huix/mixins/entity/player/IIEntityPlayer"],
+      "net/minecraft/util/StringTranslate": ["huix/mixins/util/IIStringTranslate"]
+    }
+  }
+}

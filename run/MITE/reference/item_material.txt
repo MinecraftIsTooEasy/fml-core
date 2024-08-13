@@ -1,0 +1,957 @@
+Some items have more than one material.
+
+Item Material
+-------------
+Item[1] 石头: stone
+Item[2] 草方块: grass
+Item[3] 泥土: dirt
+Item[4] 圆石: stone
+Item[5][0] 橡木木板: wood
+Item[5][1] 云杉木板: wood
+Item[5][2] 桦木木板: wood
+Item[5][3] 丛林木板: wood
+Item[6][0] 橡树树苗: plants
+Item[6][1] 云杉树苗: plants
+Item[6][2] 桦木树苗: plants
+Item[6][3] 丛林树苗: plants
+Item[7] 基岩: stone
+Item[8] 水 (moving): water
+Item[9] 水 (still): water
+Item[10] 岩浆 (moving): lava
+Item[11] 岩浆 (still): lava
+Item[12] 沙子: sand
+Item[13][0] 沙砾: sand
+Item[13][2] 地狱砂砾: sand
+Item[14][0] 金矿石: stone, gold
+Item[14][2] 金矿石: stone, gold
+Item[15] 铁矿石: stone, iron
+Item[16] 煤矿石: stone, coal
+Item[17][0] 橡木 (log): wood
+Item[17][1] 云杉木 (log): wood
+Item[17][2] 桦木 (log): wood
+Item[17][3] 丛林木 (log): wood
+Item[18][0] 橡树树叶: tree_leaves
+Item[18][1] 云杉树叶: tree_leaves
+Item[18][2] 白桦树叶: tree_leaves
+Item[18][3] 丛林树叶: tree_leaves
+Item[19] 海绵: sponge
+Item[20] 玻璃: glass
+Item[21] 青金石矿石: stone, lapis_lazuli
+Item[22] 青金石块: stone
+Item[23] 发射器: stone, wood, redstone
+Item[24][0] 沙石: stone
+Item[24][1] 錾制沙石: stone
+Item[24][2] 平滑沙石: stone
+Item[24][3] 神圣沙石: stone
+Item[25] 音符盒: wood, redstone
+Item[26] 床: wood, cloth
+Item[27] 动力铁轨: gold, wood, redstone
+Item[28] 探测铁轨: iron, stone, redstone
+Item[29] 粘性活塞: wood, stone, iron, redstone, slime
+Item[30] 蜘蛛网: web
+Item[31][1] 草 (tall): vine
+Item[31][2] 蕨 (tall): vine
+Item[32][0] 枯死的灌木: vine
+Item[32][1] 地狱灌木: vine
+Item[33] 活塞: wood, stone, iron, redstone
+Item[34] 伸出的活塞臂 (extension): piston
+Item[35][0] 羊毛: cloth
+Item[35][1] 橙色羊毛: cloth
+Item[35][2] 品红色羊毛: cloth
+Item[35][3] 淡蓝色羊毛: cloth
+Item[35][4] 黄色羊毛: cloth
+Item[35][5] 黄绿色羊毛: cloth
+Item[35][6] 粉红色羊毛: cloth
+Item[35][7] 灰色羊毛: cloth
+Item[35][8] 淡灰色羊毛: cloth
+Item[35][9] 青色羊毛: cloth
+Item[35][10] 紫色羊毛: cloth
+Item[35][11] 蓝色羊毛: cloth
+Item[35][12] 棕色羊毛: cloth
+Item[35][13] 绿色羊毛: cloth
+Item[35][14] 红色羊毛: cloth
+Item[35][15] 黑色羊毛: cloth
+Item[36] 活塞移动 (moving): piston
+Item[37] 蒲公英: plants
+Item[38][0] 玫瑰: plants
+Item[38][1] 兰花: plants
+Item[38][2] 葱: plants
+Item[38][5] 郁金香: plants
+Item[38][7] 大丽花: plants
+Item[38][8] 雏菊: plants
+Item[39] 蘑菇 (brown, small): plants
+Item[40] 蘑菇 (red, small): plants
+Item[41] 金块: gold
+Item[42] 铁块: iron
+Item[43][0] 石台阶 (double): stone
+Item[43][1] 沙石台阶 (double): stone
+Item[43][3] 圆石台阶 (double): stone
+Item[43][4] 砖台阶 (double): stone
+Item[43][5] 石砖台阶 (double): stone
+Item[43][6] 地狱砖台阶 (double): stone
+Item[43][7] 石英台阶 (double): stone
+Item[44][0] 石台阶 (single): stone
+Item[44][1] 沙石台阶 (single): stone
+Item[44][3] 圆石台阶 (single): stone
+Item[44][4] 砖台阶 (single): stone
+Item[44][5] 石砖台阶 (single): stone
+Item[44][6] 地狱砖台阶 (single): stone
+Item[44][7] 石英台阶 (single): stone
+Item[45] 砖块: stone
+Item[46] TNT: tnt
+Item[47] 书架: wood, paper, leather
+Item[48] 苔石: stone
+Item[49] 黑曜石: obsidian
+Item[50] 火把: wood, coal
+Item[51] 火: fire
+Item[52] 刷怪箱: iron
+Item[53] 橡木楼梯: wood
+Item[54] 箱子: wood
+Item[55] 红石粉: circuits
+Item[56] 钻石矿石: stone, diamond
+Item[57] 钻石块: diamond
+Item[58][0] 燧石工具台: wood
+Item[58][1] 燧石工具台: wood
+Item[58][2] 燧石工具台: wood
+Item[58][3] 燧石工具台: wood
+Item[58][4] 铜工作台: wood
+Item[58][5] 银工作台: wood
+Item[58][6] 金工作台: wood
+Item[58][7] 铁工作台: wood
+Item[58][8] 远古金属工作台: wood
+Item[58][9] 秘银工作台: wood
+Item[58][10] 艾德曼工作台: wood
+Item[58][11] 黑曜石工具台: wood
+Item[58][12] 黑曜石工具台: wood
+Item[58][13] 黑曜石工具台: wood
+Item[58][14] 黑曜石工具台: wood
+Item[59] 小麦 (living): plants
+Item[60] 耕地: dirt
+Item[61] 石熔炉 (idle): stone
+Item[62] 石熔炉 (active): stone
+Item[63] 告示牌 (standing): wood
+Item[64] 木门: wood
+Item[65] 梯子: wood
+Item[66] 铁轨: iron, wood
+Item[67] 石楼梯: stone
+Item[68] 告示牌 (mounted): wood
+Item[69] 拉杆: stone, wood
+Item[70] 压力板 (stone): stone
+Item[71] 铁门: iron
+Item[72] 压力板 (wood): wood
+Item[73] 红石矿石 (unlit): stone
+Item[74] 红石矿石 (lit): stone
+Item[75] 红石火把 (unlit): wood, redstone
+Item[76] 红石火把 (lit): wood, redstone
+Item[77] 按钮 (stone): stone
+Item[78][0] 雪 (thin): snow
+Item[78][3] 雪 (slab): snow
+Item[79] 冰: ice
+Item[80] 雪 (block): crafted_snow
+Item[81] 仙人掌: cactus
+Item[82] 粘土块: clay
+Item[83] 甘蔗: plants
+Item[84] 唱片机: wood, diamond
+Item[85] 栅栏: wood
+Item[86] 南瓜: pumpkin
+Item[87] 地狱岩: netherrack
+Item[88] 灵魂沙: sand
+Item[89] 荧石: glass
+Item[90] 传送门: portal
+Item[91] 南瓜灯: pumpkin, wood, coal
+Item[92] 蛋糕: cake
+Item[93] 红石中继器 (idle): circuits
+Item[94] 红石中继器 (active): circuits
+Item[95][0] 地幔: stone
+Item[95][1] 地核: stone
+Item[96] 活板门: wood
+Item[97][0] 石头怪物蛋: clay
+Item[97][1] 圆石怪物蛋: clay
+Item[97][2] 石砖怪物蛋: clay
+Item[97][3] 地狱岩生怪蛋: clay
+Item[97][4] 石头怪物蛋: clay
+Item[98][0] 石砖: stone
+Item[98][1] 苔石砖: stone
+Item[98][2] 裂石砖: stone
+Item[98][3] 錾制石砖: stone
+Item[99] 蘑菇 (brown, giant): wood
+Item[100] 蘑菇 (red, giant): wood
+Item[101] 铁栏杆: iron
+Item[102] 玻璃板: glass
+Item[103] 西瓜: pumpkin
+Item[104] 茎 (pumpkin): plants
+Item[105] 茎 (melon): plants
+Item[106] 藤蔓: vine
+Item[107] 栅栏门: wood
+Item[108] 砖楼梯: stone
+Item[109] 石砖楼梯: stone
+Item[110] 菌丝: grass
+Item[111] 睡莲: plants
+Item[112] 地狱砖块: netherrack
+Item[113] 地狱砖栅栏: netherrack
+Item[114] 地狱砖楼梯: netherrack
+Item[115] 地狱疣: plants
+Item[116] 附魔台 (diamond): obsidian, diamond, paper, leather
+Item[117] 酿造台: iron
+Item[118] 炼药锅: iron
+Item[119] 末地传送门: portal
+Item[120] 末地传送门 (frame): stone
+Item[121] 末地石: stone
+Item[122] 龙蛋: dragon_egg
+Item[123] 红石灯 (unlit): redstone, glowstone
+Item[124] 红石灯 (lit): redstone, glowstone
+Item[125][0] 橡木台阶 (double): wood
+Item[125][1] 云杉木台阶 (double): wood
+Item[125][2] 白桦木台阶 (double): wood
+Item[125][3] 丛林木台阶 (double): wood
+Item[126][0] 橡木台阶 (single): wood
+Item[126][1] 云杉木台阶 (single): wood
+Item[126][2] 白桦木台阶 (single): wood
+Item[126][3] 丛林木台阶 (single): wood
+Item[127] 可可果: plants
+Item[128] 沙石楼梯: stone
+Item[129] 绿宝石矿石: stone, emerald
+Item[130] 末影箱: stone
+Item[131] 绊线钩: circuits
+Item[132] 绊线: circuits
+Item[133] 绿宝石块: emerald
+Item[134] 云杉木楼梯: wood
+Item[135] 桦木楼梯: wood
+Item[136] 丛林木楼梯: wood
+Item[137] 命令方块: iron
+Item[138] 信标: glass
+Item[139][0] 圆石墙: stone
+Item[139][1] 苔石墙: stone
+Item[140] 花盆: clay
+Item[141] 胡萝卜 (living): plants
+Item[142] 马铃薯 (living): plants
+Item[143] 按钮 (wood): wood
+Item[144] 头颅: circuits
+Item[145][0] 铁砧: iron
+Item[145][1] 轻微受损的铁砧: iron
+Item[145][2] 严重受损的铁砧: iron
+Item[146] 陷阱箱: wood
+Item[147] 测重压力板 (轻质): gold
+Item[148] 测重压力板 (重质): iron
+Item[149] 红石比较器 (idle): circuits
+Item[150] 红石比较器 (active): circuits
+Item[151] 阳光传感器: wood
+Item[152] 红石块: redstone
+Item[153] 下界石英矿石: stone, quartz
+Item[154] 漏斗: iron
+Item[155][0] 石英块: quartz
+Item[155][1] 錾制石英块: quartz
+Item[155][2] 竖纹石英块: quartz
+Item[156] 石英楼梯: quartz
+Item[157] 激活铁轨: gold, wood, redstone
+Item[158] 投掷器: stone, wood, redstone
+Item[159][0] 白色染色粘土 (colored): hardened_clay
+Item[159][1] 橙色染色粘土 (colored): hardened_clay
+Item[159][2] 品红色染色粘土 (colored): hardened_clay
+Item[159][3] 淡蓝色染色粘土 (colored): hardened_clay
+Item[159][4] 黄色染色粘土 (colored): hardened_clay
+Item[159][5] 黄绿色染色粘土 (colored): hardened_clay
+Item[159][6] 粉红色染色粘土 (colored): hardened_clay
+Item[159][7] 灰色染色粘土 (colored): hardened_clay
+Item[159][8] 淡灰色染色粘土 (colored): hardened_clay
+Item[159][9] 青色染色粘土 (colored): hardened_clay
+Item[159][10] 紫色染色粘土 (colored): hardened_clay
+Item[159][11] 蓝色染色粘土 (colored): hardened_clay
+Item[159][12] 棕色染色粘土 (colored): hardened_clay
+Item[159][13] 绿色染色粘土 (colored): hardened_clay
+Item[159][14] 红色染色粘土 (colored): hardened_clay
+Item[159][15] 黑色染色粘土 (colored): hardened_clay
+Item[170] 干草块: plants
+Item[171][0] 地毯: carpet
+Item[171][1] 橙色地毯: carpet
+Item[171][2] 品红色地毯: carpet
+Item[171][3] 淡蓝色地毯: carpet
+Item[171][4] 黄色地毯: carpet
+Item[171][5] 黄绿色地毯: carpet
+Item[171][6] 粉红色地毯: carpet
+Item[171][7] 灰色地毯: carpet
+Item[171][8] 淡灰色地毯: carpet
+Item[171][9] 青色地毯: carpet
+Item[171][10] 紫色地毯: carpet
+Item[171][11] 蓝色地毯: carpet
+Item[171][12] 棕色地毯: carpet
+Item[171][13] 绿色地毯: carpet
+Item[171][14] 红色地毯: carpet
+Item[171][15] 黑色地毯: carpet
+Item[172] 硬化粘土: hardened_clay
+Item[173] 煤炭块: coal
+Item[198][0] 符文石 "Nul" (adamantium): obsidian, adamantium
+Item[198][1] 符文石 "Quas" (adamantium): obsidian, adamantium
+Item[198][2] 符文石 "Por" (adamantium): obsidian, adamantium
+Item[198][3] 符文石 "An" (adamantium): obsidian, adamantium
+Item[198][4] 符文石 "Nox" (adamantium): obsidian, adamantium
+Item[198][5] 符文石 "Flam" (adamantium): obsidian, adamantium
+Item[198][6] 符文石 "Vas" (adamantium): obsidian, adamantium
+Item[198][7] 符文石 "Des" (adamantium): obsidian, adamantium
+Item[198][8] 符文石 "Ort" (adamantium): obsidian, adamantium
+Item[198][9] 符文石 "Tym" (adamantium): obsidian, adamantium
+Item[198][10] 符文石 "Corp" (adamantium): obsidian, adamantium
+Item[198][11] 符文石 "Lor" (adamantium): obsidian, adamantium
+Item[198][12] 符文石 "Mani" (adamantium): obsidian, adamantium
+Item[198][13] 符文石 "Jux" (adamantium): obsidian, adamantium
+Item[198][14] 符文石 "Ylem" (adamantium): obsidian, adamantium
+Item[198][15] 符文石 "Sanct" (adamantium): obsidian, adamantium
+Item[199] 远古金属栅栏: ancient_metal
+Item[200] 铜矿: stone, copper
+Item[201] 银矿: stone, silver
+Item[202] 秘银矿: stone, mithril
+Item[203] 艾德曼矿: stone, adamantium
+Item[204] 铜块: copper
+Item[205] 银块: silver
+Item[206] 秘银块: mithril
+Item[207] 艾德曼块: adamantium
+Item[208] 铜门: copper
+Item[209] 银门: silver
+Item[210] 金门: gold
+Item[211] 秘银门: mithril
+Item[212] 艾德曼门: adamantium
+Item[213] 铜栅栏: copper
+Item[214] 银栅栏: silver
+Item[215] 金栅栏: gold
+Item[216] 秘银栅栏: mithril
+Item[217] 艾德曼栅栏: adamantium
+Item[218] 粘土炉 (idle): clay
+Item[219] 粘土炉 (active): clay
+Item[220] 沙石炉 (idle): sand
+Item[221] 沙石炉 (active): sand
+Item[222] 黑曜石熔炉 (idle): obsidian
+Item[223] 黑曜石熔炉 (active): obsidian
+Item[224] 地狱岩熔炉 (idle): netherrack
+Item[225] 地狱岩熔炉 (active): netherrack
+Item[226] 黑曜石台阶 (double): obsidian
+Item[227] 黑曜石台阶 (single): obsidian
+Item[228] 黑曜石楼梯: obsidian
+Item[229][0] 铜砧: copper
+Item[229][1] 轻微受损的铜砧: copper
+Item[229][2] 严重受损的铜砧: copper
+Item[230][0] 银砧: silver
+Item[230][1] 轻微受损的银砧: silver
+Item[230][2] 严重受损的银砧: silver
+Item[231][0] 金砧: gold
+Item[231][1] 轻微受损的金砧: gold
+Item[231][2] 严重受损的金砧: gold
+Item[232][0] 秘银砧: mithril
+Item[232][1] 轻微受损的秘银砧: mithril
+Item[232][2] 严重受损的秘银砧: mithril
+Item[233][0] 艾德曼砧: adamantium
+Item[233][1] 轻微受损的艾德曼砧: adamantium
+Item[233][2] 严重受损的艾德曼砧: adamantium
+Item[234] 洋葱 (living): plants
+Item[235] 小麦 (dead): plants
+Item[236] 胡萝卜 (dead): plants
+Item[237] 马铃薯 (dead): plants
+Item[238] 洋葱 (dead): plants
+Item[239] 铜箱子: copper
+Item[240] 银箱子: silver
+Item[241] 金箱子: gold
+Item[242] 铁箱子: iron
+Item[243] 秘银箱子: mithril
+Item[244] 艾德曼箱子: adamantium
+Item[245] 附魔台 (emerald): obsidian, emerald, paper, leather
+Item[246] 火花: fire
+Item[247][0] 符文石 "Nul" (mithril): obsidian, mithril
+Item[247][1] 符文石 "Quas" (mithril): obsidian, mithril
+Item[247][2] 符文石 "Por" (mithril): obsidian, mithril
+Item[247][3] 符文石 "An" (mithril): obsidian, mithril
+Item[247][4] 符文石 "Nox" (mithril): obsidian, mithril
+Item[247][5] 符文石 "Flam" (mithril): obsidian, mithril
+Item[247][6] 符文石 "Vas" (mithril): obsidian, mithril
+Item[247][7] 符文石 "Des" (mithril): obsidian, mithril
+Item[247][8] 符文石 "Ort" (mithril): obsidian, mithril
+Item[247][9] 符文石 "Tym" (mithril): obsidian, mithril
+Item[247][10] 符文石 "Corp" (mithril): obsidian, mithril
+Item[247][11] 符文石 "Lor" (mithril): obsidian, mithril
+Item[247][12] 符文石 "Mani" (mithril): obsidian, mithril
+Item[247][13] 符文石 "Jux" (mithril): obsidian, mithril
+Item[247][14] 符文石 "Ylem" (mithril): obsidian, mithril
+Item[247][15] 符文石 "Sanct" (mithril): obsidian, mithril
+Item[248] 花盆: clay
+Item[249][12] 蓝莓丛: plants
+Item[250] 硬化粘土炉 (idle): hardened_clay
+Item[251] 硬化粘土炉 (active): hardened_clay
+Item[252] 远古金属块: ancient_metal
+Item[253] 远古金属门: ancient_metal
+Item[254][0] 远古金属砧: ancient_metal
+Item[254][1] 轻微受损的远古金属砧: ancient_metal
+Item[254][2] 严重受损的远古金属砧: ancient_metal
+Item[255] 远古金属箱子: ancient_metal
+Item[256] 铁锹: iron, wood
+Item[257] 铁镐: iron, wood
+Item[258] 铁斧: iron, wood
+Item[259] 打火石: flint, iron
+Item[260] 苹果: fruit
+Item[261] 弓: wood
+Item[263][0] 煤炭: coal
+Item[263][1] 木炭: coal
+Item[264] 钻石: diamond
+Item[265] 铁锭: iron
+Item[266] 金锭: gold
+Item[267] 铁剑: iron, wood
+Item[269] 木锹: wood
+Item[280] 木棍: wood
+Item[281] 碗: wood
+Item[282] 蘑菇煲: wood, mushroom_stew
+Item[283] 金剑: gold, wood
+Item[284] 金锹: gold, wood
+Item[285] 金镐: gold, wood
+Item[286] 金斧: gold, wood
+Item[287] 线: silk
+Item[288] 羽毛: feather
+Item[289] 火药: gunpowder
+Item[292] 铁锄: iron, wood
+Item[294] 金锄: gold, wood
+Item[295] 小麦种子: seed
+Item[296] 小麦: plants
+Item[297] 面包: bread
+Item[298] 皮革帽子: leather
+Item[299] 皮革外套: leather
+Item[300] 皮革裤子: leather
+Item[301] 皮革靴子: leather
+Item[302] 铁锁链头盔: iron
+Item[303] 铁锁链胸甲: iron
+Item[304] 铁锁链护腿: iron
+Item[305] 铁锁链靴子: iron
+Item[306] 铁头盔: iron
+Item[307] 铁胸甲: iron
+Item[308] 铁护腿: iron
+Item[309] 铁靴子: iron
+Item[314] 金头盔: gold
+Item[315] 金胸甲: gold
+Item[316] 金护腿: gold
+Item[317] 黄金靴子: gold
+Item[318] 燧石: flint
+Item[319] 生猪排: meat
+Item[320] 熟猪排: meat
+Item[321] 画: cloth, wood
+Item[322][0] 金苹果: fruit, gold
+Item[322][1] 附魔金苹果: fruit, gold
+Item[323] 告示牌: wood
+Item[324] 木门: wood
+Item[325] 铁桶: iron
+Item[326] 装满水的铁桶: iron, water
+Item[327] 装满岩浆的铁桶: iron, lava
+Item[328] 矿车 (empty): iron
+Item[329] 鞍: leather
+Item[330] 铁门: iron
+Item[331] 红石: redstone
+Item[332] 雪球: snow
+Item[333] 船: wood
+Item[334] 皮革: leather
+Item[335] 装满牛奶的铁桶: iron, milk
+Item[336] 红砖: clay
+Item[337] 粘土 (ball): clay
+Item[338] 甘蔗: plants
+Item[339] 纸: paper
+Item[340] 书: paper, leather
+Item[341][0] 绿色粘液球: slime
+Item[341][1] 褐色粘液球: slime
+Item[341][2] 红色粘液球: slime
+Item[341][3] 灰色粘液球: slime
+Item[341][4] 黑色粘液球: slime
+Item[342] 运输矿车: iron, wood
+Item[343] 动力矿车: iron, stone
+Item[344] 鸡蛋: meat
+Item[345] 指南针: iron, redstone
+Item[346] 钓鱼竿 (iron): wood, iron
+Item[347] 钟: gold, redstone
+Item[348] 荧石粉: glowstone
+Item[349] 生鱼: meat
+Item[350] 熟鱼: meat
+Item[351][0] 墨囊: dye
+Item[351][1] 玫瑰红: dye
+Item[351][2] 仙人掌绿: dye
+Item[351][3] 可可豆: dye
+Item[351][4] 青金石: dye
+Item[351][5] 紫色染料: dye
+Item[351][6] 青色染料: dye
+Item[351][7] 淡灰色染料: dye
+Item[351][8] 灰色染料: dye
+Item[351][9] 粉红色染料: dye
+Item[351][10] 黄绿色染料: dye
+Item[351][11] 蒲公英黄: dye
+Item[351][12] 淡蓝色染料: dye
+Item[351][13] 品红色染料: dye
+Item[351][14] 橙色染料: dye
+Item[351][15] 骨粉: dye
+Item[352] 骨头: bone
+Item[353] 糖: sugar
+Item[354] 蛋糕: cake
+Item[355] 床: wood, cloth
+Item[356] 红石中继器: circuits
+Item[357] 曲奇: desert
+Item[358] 地图: paper
+Item[359] 铁剪刀: iron
+Item[360] 西瓜 (slice): fruit
+Item[361] 南瓜种子: seed
+Item[362] 西瓜种子: seed
+Item[363] 生牛肉: meat
+Item[364] 熟牛肉: meat
+Item[365] 生鸡肉: meat
+Item[366] 熟鸡肉: meat
+Item[367] 腐肉: meat
+Item[368] 末影珍珠: ender_pearl
+Item[369] 烈焰棒: blaze
+Item[370] 恶魂之泪: water
+Item[371] 金粒: gold
+Item[372] 地狱疣: seed
+Item[373][0] 水瓶: glass
+Item[373][8193] Potion of 生命恢复 (0:45): glass
+Item[373][8225] Potion of 生命恢复 II (0:22): glass
+Item[373][8257] Potion of 生命恢复 (2:00): glass
+Item[373][16385] Splash Potion of 生命恢复 (0:33): glass
+Item[373][16417] Splash Potion of 生命恢复 II (0:16): glass
+Item[373][16449] Splash Potion of 生命恢复 (1:30): glass
+Item[373][8194] Potion of 速度 (3:00): glass
+Item[373][8226] Potion of 速度 II (1:30): glass
+Item[373][8258] Potion of 速度 (8:00): glass
+Item[373][16386] Splash Potion of 速度 (2:15): glass
+Item[373][16418] Splash Potion of 速度 II (1:07): glass
+Item[373][16450] Splash Potion of 速度 (6:00): glass
+Item[373][8227] Potion of 防火 (3:00): glass
+Item[373][8259] Potion of 防火 (8:00): glass
+Item[373][16419] Splash Potion of 防火 (2:15): glass
+Item[373][16451] Splash Potion of 防火 (6:00): glass
+Item[373][8196] Potion of 中毒 (0:45): glass
+Item[373][8228] Potion of 中毒 II (0:22): glass
+Item[373][8260] Potion of 中毒 (2:00): glass
+Item[373][16388] Splash Potion of 中毒 (0:33): glass
+Item[373][16420] Splash Potion of 中毒 II (0:16): glass
+Item[373][16452] Splash Potion of 中毒 (1:30): glass
+Item[373][8261] Potion of 瞬间治疗: glass
+Item[373][8229] Potion of 瞬间治疗 II: glass
+Item[373][16453] Splash Potion of 瞬间治疗: glass
+Item[373][16421] Splash Potion of 瞬间治疗 II: glass
+Item[373][8230] Potion of 夜视 (3:00): glass
+Item[373][8262] Potion of 夜视 (8:00): glass
+Item[373][16422] Splash Potion of 夜视 (2:15): glass
+Item[373][16454] Splash Potion of 夜视 (6:00): glass
+Item[373][8232] Potion of 虚弱 (1:30): glass
+Item[373][8264] Potion of 虚弱 (4:00): glass
+Item[373][16424] Splash Potion of 虚弱 (1:07): glass
+Item[373][16456] Splash Potion of 虚弱 (3:00): glass
+Item[373][8201] Potion of 力量 (3:00): glass
+Item[373][8233] Potion of 力量 II (1:30): glass
+Item[373][8265] Potion of 力量 (8:00): glass
+Item[373][16393] Splash Potion of 力量 (2:15): glass
+Item[373][16425] Splash Potion of 力量 II (1:07): glass
+Item[373][16457] Splash Potion of 力量 (6:00): glass
+Item[373][8234] Potion of 缓慢 (1:30): glass
+Item[373][8266] Potion of 缓慢 (4:00): glass
+Item[373][16426] Splash Potion of 缓慢 (1:07): glass
+Item[373][16458] Splash Potion of 缓慢 (3:00): glass
+Item[373][8268] Potion of 瞬间伤害: glass
+Item[373][8236] Potion of 瞬间伤害 II: glass
+Item[373][16460] Splash Potion of 瞬间伤害: glass
+Item[373][16428] Splash Potion of 瞬间伤害 II: glass
+Item[373][8238] Potion of 隐身 (3:00): glass
+Item[373][8270] Potion of 隐身 (8:00): glass
+Item[373][16430] Splash Potion of 隐身 (2:15): glass
+Item[373][16462] Splash Potion of 隐身 (6:00): glass
+Item[374] 玻璃瓶: glass
+Item[375] 蜘蛛眼: meat
+Item[376] 发酵蛛眼: meat
+Item[377] 烈焰粉: blaze
+Item[378] 岩浆膏: stone
+Item[379] 酿造台: iron
+Item[380] 炼药锅: iron
+Item[381] 末影之眼: ender_pearl, blaze
+Item[382] 闪烁的西瓜: fruit, gold
+Item[383][50] 生成 爬行者: iron
+Item[383][51] 生成 骷髅: iron
+Item[383][52] 生成 蜘蛛: iron
+Item[383][54] 生成 僵尸: iron
+Item[383][55] 生成 史莱姆: iron
+Item[383][56] 生成 恶魂: iron
+Item[383][57] 生成 僵尸猪人: iron
+Item[383][58] 生成 末影人: iron
+Item[383][59] 生成 洞穴蜘蛛: iron
+Item[383][60] 生成 蠹虫: iron
+Item[383][61] 生成 烈焰人: iron
+Item[383][62] 生成 岩浆怪: iron
+Item[383][65] 生成 蝙蝠: iron
+Item[383][66] 生成 女巫: iron
+Item[383][90] 生成 猪: iron
+Item[383][91] 生成 羊: iron
+Item[383][92] 生成 牛: iron
+Item[383][93] 生成 鸡: iron
+Item[383][94] 生成 鱿鱼: iron
+Item[383][95] 生成 狼: iron
+Item[383][96] 生成 哞菇: iron
+Item[383][98] 生成 豹猫: iron
+Item[383][100] 生成 马: iron
+Item[383][512] 生成 食尸鬼: iron
+Item[383][513] 生成 白色食尸鬼: iron
+Item[383][514] 生成 隐形潜伏者: iron
+Item[383][515] 生成 地狱蜘蛛: iron
+Item[383][516] 生成 地狱犬: iron
+Item[383][517] 生成 恶狼: iron
+Item[383][518] 生成 木蜘蛛: iron
+Item[383][519] 生成 地狱爬行者: iron
+Item[383][520] 生成 黑色食尸鬼: iron
+Item[383][521] 生成 火元素: iron
+Item[383][522] 生成 黑寡妇蜘蛛: iron
+Item[383][523] 生成 亡灵: iron
+Item[383][524] 生成 土元素: iron
+Item[383][525] 生成 褐色史莱姆: iron
+Item[383][526] 生成 红色史莱姆: iron
+Item[383][527] 生成 灰色史莱姆: iron
+Item[383][528] 生成 黑色史莱姆: iron
+Item[383][529] 生成 吸血蝙蝠: iron
+Item[383][530] 生成 吸血巨蝠: iron
+Item[383][531] 生成 古尸: iron
+Item[383][532] 生成 古尸守卫: iron
+Item[383][533] 生成 暗影蝙蝠: iron
+Item[383][534] 生成 爆炸蠹虫: iron
+Item[383][535] 生成 铜毒蠹虫: iron
+Item[383][536] 生成 远古蠹虫: iron
+Item[383][537] 生成 黏土元素: iron
+Item[383][538] 生成 骷髅领主: iron
+Item[383][539] 生成 远古骷髅领主: iron
+Item[383][540] 生成 相位蜘蛛: iron
+Item[383][120] 生成 村民: iron
+Item[384] 附魔之瓶: glass
+Item[385] 火焰弹: gunpowder, blaze, coal
+Item[386] 书与笔: paper, leather
+Item[387] 成书: paper, leather
+Item[388] 绿宝石: emerald
+Item[389] 物品展示框: wood, leather
+Item[390] 花盆: circuits
+Item[391] 胡萝卜: seed
+Item[392] 马铃薯: seed
+Item[393] 烤马铃薯: vegetable
+Item[394] 毒马铃薯: vegetable
+Item[395] 空地图: paper
+Item[396] 金萝卜: vegetable
+Item[397][0] 骷髅头颅: bone
+Item[397][1] 凋灵骷髅头颅: bone
+Item[397][2] 僵尸的头: bone
+Item[397][3] 头: bone
+Item[397][4] 爬行者的头: bone
+Item[398] 萝卜钓竿 (iron): wood, iron
+Item[399] 下界之星: stone
+Item[400] 南瓜派: pie
+Item[401] 烟花火箭: gunpowder, blaze, coal
+Item[402] 烟火之星: gunpowder, blaze, coal
+Item[403] 附魔书: paper, leather
+Item[404] 红石比较器: redstone, coal, quartz, stone
+Item[405] 地狱砖: stone
+Item[406] 下界石英: quartz
+Item[407] TNT矿车: iron, tnt
+Item[408] 漏斗矿车: iron
+Item[417] 铁马铠: iron
+Item[418] 金马铠: gold
+Item[420] 拴绳: silk, slime
+Item[421] 命名牌: leather
+Item[956] 铜粒: copper
+Item[957] 银粒: silver
+Item[958] 铁粒: iron
+Item[959] 秘银粒: mithril
+Item[960] 艾德曼粒: adamantium
+Item[961] 远古金属粒: ancient_metal
+Item[962] 铜锭: copper
+Item[963] 银锭: silver
+Item[964] 秘银锭: mithril
+Item[965] 艾德曼锭: adamantium
+Item[966] 远古金属锭: ancient_metal
+Item[967] 铜镐: copper, wood
+Item[968] 银镐: silver, wood
+Item[969] 秘银镐: mithril, wood
+Item[970] 艾德曼镐: adamantium, wood
+Item[971] 锈铁镐: rusted_iron, wood
+Item[972] 燧石锹: flint, wood
+Item[973] 铜锹: copper, wood
+Item[974] 银锹: silver, wood
+Item[975] 秘银锹: mithril, wood
+Item[976] 艾德曼锹: adamantium, wood
+Item[977] 锈铁锹: rusted_iron, wood
+Item[978] 燧石短斧: flint, wood
+Item[979] 燧石斧: flint, wood
+Item[980] 铜斧: copper, wood
+Item[981] 银斧: silver, wood
+Item[982] 秘银斧: mithril, wood
+Item[983] 艾德曼斧: adamantium, wood
+Item[984] 锈铁斧: rusted_iron, wood
+Item[985] 铜锄: copper, wood
+Item[986] 银锄: silver, wood
+Item[987] 秘银锄: mithril, wood
+Item[988] 艾德曼锄: adamantium, wood
+Item[989] 锈铁锄: rusted_iron, wood
+Item[990] 铜战锤: copper, wood
+Item[991] 银战锤: silver, wood
+Item[992] 金战锤: gold, wood
+Item[993] 铁战锤: iron, wood
+Item[994] 秘银战锤: mithril, wood
+Item[995] 艾德曼战锤: adamantium, wood
+Item[996] 锈铁战锤: rusted_iron, wood
+Item[997] 铜鸭嘴锄: copper, wood
+Item[998] 银鸭嘴锄: silver, wood
+Item[999] 金鸭嘴锄: gold, wood
+Item[1000] 铁鸭嘴锄: iron, wood
+Item[1001] 秘银鸭嘴锄: mithril, wood
+Item[1002] 艾德曼鸭嘴锄: adamantium, wood
+Item[1003] 锈铁鸭嘴锄: rusted_iron, wood
+Item[1004] 铜战斧: copper, wood
+Item[1005] 银战斧: silver, wood
+Item[1006] 金战斧: gold, wood
+Item[1007] 铁战斧: iron, wood
+Item[1008] 秘银战斧: mithril, wood
+Item[1009] 艾德曼战斧: adamantium, wood
+Item[1010] 锈铁战斧: rusted_iron, wood
+Item[1011] 铜镰刀: copper, wood
+Item[1012] 银镰刀: silver, wood
+Item[1013] 金镰刀: gold, wood
+Item[1014] 铁镰刀: iron, wood
+Item[1015] 秘银镰刀: mithril, wood
+Item[1016] 艾德曼镰刀: adamantium, wood
+Item[1017] 锈铁镰刀: rusted_iron, wood
+Item[1018] 铜剪刀: copper
+Item[1019] 银剪刀: silver
+Item[1020] 金剪刀: gold
+Item[1021] 秘银剪刀: mithril
+Item[1022] 艾德曼剪刀: adamantium
+Item[1023] 燧石小刀: flint, wood
+Item[1024] 小木棒: wood
+Item[1025] 木棒: wood
+Item[1028] 铜剑: copper, wood
+Item[1029] 银剑: silver, wood
+Item[1030] 秘银剑: mithril, wood
+Item[1031] 艾德曼剑: adamantium, wood
+Item[1032] 锈铁剑: rusted_iron, wood
+Item[1033] 铜短剑: copper, wood
+Item[1034] 银短剑: silver, wood
+Item[1035] 金短剑: gold, wood
+Item[1036] 铁短剑: iron, wood
+Item[1037] 秘银短剑: mithril, wood
+Item[1038] 艾德曼短剑: adamantium, wood
+Item[1039] 锈铁短剑: rusted_iron, wood
+Item[1040] 燧石箭: wood, flint
+Item[1041] 铜箭: wood, copper
+Item[1042] 银箭: wood, silver
+Item[1043] 金箭: wood, gold
+Item[1044] 铁箭: wood, iron
+Item[1045] 秘银箭: wood, mithril
+Item[1046] 艾德曼箭: wood, adamantium
+Item[1047] 锈铁箭: wood, rusted_iron
+Item[1048] 秘银弓: wood, mithril
+Item[1049] 黑曜石箭: wood, obsidian
+Item[1050] 铜小刀: copper, wood
+Item[1051] 银小刀: silver, wood
+Item[1052] 金小刀: gold, wood
+Item[1053] 铁小刀: iron, wood
+Item[1054] 秘银小刀: mithril, wood
+Item[1055] 艾德曼小刀: adamantium, wood
+Item[1056] 锈铁小刀: rusted_iron, wood
+Item[1057] 远古金属小刀: ancient_metal, wood
+Item[1067] 铜头盔: copper
+Item[1068] 银头盔: silver
+Item[1069] 秘银头盔: mithril
+Item[1070] 艾德曼头盔: adamantium
+Item[1071] 铜锁链头盔: copper
+Item[1072] 银锁链头盔: silver
+Item[1073] 金锁链头盔: gold
+Item[1074] 秘银锁链头盔: mithril
+Item[1075] 艾德曼锁链头盔: adamantium
+Item[1076] 锈铁头盔: rusted_iron
+Item[1077] 锈铁锁链头盔: rusted_iron
+Item[1078] 铜胸甲: copper
+Item[1079] 银胸甲: silver
+Item[1080] 秘银胸甲: mithril
+Item[1081] 艾德曼胸甲: adamantium
+Item[1082] 铜锁链胸甲: copper
+Item[1083] 银锁链胸甲: silver
+Item[1084] 金锁链胸甲: gold
+Item[1085] 秘银锁链胸甲: mithril
+Item[1086] 艾德曼锁链胸甲: adamantium
+Item[1087] 锈铁胸甲: rusted_iron
+Item[1088] 锈铁锁链胸甲: rusted_iron
+Item[1089] 铜护腿: copper
+Item[1090] 银护腿: silver
+Item[1091] 秘银护腿: mithril
+Item[1092] 艾德曼护腿: adamantium
+Item[1093] 铜锁链护腿: copper
+Item[1094] 银锁链护腿: silver
+Item[1095] 金锁链护腿: gold
+Item[1096] 秘银锁链护腿: mithril
+Item[1097] 艾德曼锁链护腿: adamantium
+Item[1098] 锈铁护腿: rusted_iron
+Item[1099] 锈铁锁链护腿: rusted_iron
+Item[1100] 铜靴子: copper
+Item[1101] 银靴子: silver
+Item[1102] 秘银靴子: mithril
+Item[1103] 艾德曼靴子: adamantium
+Item[1104] 铜锁链靴子: copper
+Item[1105] 银锁链靴子: silver
+Item[1106] 金锁链靴子: gold
+Item[1107] 秘银锁链靴子: mithril
+Item[1108] 艾德曼锁链靴子: adamantium
+Item[1109] 锈铁靴子: rusted_iron
+Item[1110] 锈铁锁链靴子: rusted_iron
+Item[1111] 铜门: copper
+Item[1112] 银门: silver
+Item[1113] 金门: gold
+Item[1114] 秘银门: mithril
+Item[1115] 艾德曼门: adamantium
+Item[1117] 绿宝石碎片: emerald
+Item[1118] 钻石碎片: diamond
+Item[1119] 石英碎片: quartz
+Item[1120] 玻璃碎片: glass
+Item[1121] 燧石碎片: flint
+Item[1122] 黑曜石碎片: obsidian
+Item[1123] 铜锁链: copper
+Item[1124] 银锁链: silver
+Item[1125] 金锁链: gold
+Item[1126] 铁锁链: iron
+Item[1127] 秘银锁链: mithril
+Item[1128] 艾德曼锁链: adamantium
+Item[1129] 锈铁链: rusted_iron
+Item[1130] 铜马铠: copper
+Item[1131] 银马铠: silver
+Item[1132] 秘银马铠: mithril
+Item[1133] 艾德曼马铠: adamantium
+Item[1134] 远古金属马凯: ancient_metal
+Item[1142] 铜桶: copper
+Item[1143] 银桶: silver
+Item[1144] 金桶: gold
+Item[1145] 秘银桶: mithril
+Item[1146] 艾德曼桶: adamantium
+Item[1147] 远古金属桶: ancient_metal
+Item[1148] 装满水的铜桶: copper, water
+Item[1149] 装满水的银桶: silver, water
+Item[1150] 装满水的金桶: gold, water
+Item[1151] 装满水的秘银桶: mithril, water
+Item[1152] 装满水的艾德曼桶: adamantium, water
+Item[1153] 装满水的远古金属桶: ancient_metal, water
+Item[1154] 装满岩浆的铜桶: copper, lava
+Item[1155] 装满岩浆的银桶: silver, lava
+Item[1156] 装满岩浆的金桶: gold, lava
+Item[1157] 装满岩浆的秘银桶: mithril, lava
+Item[1158] 装满岩浆的艾德曼桶: adamantium, lava
+Item[1159] 装满岩浆的远古金属桶: ancient_metal, lava
+Item[1160] 装满牛奶的铜桶: copper, milk
+Item[1161] 装满牛奶的银桶: silver, milk
+Item[1162] 装满牛奶的金桶: gold, milk
+Item[1163] 装满牛奶的秘银桶: mithril, milk
+Item[1164] 装满牛奶的艾德曼桶: adamantium, milk
+Item[1165] 装满牛奶的远古金属桶: ancient_metal, milk
+Item[1166] 一碗牛奶: wood, milk
+Item[1167] 一碗水: wood, water
+Item[1172] 生羊肉: meat
+Item[1173] 熟羊肉: meat
+Item[1174] 皮革绳: leather
+Item[1175] 铜手斧: copper, wood
+Item[1176] 银手斧: silver, wood
+Item[1177] 金手斧: gold, wood
+Item[1178] 铁手斧: iron, wood
+Item[1179] 秘银手斧: mithril, wood
+Item[1180] 艾德曼手斧: adamantium, wood
+Item[1181] 锈铁手斧: rusted_iron, wood
+Item[1182] 锈铁剪刀: rusted_iron
+Item[1183] 奶酪: cheese
+Item[1184] 面粉: flour
+Item[1185] 面团: dough
+Item[1186] 巧克力: desert
+Item[1187] 洋葱: seed
+Item[1188] 牛肉汤: wood, beef_stew
+Item[1189] 鸡肉汤: wood, chicken_soup
+Item[1190] 蔬菜汤: wood, vegetable_soup
+Item[1191] 肥料: manure
+Item[1192] 钓鱼竿 (copper): wood, copper
+Item[1193] 钓鱼竿 (silver): wood, silver
+Item[1194] 钓鱼竿 (gold): wood, gold
+Item[1195] 钓鱼竿 (mithril): wood, mithril
+Item[1196] 钓鱼竿 (adamantium): wood, adamantium
+Item[1197] 萝卜钓竿 (copper): wood, copper
+Item[1198] 萝卜钓竿 (silver): wood, silver
+Item[1199] 萝卜钓竿 (gold): wood, gold
+Item[1200] 萝卜钓竿 (mithril): wood, mithril
+Item[1201] 萝卜钓竿 (adamantium): wood, adamantium
+Item[1202] 黑曜石锹: obsidian, wood
+Item[1203] 黑曜石小刀: obsidian, wood
+Item[1204] 黑曜石短斧: obsidian, wood
+Item[1205] 黑曜石斧: obsidian, wood
+Item[1206] 冰激凌: wood, ice_cream
+Item[1207] 钓鱼竿 (flint): wood, flint
+Item[1208] 萝卜钓竿 (flint): wood, flint
+Item[1209] 沙拉: wood, salad
+Item[1210] item.frags_creeper.name: frags
+Item[1211] item.frags_infernal_creeper.name: frags
+Item[1212] 钓鱼竿 (obsidian): wood, obsidian
+Item[1213] 萝卜钓竿 (obsidian): wood, obsidian
+Item[1214] 祛魔之瓶: glass
+Item[1215] 奶油蘑菇汤: wood, cream_of_mushroom_soup
+Item[1216] 奶油蔬菜汤: wood, cream_of_vegetable_soup
+Item[1217] 南瓜汤: wood, pumpkin_soup
+Item[1218] 橘子: fruit
+Item[1219] 香蕉: fruit
+Item[1220] 铜币: copper
+Item[1221] 银币: silver
+Item[1222] 金币: gold
+Item[1223] 土豆泥: wood, mashed_potato
+Item[1224] 水果冰糕: wood, sorbet
+Item[1225] 蓝莓: fruit
+Item[1226] 蓝莓粥: wood, porridge
+Item[1227] 麦片粥: wood, cereal
+Item[1228] item.referencedBook.name: paper, leather
+Item[1229] 生鱼 (large): meat
+Item[1230] 熟鱼 (large): meat
+Item[1231] 装满石头的铜桶: copper, stone
+Item[1232] 装满石头的银桶: silver, stone
+Item[1233] 装满石头的金桶: gold, stone
+Item[1234] 装满石头的铁桶: iron, stone
+Item[1235] 装满石头的秘银桶: mithril, stone
+Item[1236] 装满石头的艾德曼桶: adamantium, stone
+Item[1237] 装满石头的远古金属桶: ancient_metal, stone
+Item[1239] 远古金属镐: ancient_metal, wood
+Item[1240] 远古金属锹: ancient_metal, wood
+Item[1241] 远古金属斧: ancient_metal, wood
+Item[1242] 远古金属锄: ancient_metal, wood
+Item[1243] 远古金属战锤: ancient_metal, wood
+Item[1244] 远古金属鸭嘴锄: ancient_metal, wood
+Item[1245] 远古金属战斧: ancient_metal, wood
+Item[1246] 远古金属镰刀: ancient_metal, wood
+Item[1247] 远古金属剪刀: ancient_metal
+Item[1248] 远古金属剑: ancient_metal, wood
+Item[1249] 远古金属短剑: ancient_metal, wood
+Item[1250] 远古金属箭: wood, ancient_metal
+Item[1251] 远古金属弓: wood, ancient_metal
+Item[1252] 远古金属头盔: ancient_metal
+Item[1253] 远古金属锁链头盔: ancient_metal
+Item[1254] 远古金属胸甲: ancient_metal
+Item[1255] 远古金属锁链胸甲: ancient_metal
+Item[1256] 远古金属护腿: ancient_metal
+Item[1257] 远古金属锁链护腿: ancient_metal
+Item[1258] 远古金属靴子: ancient_metal
+Item[1259] 远古金属锁链靴子: ancient_metal
+Item[1260] 远古金属门: ancient_metal
+Item[1261] 远古金属锁链: ancient_metal
+Item[1262] 远古金属手斧: ancient_metal, wood
+Item[1263] 钓鱼竿 (ancient_metal): wood, ancient_metal
+Item[1264] 萝卜钓竿 (ancient_metal): wood, ancient_metal
+Item[1276] item.frags_netherspawn.name: frags
+Item[1277] 远古金属币: ancient_metal
+Item[1278] 秘银币: mithril
+Item[1279] 艾德曼币: adamantium
+Item[1280] 虫子: meat
+Item[1281] 熟虫子: meat
+Item[1282] item.web.name: web
+Item[2256] 音乐唱片 (13): vinyl
+Item[2257] 音乐唱片 (cat): vinyl
+Item[2258] 音乐唱片 (blocks): vinyl
+Item[2259] 音乐唱片 (chirp): vinyl
+Item[2260] 音乐唱片 (far): vinyl
+Item[2261] 音乐唱片 (mall): vinyl
+Item[2262] 音乐唱片 (mellohi): vinyl
+Item[2263] 音乐唱片 (stal): vinyl
+Item[2264] 音乐唱片 (strad): vinyl
+Item[2265] 音乐唱片 (ward): vinyl
+Item[2266] 音乐唱片 (11): vinyl
+Item[2267] 音乐唱片 (wait): vinyl
+Item[2276] 音乐唱片 (imported.underworld): vinyl
+Item[2277] 音乐唱片 (imported.descent): vinyl
+Item[2278] 音乐唱片 (imported.wanderer): vinyl
+Item[2279] 音乐唱片 (imported.legends): vinyl

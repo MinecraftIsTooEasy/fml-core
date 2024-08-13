@@ -1,0 +1,192 @@
+[09:16:59] [main/INFO] (GameRemapper) Mapped jar cache not found, remapping with TinyRemapper on FML version 4.0.1
+[09:16:59] [main/INFO] (GameRemapper) Minecraft jar has successfully remapped
+[09:17:00] [main/INFO] (lolimodloader) Loading 3 mods: 
+	- java 17
+	- lolimodloader 4.0.1
+	- mite 1.6.4
+[09:17:00] [main/INFO] (Mixin) SpongePowered MIXIN Subsystem Version=0.8.5 Source=file:/H:/Java/Minecraft/fml-core/LoliModLoader.jar Service=Knot/FishModLoader Env=UNKNOWN
+[09:17:00] [main/DEBUG] (Mixin) Error cleaning class output directory: .mixin.out
+[09:17:00] [main/DEBUG] (Mixin) Initialising Mixin Platform Manager
+[09:17:00] [main/DEBUG] (Mixin) Adding mixin platform agents for container ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)
+[09:17:00] [main/DEBUG] (Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)
+[09:17:00] [main/DEBUG] (Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)
+[09:17:00] [main/DEBUG] (Mixin) Instancing new MixinPlatformAgentDefault for ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)
+[09:17:00] [main/DEBUG] (Mixin) MixinPlatformAgentDefault accepted container ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)
+[09:17:00] [main/DEBUG] (Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)]
+[09:17:00] [main/DEBUG] (Mixin) Processing prepare() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)]
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:client.ClientPlayerMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:client.DefaultResourcePackMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:client.MainMenuMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:client.RenderFix for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:entrypoint.ClientEntrypointMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:entrypoint.ServerEntrypointMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumActionMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumArtMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumBlockBreakReasonMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumBlockFXMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumBlockOperationMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumChatFormattingMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumChestTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumCommandMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumConsciousStateMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumCreatureAttributeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumCreatureTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumDirectionMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumDoorMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumEnchantmentTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumEntityFXMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumEntityReachContextMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumEntitySizeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumEntityStateMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumEquipmentMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumFaceMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumFacingMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumGameTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumInsulinResistanceLevelMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumItemInUseActionMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumLevelBonusMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumMaterialHardnessMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumMobTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumMovingObjectTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumOptionsMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumOSMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumParticleMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumQualityMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumRarityMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumSideMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumSignalMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumSkyBlockMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumSpecialSplashMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumStatusMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumToolMaterialMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:enum_extend.EnumTournamentTypeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.AllowedCharFix for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.ChatFix for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.EnchantmentPiercingTranslationFix for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FixAnvilStackCrash for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FixBoundingBoxCheck for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FixCrash2 for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FixMinecart for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FixServerCrash for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_creative_inv.ContainerCreativeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_creative_inv.GuiCreativeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_creative_inv.SlotCreativeInvMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_minecart.EntityMinecartChestTrans for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_minecart.EntityMinecartContainerMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_recipe.ItemMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.fix_recipe.RecipeHelperMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FpsUnlimit2 for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.FpsUnlimited for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.RedstoneTorchFix for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.skin.SkinFixTransform for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.skin.ThreadDownloadImageDataAccessor for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:fix.WeaponDamageTranslationFix for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.BipedRendererMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.BlockFireMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.BlockMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.ChunkMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.ChunkRegionLoaderMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.ChunkSectionMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.EndermanMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.EntityItemMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.ItemMapMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.NetClientHandlerMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.PacketMultiBlockChangeMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.PlayerRendererMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.PotionMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.RecipeHelperMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.SnowManRendererMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.StatisticMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.WitchRendererMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:id_extend.WorldMixin for lolimodloader
+[09:17:00] [main/INFO] (lolimodloader) Registering mixin class:MinecraftMixin for lolimodloader
+[09:17:00] [main/DEBUG] (Mixin) Compatibility level JAVA_17 specified by lolimodloader is higher than the maximum level supported by this version of mixin (JAVA_13).
+[09:17:00] [main/INFO] (Mixin) Compatibility level set to JAVA_17
+[09:17:00] [main/DEBUG] (Mixin) Initialising Mixin Platform Manager
+[09:17:00] [main/INFO] (lolimodloader) Starting Minecraft
+[09:17:00] [main/DEBUG] (Mixin) Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)]
+[09:17:00] [main/DEBUG] (Mixin) Processing launch tasks for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)]
+[09:17:00] [main/DEBUG] (Mixin) inject() running with 1 agents
+[09:17:00] [main/DEBUG] (Mixin) Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)]
+[09:17:00] [main/DEBUG] (Mixin) Processing inject() for PlatformAgent[MixinPlatformAgentDefault:ContainerHandleURI(file:///H:/Java/Minecraft/fml-core/LoliModLoader.jar)]
+[09:17:00] [main/DEBUG] (Mixin) com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5) is taking over from null
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @Inject with org.spongepowered.asm.mixin.injection.struct.CallbackInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @ModifyArg with org.spongepowered.asm.mixin.injection.struct.ModifyArgInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @ModifyArgs with org.spongepowered.asm.mixin.injection.struct.ModifyArgsInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @Redirect with org.spongepowered.asm.mixin.injection.struct.RedirectInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @ModifyVariable with org.spongepowered.asm.mixin.injection.struct.ModifyVariableInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @ModifyConstant with org.spongepowered.asm.mixin.injection.struct.ModifyConstantInjectionInfo
+[09:17:00] [main/INFO] (Mixin) Preparing mixins for MixinEnvironment[DEFAULT]
+[09:17:00] [main/INFO] (Mixin) Selecting config lolimodloader
+[09:17:00] [main/INFO] (Mixin) Preparing lolimodloader (86)
+[09:17:00] [main/INFO] (Mixin) Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.3.5).
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @SugarWrapper with com.llamalad7.mixinextras.sugar.impl.SugarWrapperInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Registering new injector for @FactoryRedirectWrapper with com.llamalad7.mixinextras.wrapper.factory.FactoryRedirectWrapperInjectionInfo
+[09:17:00] [main/DEBUG] (Mixin) Mixing entrypoint.ClientEntrypointMixin from lolimodloader into net.minecraft.client.main.Main
+[09:17:00] [main/DEBUG] (Mixin) Renaming synthetic method lambda$injectMain$1(Lnet/fabricmc/api/ModInitializer;)V to mdf30c39$lambda$injectMain$1$0 in lolimodloader:entrypoint.ClientEntrypointMixin
+[09:17:00] [main/DEBUG] (Mixin) Renaming synthetic method lambda$injectMain$0(Lnet/xiaoyu233/fml/config/ConfigRegistry;)V to mdf30c39$lambda$injectMain$0$1 in lolimodloader:entrypoint.ClientEntrypointMixin
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.FixCrash2 from lolimodloader into net.minecraft.client.model.TexturedQuad
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.WorldMixin from lolimodloader into net.minecraft.world.World
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.FixServerCrash from lolimodloader into net.minecraft.world.WorldServer
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.EntityItemMixin from lolimodloader into net.minecraft.entity.item.EntityItem
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.FpsUnlimited from lolimodloader into net.minecraft.client.Minecraft
+[09:17:00] [main/DEBUG] (Mixin) Mixing MinecraftMixin from lolimodloader into net.minecraft.client.Minecraft
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.ChatFix from lolimodloader into net.minecraft.client.gui.GuiScreen
+[09:17:00] [main/DEBUG] (Mixin) Mixing client.ClientPlayerMixin from lolimodloader into net.minecraft.client.entity.EntityClientPlayerMP
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.FixBoundingBoxCheck from lolimodloader into net.minecraft.entity.player.EntityPlayer
+[09:17:00] [main/DEBUG] (Mixin) Mixing client.MainMenuMixin from lolimodloader into net.minecraft.client.gui.GuiMainMenu
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumOSMixin from lolimodloader into net.minecraft.util.EnumOS
+[09:17:00] [main/INFO] (STDOUT) Command line arguments: --assetsDir C:\Users\Huix\.gradle\caches\fml-loom\assets\legacy\1.6.4 --version 1.6.4
+[09:17:00] [main/INFO] (STDOUT) Missing argument: session
+[09:17:00] [main/INFO] (STDOUT) Attempting to construct "session" argument. Result: session=null
+[09:17:00] [main/DEBUG] (Mixin) Mixing entrypoint.ServerEntrypointMixin from lolimodloader into net.minecraft.huix.mixins.server.MinecraftServer
+[09:17:00] [main/DEBUG] (Mixin) Renaming synthetic method lambda$injectMain$1(Lnet/fabricmc/api/ModInitializer;)V to mdf30c39$lambda$injectMain$1$0 in lolimodloader:entrypoint.ServerEntrypointMixin
+[09:17:00] [main/DEBUG] (Mixin) Renaming synthetic method lambda$injectMain$0(Lnet/xiaoyu233/fml/config/ConfigRegistry;)V to mdf30c39$lambda$injectMain$0$1 in lolimodloader:entrypoint.ServerEntrypointMixin
+[09:17:00] [main/DEBUG] (Mixin) Mixing client.DefaultResourcePackMixin from lolimodloader into net.minecraft.client.resources.DefaultResourcePack
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.StatisticMixin from lolimodloader into net.minecraft.huix.mixins.stats.StatList
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.BlockMixin from lolimodloader into net.minecraft.block.Block
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumQualityMixin from lolimodloader into net.minecraft.util.EnumQuality
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumRarityMixin from lolimodloader into net.minecraft.util.EnumQuality
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumEquipmentMixin from lolimodloader into net.minecraft.util.EnumEquipmentMaterial
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumMaterialHardnessMixin from lolimodloader into net.minecraft.util.EnumMaterialHardness
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.fix_recipe.ItemMixin from lolimodloader into net.minecraft.item.Item
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumDirectionMixin from lolimodloader into net.minecraft.util.EnumDirection
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.FixAnvilStackCrash from lolimodloader into net.minecraft.block.BlockAnvil
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.BlockFireMixin from lolimodloader into net.minecraft.block.BlockFire
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumChestTypeMixin from lolimodloader into net.minecraft.util.EnumChestType
+[09:17:00] [main/DEBUG] (Mixin) Mixing enum_extend.EnumMobTypeMixin from lolimodloader into net.minecraft.block.EnumMobType
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.RedstoneTorchFix from lolimodloader into net.minecraft.block.BlockRedstoneTorch
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.ItemMapMixin from lolimodloader into net.minecraft.item.ItemMap
+[09:17:00] [main/DEBUG] (Mixin) Mixing id_extend.PotionMixin from lolimodloader into net.minecraft.potion.Potion
+[09:17:00] [main/DEBUG] (Mixin) Mixing fix.FixMinecart from lolimodloader into net.minecraft.entity.item.EntityMinecart
+[09:17:01] [main/DEBUG] (Mixin) Mixing fix.fix_minecart.EntityMinecartChestTrans from lolimodloader into net.minecraft.entity.item.EntityMinecartChest
+[09:17:01] [main/DEBUG] (Mixin) Mixing fix.fix_minecart.EntityMinecartContainerMixin from lolimodloader into net.minecraft.entity.item.EntityMinecartContainer
+[09:17:01] [main/DEBUG] (Mixin) Mixing id_extend.EndermanMixin from lolimodloader into net.minecraft.entity.monster.EntityEnderman
+[09:17:01] [main/DEBUG] (Mixin) Mixing enum_extend.EnumFaceMixin from lolimodloader into net.minecraft.util.EnumFace
+[09:17:01] [main/DEBUG] (Mixin) Mixing fix.fix_recipe.RecipeHelperMixin from lolimodloader into net.minecraft.item.crafting.RecipeHelper
+[09:17:01] [main/DEBUG] (Mixin) Mixing id_extend.RecipeHelperMixin from lolimodloader into net.minecraft.item.crafting.RecipeHelper
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing client.RenderFix from lolimodloader into net.minecraft.client.renderer.OpenGlHelper
+[09:17:01] [Minecraft main thread/INFO] (STDOUT) 
+[09:17:01] [Minecraft main thread/INFO] (STDOUT) SoundsMITE: Loading sounds...
+[09:17:01] [Minecraft main thread/INFO] (STDOUT)  [ok]
+[09:17:01] [Thread-4/INFO] (STDOUT) 
+[09:17:01] [Thread-4/INFO] (STDOUT) Starting up SoundSystem...
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing id_extend.SnowManRendererMixin from lolimodloader into net.minecraft.client.renderer.entity.RenderSnowMan
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing id_extend.BipedRendererMixin from lolimodloader into net.minecraft.client.renderer.entity.RenderBiped
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing id_extend.WitchRendererMixin from lolimodloader into net.minecraft.client.renderer.entity.RenderWitch
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing id_extend.PlayerRendererMixin from lolimodloader into net.minecraft.client.renderer.entity.RenderPlayer
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing fix.FpsUnlimit2 from lolimodloader into net.minecraft.client.renderer.EntityRenderer
+[09:17:01] [Thread-5/INFO] (STDOUT) Initializing LWJGL OpenAL
+[09:17:01] [Thread-5/INFO] (STDOUT)     (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[09:17:01] [Thread-5/INFO] (STDOUT) OpenAL initialized.
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing enum_extend.EnumChatFormattingMixin from lolimodloader into net.minecraft.util.EnumChatFormatting
+[09:17:01] [Minecraft main thread/DEBUG] (Mixin) Mixing fix.AllowedCharFix from lolimodloader into net.minecraft.util.ChatAllowedCharacters
+[09:17:02] [Minecraft main thread/INFO] (STDOUT) Writing reference files... [failed]
+
+[09:17:02] [Minecraft main thread/DEBUG] (Mixin) Mixing enum_extend.EnumSpecialSplashMixin from lolimodloader into net.minecraft.util.EnumSpecialSplash
+[09:17:02] [Thread-4/INFO] (STDOUT) 
+[09:17:06] [Minecraft main thread/DEBUG] (Mixin) Mixing enum_extend.EnumOptionsMixin from lolimodloader into net.minecraft.client.settings.EnumOptions
+[09:17:09] [Minecraft main thread/INFO] (STDOUT) 
+[09:17:09] [Minecraft main thread/INFO] (STDOUT) SoundSystem shutting down...
+[09:17:10] [Minecraft main thread/INFO] (STDOUT)     Author: Paul Lamb, www.paulscode.com
+[09:17:10] [Minecraft main thread/INFO] (STDOUT) 

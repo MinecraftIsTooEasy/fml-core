@@ -1,0 +1,231 @@
+Only items that can be burned in a furnace are listed.
+
+Item Burn Time
+--------------
+Item[5][0] 橡木木板: 400 ticks @ heat level 1
+Item[5][1] 云杉木板: 400 ticks @ heat level 1
+Item[5][2] 桦木木板: 400 ticks @ heat level 1
+Item[5][3] 丛林木板: 400 ticks @ heat level 1
+Item[6][0] 橡树树苗: 200 ticks @ heat level 1
+Item[6][1] 云杉树苗: 200 ticks @ heat level 1
+Item[6][2] 桦木树苗: 200 ticks @ heat level 1
+Item[6][3] 丛林树苗: 200 ticks @ heat level 1
+Item[17][0] 橡木 (log): 1600 ticks @ heat level 1
+Item[17][1] 云杉木 (log): 1600 ticks @ heat level 1
+Item[17][2] 桦木 (log): 1600 ticks @ heat level 1
+Item[17][3] 丛林木 (log): 1600 ticks @ heat level 1
+Item[25] 音符盒: 400 ticks @ heat level 1
+Item[32][0] 枯死的灌木: 200 ticks @ heat level 1
+Item[32][1] 地狱灌木: 200 ticks @ heat level 1
+Item[47] 书架: 400 ticks @ heat level 1
+Item[50] 火把: 800 ticks @ heat level 1
+Item[53] 橡木楼梯: 400 ticks @ heat level 1
+Item[54] 箱子: 400 ticks @ heat level 1
+Item[58][0] 燧石工具台: 400 ticks @ heat level 1
+Item[58][1] 燧石工具台: 400 ticks @ heat level 1
+Item[58][2] 燧石工具台: 400 ticks @ heat level 1
+Item[58][3] 燧石工具台: 400 ticks @ heat level 1
+Item[58][4] 铜工作台: 400 ticks @ heat level 1
+Item[58][5] 银工作台: 400 ticks @ heat level 1
+Item[58][6] 金工作台: 400 ticks @ heat level 1
+Item[58][7] 铁工作台: 400 ticks @ heat level 1
+Item[58][8] 远古金属工作台: 400 ticks @ heat level 1
+Item[58][9] 秘银工作台: 400 ticks @ heat level 1
+Item[58][10] 艾德曼工作台: 400 ticks @ heat level 1
+Item[58][11] 黑曜石工具台: 400 ticks @ heat level 1
+Item[58][12] 黑曜石工具台: 400 ticks @ heat level 1
+Item[58][13] 黑曜石工具台: 400 ticks @ heat level 1
+Item[58][14] 黑曜石工具台: 400 ticks @ heat level 1
+Item[63] 告示牌 (standing): 400 ticks @ heat level 1
+Item[64] 木门: 400 ticks @ heat level 1
+Item[68] 告示牌 (mounted): 400 ticks @ heat level 1
+Item[72] 压力板 (wood): 400 ticks @ heat level 1
+Item[75] 红石火把 (unlit): 800 ticks @ heat level 1
+Item[76] 红石火把 (lit): 800 ticks @ heat level 1
+Item[84] 唱片机: 400 ticks @ heat level 1
+Item[85] 栅栏: 400 ticks @ heat level 1
+Item[96] 活板门: 400 ticks @ heat level 1
+Item[99] 蘑菇 (brown, giant): 400 ticks @ heat level 1
+Item[100] 蘑菇 (red, giant): 400 ticks @ heat level 1
+Item[107] 栅栏门: 400 ticks @ heat level 1
+Item[125][0] 橡木台阶 (double): 400 ticks @ heat level 1
+Item[125][1] 云杉木台阶 (double): 400 ticks @ heat level 1
+Item[125][2] 白桦木台阶 (double): 400 ticks @ heat level 1
+Item[125][3] 丛林木台阶 (double): 400 ticks @ heat level 1
+Item[126][0] 橡木台阶 (single): 200 ticks @ heat level 1
+Item[126][1] 云杉木台阶 (single): 200 ticks @ heat level 1
+Item[126][2] 白桦木台阶 (single): 200 ticks @ heat level 1
+Item[126][3] 丛林木台阶 (single): 200 ticks @ heat level 1
+Item[134] 云杉木楼梯: 400 ticks @ heat level 1
+Item[135] 桦木楼梯: 400 ticks @ heat level 1
+Item[136] 丛林木楼梯: 400 ticks @ heat level 1
+Item[143] 按钮 (wood): 400 ticks @ heat level 1
+Item[146] 陷阱箱: 400 ticks @ heat level 1
+Item[151] 阳光传感器: 400 ticks @ heat level 1
+Item[173] 煤炭块: 16000 ticks @ heat level 2
+Item[256] 铁锹: 100 ticks @ heat level 1
+Item[257] 铁镐: 100 ticks @ heat level 1
+Item[258] 铁斧: 100 ticks @ heat level 1
+Item[261] 弓: 200 ticks @ heat level 1
+Item[263][0] 煤炭: 1600 ticks @ heat level 2
+Item[263][1] 木炭: 1600 ticks @ heat level 1
+Item[267] 铁剑: 100 ticks @ heat level 1
+Item[269] 木锹: 200 ticks @ heat level 1
+Item[280] 木棍: 100 ticks @ heat level 1
+Item[281] 碗: 200 ticks @ heat level 1
+Item[283] 金剑: 100 ticks @ heat level 1
+Item[284] 金锹: 100 ticks @ heat level 1
+Item[285] 金镐: 100 ticks @ heat level 1
+Item[286] 金斧: 100 ticks @ heat level 1
+Item[292] 铁锄: 100 ticks @ heat level 1
+Item[294] 金锄: 100 ticks @ heat level 1
+Item[321] 画: 200 ticks @ heat level 1
+Item[323] 告示牌: 200 ticks @ heat level 1
+Item[324] 木门: 400 ticks @ heat level 1
+Item[327] 装满岩浆的铁桶: 3200 ticks @ heat level 3
+Item[333] 船: 1200 ticks @ heat level 1
+Item[339] 纸: 25 ticks @ heat level 1
+Item[340] 书: 100 ticks @ heat level 1
+Item[342] 运输矿车: 200 ticks @ heat level 1
+Item[346] 钓鱼竿 (iron): 200 ticks @ heat level 1
+Item[355] 床: 200 ticks @ heat level 1
+Item[358][*] 地图: 50 ticks @ heat level 1
+Item[369] 烈焰棒: 2400 ticks @ heat level 4
+Item[386] 书与笔: 100 ticks @ heat level 1
+Item[387] 成书: 100 ticks @ heat level 1
+Item[389] 物品展示框: 200 ticks @ heat level 1
+Item[395] 空地图: 50 ticks @ heat level 1
+Item[398] 萝卜钓竿 (iron): 200 ticks @ heat level 1
+Item[403] 附魔书: 100 ticks @ heat level 1
+Item[967] 铜镐: 100 ticks @ heat level 1
+Item[968] 银镐: 100 ticks @ heat level 1
+Item[969] 秘银镐: 100 ticks @ heat level 1
+Item[970] 艾德曼镐: 100 ticks @ heat level 1
+Item[971] 锈铁镐: 100 ticks @ heat level 1
+Item[972] 燧石锹: 100 ticks @ heat level 1
+Item[973] 铜锹: 100 ticks @ heat level 1
+Item[974] 银锹: 100 ticks @ heat level 1
+Item[975] 秘银锹: 100 ticks @ heat level 1
+Item[976] 艾德曼锹: 100 ticks @ heat level 1
+Item[977] 锈铁锹: 100 ticks @ heat level 1
+Item[978] 燧石短斧: 100 ticks @ heat level 1
+Item[979] 燧石斧: 100 ticks @ heat level 1
+Item[980] 铜斧: 100 ticks @ heat level 1
+Item[981] 银斧: 100 ticks @ heat level 1
+Item[982] 秘银斧: 100 ticks @ heat level 1
+Item[983] 艾德曼斧: 100 ticks @ heat level 1
+Item[984] 锈铁斧: 100 ticks @ heat level 1
+Item[985] 铜锄: 100 ticks @ heat level 1
+Item[986] 银锄: 100 ticks @ heat level 1
+Item[987] 秘银锄: 100 ticks @ heat level 1
+Item[988] 艾德曼锄: 100 ticks @ heat level 1
+Item[989] 锈铁锄: 100 ticks @ heat level 1
+Item[990] 铜战锤: 100 ticks @ heat level 1
+Item[991] 银战锤: 100 ticks @ heat level 1
+Item[992] 金战锤: 100 ticks @ heat level 1
+Item[993] 铁战锤: 100 ticks @ heat level 1
+Item[994] 秘银战锤: 100 ticks @ heat level 1
+Item[995] 艾德曼战锤: 100 ticks @ heat level 1
+Item[996] 锈铁战锤: 100 ticks @ heat level 1
+Item[997] 铜鸭嘴锄: 100 ticks @ heat level 1
+Item[998] 银鸭嘴锄: 100 ticks @ heat level 1
+Item[999] 金鸭嘴锄: 100 ticks @ heat level 1
+Item[1000] 铁鸭嘴锄: 100 ticks @ heat level 1
+Item[1001] 秘银鸭嘴锄: 100 ticks @ heat level 1
+Item[1002] 艾德曼鸭嘴锄: 100 ticks @ heat level 1
+Item[1003] 锈铁鸭嘴锄: 100 ticks @ heat level 1
+Item[1004] 铜战斧: 100 ticks @ heat level 1
+Item[1005] 银战斧: 100 ticks @ heat level 1
+Item[1006] 金战斧: 100 ticks @ heat level 1
+Item[1007] 铁战斧: 100 ticks @ heat level 1
+Item[1008] 秘银战斧: 100 ticks @ heat level 1
+Item[1009] 艾德曼战斧: 100 ticks @ heat level 1
+Item[1010] 锈铁战斧: 100 ticks @ heat level 1
+Item[1011] 铜镰刀: 100 ticks @ heat level 1
+Item[1012] 银镰刀: 100 ticks @ heat level 1
+Item[1013] 金镰刀: 100 ticks @ heat level 1
+Item[1014] 铁镰刀: 100 ticks @ heat level 1
+Item[1015] 秘银镰刀: 100 ticks @ heat level 1
+Item[1016] 艾德曼镰刀: 100 ticks @ heat level 1
+Item[1017] 锈铁镰刀: 100 ticks @ heat level 1
+Item[1023] 燧石小刀: 100 ticks @ heat level 1
+Item[1024] 小木棒: 200 ticks @ heat level 1
+Item[1025] 木棒: 200 ticks @ heat level 1
+Item[1028] 铜剑: 100 ticks @ heat level 1
+Item[1029] 银剑: 100 ticks @ heat level 1
+Item[1030] 秘银剑: 100 ticks @ heat level 1
+Item[1031] 艾德曼剑: 100 ticks @ heat level 1
+Item[1032] 锈铁剑: 100 ticks @ heat level 1
+Item[1033] 铜短剑: 100 ticks @ heat level 1
+Item[1034] 银短剑: 100 ticks @ heat level 1
+Item[1035] 金短剑: 100 ticks @ heat level 1
+Item[1036] 铁短剑: 100 ticks @ heat level 1
+Item[1037] 秘银短剑: 100 ticks @ heat level 1
+Item[1038] 艾德曼短剑: 100 ticks @ heat level 1
+Item[1039] 锈铁短剑: 100 ticks @ heat level 1
+Item[1040] 燧石箭: 100 ticks @ heat level 1
+Item[1041] 铜箭: 100 ticks @ heat level 1
+Item[1042] 银箭: 100 ticks @ heat level 1
+Item[1043] 金箭: 100 ticks @ heat level 1
+Item[1044] 铁箭: 100 ticks @ heat level 1
+Item[1045] 秘银箭: 100 ticks @ heat level 1
+Item[1046] 艾德曼箭: 100 ticks @ heat level 1
+Item[1047] 锈铁箭: 100 ticks @ heat level 1
+Item[1048] 秘银弓: 200 ticks @ heat level 1
+Item[1049] 黑曜石箭: 100 ticks @ heat level 1
+Item[1050] 铜小刀: 100 ticks @ heat level 1
+Item[1051] 银小刀: 100 ticks @ heat level 1
+Item[1052] 金小刀: 100 ticks @ heat level 1
+Item[1053] 铁小刀: 100 ticks @ heat level 1
+Item[1054] 秘银小刀: 100 ticks @ heat level 1
+Item[1055] 艾德曼小刀: 100 ticks @ heat level 1
+Item[1056] 锈铁小刀: 100 ticks @ heat level 1
+Item[1057] 远古金属小刀: 100 ticks @ heat level 1
+Item[1154] 装满岩浆的铜桶: 3200 ticks @ heat level 3
+Item[1155] 装满岩浆的银桶: 3200 ticks @ heat level 3
+Item[1156] 装满岩浆的金桶: 3200 ticks @ heat level 3
+Item[1157] 装满岩浆的秘银桶: 3200 ticks @ heat level 3
+Item[1158] 装满岩浆的艾德曼桶: 3200 ticks @ heat level 3
+Item[1159] 装满岩浆的远古金属桶: 3200 ticks @ heat level 3
+Item[1175] 铜手斧: 100 ticks @ heat level 1
+Item[1176] 银手斧: 100 ticks @ heat level 1
+Item[1177] 金手斧: 100 ticks @ heat level 1
+Item[1178] 铁手斧: 100 ticks @ heat level 1
+Item[1179] 秘银手斧: 100 ticks @ heat level 1
+Item[1180] 艾德曼手斧: 100 ticks @ heat level 1
+Item[1181] 锈铁手斧: 100 ticks @ heat level 1
+Item[1191] 肥料: 100 ticks @ heat level 1
+Item[1192] 钓鱼竿 (copper): 200 ticks @ heat level 1
+Item[1193] 钓鱼竿 (silver): 200 ticks @ heat level 1
+Item[1194] 钓鱼竿 (gold): 200 ticks @ heat level 1
+Item[1195] 钓鱼竿 (mithril): 200 ticks @ heat level 1
+Item[1196] 钓鱼竿 (adamantium): 200 ticks @ heat level 1
+Item[1197] 萝卜钓竿 (copper): 200 ticks @ heat level 1
+Item[1198] 萝卜钓竿 (silver): 200 ticks @ heat level 1
+Item[1199] 萝卜钓竿 (gold): 200 ticks @ heat level 1
+Item[1200] 萝卜钓竿 (mithril): 200 ticks @ heat level 1
+Item[1201] 萝卜钓竿 (adamantium): 200 ticks @ heat level 1
+Item[1202] 黑曜石锹: 100 ticks @ heat level 1
+Item[1203] 黑曜石小刀: 100 ticks @ heat level 1
+Item[1204] 黑曜石短斧: 100 ticks @ heat level 1
+Item[1205] 黑曜石斧: 100 ticks @ heat level 1
+Item[1207] 钓鱼竿 (flint): 200 ticks @ heat level 1
+Item[1208] 萝卜钓竿 (flint): 200 ticks @ heat level 1
+Item[1212] 钓鱼竿 (obsidian): 200 ticks @ heat level 1
+Item[1213] 萝卜钓竿 (obsidian): 200 ticks @ heat level 1
+Item[1228] item.referencedBook.name: 100 ticks @ heat level 1
+Item[1239] 远古金属镐: 100 ticks @ heat level 1
+Item[1240] 远古金属锹: 100 ticks @ heat level 1
+Item[1241] 远古金属斧: 100 ticks @ heat level 1
+Item[1242] 远古金属锄: 100 ticks @ heat level 1
+Item[1243] 远古金属战锤: 100 ticks @ heat level 1
+Item[1244] 远古金属鸭嘴锄: 100 ticks @ heat level 1
+Item[1245] 远古金属战斧: 100 ticks @ heat level 1
+Item[1246] 远古金属镰刀: 100 ticks @ heat level 1
+Item[1248] 远古金属剑: 100 ticks @ heat level 1
+Item[1249] 远古金属短剑: 100 ticks @ heat level 1
+Item[1250] 远古金属箭: 100 ticks @ heat level 1
+Item[1251] 远古金属弓: 200 ticks @ heat level 1
+Item[1262] 远古金属手斧: 100 ticks @ heat level 1
+Item[1263] 钓鱼竿 (ancient_metal): 200 ticks @ heat level 1
+Item[1264] 萝卜钓竿 (ancient_metal): 200 ticks @ heat level 1

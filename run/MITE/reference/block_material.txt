@@ -1,0 +1,380 @@
+Block Material
+--------------
+Block[1] 石头: stone
+Block[2] 草方块: grass
+Block[3] 泥土: dirt
+Block[4] 圆石: stone
+Block[5][0] 橡木木板: wood
+Block[5][1] 云杉木板: wood
+Block[5][2] 桦木木板: wood
+Block[5][3] 丛林木板: wood
+Block[6][0] 橡树树苗: plants
+Block[6][1] 云杉树苗: plants
+Block[6][2] 桦木树苗: plants
+Block[6][3] 丛林树苗: plants
+Block[7] 基岩: stone
+Block[8] 水 (moving): water
+Block[9] 水 (still): water
+Block[10] 岩浆 (moving): lava
+Block[11] 岩浆 (still): lava
+Block[12] 沙子: sand
+Block[13][0] 沙砾: sand
+Block[13][2] 地狱砂砾: sand
+Block[14][0] 金矿石: stone
+Block[14][2] 金矿石: stone
+Block[15] 铁矿石: stone
+Block[16] 煤矿石: stone
+Block[17][0] 橡木 (log): wood
+Block[17][1] 云杉木 (log): wood
+Block[17][2] 桦木 (log): wood
+Block[17][3] 丛林木 (log): wood
+Block[18][0] 橡树树叶: tree_leaves
+Block[18][1] 云杉树叶: tree_leaves
+Block[18][2] 白桦树叶: tree_leaves
+Block[18][3] 丛林树叶: tree_leaves
+Block[19] 海绵: sponge
+Block[20] 玻璃: glass
+Block[21] 青金石矿石: stone
+Block[22] 青金石块: stone
+Block[23] 发射器: stone
+Block[24][0] 沙石: stone
+Block[24][1] 錾制沙石: stone
+Block[24][2] 平滑沙石: stone
+Block[24][3] 神圣沙石: stone
+Block[25] 音符盒: wood
+Block[26] 床: cloth
+Block[27] 动力铁轨: circuits
+Block[28] 探测铁轨: circuits
+Block[29] 粘性活塞: piston
+Block[30] 蜘蛛网: web
+Block[31][1] 草 (tall): vine
+Block[31][2] 蕨 (tall): vine
+Block[32][0] 枯死的灌木: vine
+Block[32][1] 地狱灌木: vine
+Block[33] 活塞: piston
+Block[34] 伸出的活塞臂 (extension): piston
+Block[35][0] 羊毛: cloth
+Block[35][1] 橙色羊毛: cloth
+Block[35][2] 品红色羊毛: cloth
+Block[35][3] 淡蓝色羊毛: cloth
+Block[35][4] 黄色羊毛: cloth
+Block[35][5] 黄绿色羊毛: cloth
+Block[35][6] 粉红色羊毛: cloth
+Block[35][7] 灰色羊毛: cloth
+Block[35][8] 淡灰色羊毛: cloth
+Block[35][9] 青色羊毛: cloth
+Block[35][10] 紫色羊毛: cloth
+Block[35][11] 蓝色羊毛: cloth
+Block[35][12] 棕色羊毛: cloth
+Block[35][13] 绿色羊毛: cloth
+Block[35][14] 红色羊毛: cloth
+Block[35][15] 黑色羊毛: cloth
+Block[36] 活塞移动 (moving): piston
+Block[37] 蒲公英: plants
+Block[38][0] 玫瑰: plants
+Block[38][1] 兰花: plants
+Block[38][2] 葱: plants
+Block[38][5] 郁金香: plants
+Block[38][7] 大丽花: plants
+Block[38][8] 雏菊: plants
+Block[39] 蘑菇 (brown, small): plants
+Block[40] 蘑菇 (red, small): plants
+Block[41] 金块: gold
+Block[42] 铁块: iron
+Block[43][0] 石台阶 (double): stone
+Block[43][1] 沙石台阶 (double): stone
+Block[43][3] 圆石台阶 (double): stone
+Block[43][4] 砖台阶 (double): stone
+Block[43][5] 石砖台阶 (double): stone
+Block[43][6] 地狱砖台阶 (double): stone
+Block[43][7] 石英台阶 (double): stone
+Block[44][0] 石台阶 (single): stone
+Block[44][1] 沙石台阶 (single): stone
+Block[44][3] 圆石台阶 (single): stone
+Block[44][4] 砖台阶 (single): stone
+Block[44][5] 石砖台阶 (single): stone
+Block[44][6] 地狱砖台阶 (single): stone
+Block[44][7] 石英台阶 (single): stone
+Block[45] 砖块: stone
+Block[46] TNT: tnt
+Block[47] 书架: wood
+Block[48] 苔石: stone
+Block[49] 黑曜石: obsidian
+Block[50] 火把: circuits
+Block[51] 火: fire
+Block[52] 刷怪箱: iron
+Block[53] 橡木楼梯: wood
+Block[54] 箱子: wood
+Block[55] 红石粉: circuits
+Block[56] 钻石矿石: stone
+Block[57] 钻石块: diamond
+Block[58][0] 燧石工具台: wood
+Block[58][1] 燧石工具台: wood
+Block[58][2] 燧石工具台: wood
+Block[58][3] 燧石工具台: wood
+Block[58][4] 铜工作台: wood
+Block[58][5] 银工作台: wood
+Block[58][6] 金工作台: wood
+Block[58][7] 铁工作台: wood
+Block[58][8] 远古金属工作台: wood
+Block[58][9] 秘银工作台: wood
+Block[58][10] 艾德曼工作台: wood
+Block[58][11] 黑曜石工具台: wood
+Block[58][12] 黑曜石工具台: wood
+Block[58][13] 黑曜石工具台: wood
+Block[58][14] 黑曜石工具台: wood
+Block[59] 小麦 (living): plants
+Block[60] 耕地: dirt
+Block[61] 石熔炉 (idle): stone
+Block[62] 石熔炉 (active): stone
+Block[63] 告示牌 (standing): wood
+Block[64] 木门: wood
+Block[65] 梯子: circuits
+Block[66] 铁轨: circuits
+Block[67] 石楼梯: stone
+Block[68] 告示牌 (mounted): wood
+Block[69] 拉杆: circuits
+Block[70] 压力板 (stone): stone
+Block[71] 铁门: iron
+Block[72] 压力板 (wood): wood
+Block[73] 红石矿石 (unlit): stone
+Block[74] 红石矿石 (lit): stone
+Block[75] 红石火把 (unlit): circuits
+Block[76] 红石火把 (lit): circuits
+Block[77] 按钮 (stone): circuits
+Block[78][0] 雪 (thin): snow
+Block[78][3] 雪 (slab): snow
+Block[79] 冰: ice
+Block[80] 雪 (block): crafted_snow
+Block[81] 仙人掌: cactus
+Block[82] 粘土块: clay
+Block[83] 甘蔗: plants
+Block[84] 唱片机: wood
+Block[85] 栅栏: wood
+Block[86] 南瓜: pumpkin
+Block[87] 地狱岩: netherrack
+Block[88] 灵魂沙: sand
+Block[89] 荧石: glass
+Block[90] 传送门: portal
+Block[91] 南瓜灯: pumpkin
+Block[92] 蛋糕: cake
+Block[93] 红石中继器 (idle): circuits
+Block[94] 红石中继器 (active): circuits
+Block[95][0] 地幔: stone
+Block[95][1] 地核: stone
+Block[96] 活板门: wood
+Block[97][0] 石头怪物蛋: clay
+Block[97][1] 圆石怪物蛋: clay
+Block[97][2] 石砖怪物蛋: clay
+Block[97][3] 地狱岩生怪蛋: clay
+Block[97][4] 石头怪物蛋: clay
+Block[98][0] 石砖: stone
+Block[98][1] 苔石砖: stone
+Block[98][2] 裂石砖: stone
+Block[98][3] 錾制石砖: stone
+Block[99] 蘑菇 (brown, giant): wood
+Block[100] 蘑菇 (red, giant): wood
+Block[101] 铁栏杆: iron
+Block[102] 玻璃板: glass
+Block[103] 西瓜: pumpkin
+Block[104] 茎 (pumpkin): plants
+Block[105] 茎 (melon): plants
+Block[106] 藤蔓: vine
+Block[107] 栅栏门: wood
+Block[108] 砖楼梯: stone
+Block[109] 石砖楼梯: stone
+Block[110] 菌丝: grass
+Block[111] 睡莲: plants
+Block[112] 地狱砖块: netherrack
+Block[113] 地狱砖栅栏: netherrack
+Block[114] 地狱砖楼梯: netherrack
+Block[115] 地狱疣: plants
+Block[116] 附魔台 (diamond): stone
+Block[117] 酿造台: iron
+Block[118] 炼药锅: iron
+Block[119] 末地传送门: portal
+Block[120] 末地传送门 (frame): stone
+Block[121] 末地石: stone
+Block[122] 龙蛋: dragon_egg
+Block[123] 红石灯 (unlit): redstone_light
+Block[124] 红石灯 (lit): redstone_light
+Block[125][0] 橡木台阶 (double): wood
+Block[125][1] 云杉木台阶 (double): wood
+Block[125][2] 白桦木台阶 (double): wood
+Block[125][3] 丛林木台阶 (double): wood
+Block[126][0] 橡木台阶 (single): wood
+Block[126][1] 云杉木台阶 (single): wood
+Block[126][2] 白桦木台阶 (single): wood
+Block[126][3] 丛林木台阶 (single): wood
+Block[127] 可可果: plants
+Block[128] 沙石楼梯: stone
+Block[129] 绿宝石矿石: stone
+Block[130] 末影箱: stone
+Block[131] 绊线钩: circuits
+Block[132] 绊线: circuits
+Block[133] 绿宝石块: emerald
+Block[134] 云杉木楼梯: wood
+Block[135] 桦木楼梯: wood
+Block[136] 丛林木楼梯: wood
+Block[137] 命令方块: iron
+Block[138] 信标: glass
+Block[139][0] 圆石墙: stone
+Block[139][1] 苔石墙: stone
+Block[140] 花盆: circuits
+Block[141] 胡萝卜 (living): plants
+Block[142] 马铃薯 (living): plants
+Block[143] 按钮 (wood): circuits
+Block[144] 头颅: circuits
+Block[145][0] 铁砧: anvil
+Block[145][1] 轻微受损的铁砧: anvil
+Block[145][2] 严重受损的铁砧: anvil
+Block[146] 陷阱箱: wood
+Block[147] 测重压力板 (轻质): gold
+Block[148] 测重压力板 (重质): iron
+Block[149] 红石比较器 (idle): circuits
+Block[150] 红石比较器 (active): circuits
+Block[151] 阳光传感器: wood
+Block[152] 红石块: redstone
+Block[153] 下界石英矿石: stone
+Block[154] 漏斗: iron
+Block[155][0] 石英块: quartz
+Block[155][1] 錾制石英块: quartz
+Block[155][2] 竖纹石英块: quartz
+Block[156] 石英楼梯: quartz
+Block[157] 激活铁轨: circuits
+Block[158] 投掷器: stone
+Block[159][0] 白色染色粘土 (colored): hardened_clay
+Block[159][1] 橙色染色粘土 (colored): hardened_clay
+Block[159][2] 品红色染色粘土 (colored): hardened_clay
+Block[159][3] 淡蓝色染色粘土 (colored): hardened_clay
+Block[159][4] 黄色染色粘土 (colored): hardened_clay
+Block[159][5] 黄绿色染色粘土 (colored): hardened_clay
+Block[159][6] 粉红色染色粘土 (colored): hardened_clay
+Block[159][7] 灰色染色粘土 (colored): hardened_clay
+Block[159][8] 淡灰色染色粘土 (colored): hardened_clay
+Block[159][9] 青色染色粘土 (colored): hardened_clay
+Block[159][10] 紫色染色粘土 (colored): hardened_clay
+Block[159][11] 蓝色染色粘土 (colored): hardened_clay
+Block[159][12] 棕色染色粘土 (colored): hardened_clay
+Block[159][13] 绿色染色粘土 (colored): hardened_clay
+Block[159][14] 红色染色粘土 (colored): hardened_clay
+Block[159][15] 黑色染色粘土 (colored): hardened_clay
+Block[170] 干草块: plants
+Block[171][0] 地毯: carpet
+Block[171][1] 橙色地毯: carpet
+Block[171][2] 品红色地毯: carpet
+Block[171][3] 淡蓝色地毯: carpet
+Block[171][4] 黄色地毯: carpet
+Block[171][5] 黄绿色地毯: carpet
+Block[171][6] 粉红色地毯: carpet
+Block[171][7] 灰色地毯: carpet
+Block[171][8] 淡灰色地毯: carpet
+Block[171][9] 青色地毯: carpet
+Block[171][10] 紫色地毯: carpet
+Block[171][11] 蓝色地毯: carpet
+Block[171][12] 棕色地毯: carpet
+Block[171][13] 绿色地毯: carpet
+Block[171][14] 红色地毯: carpet
+Block[171][15] 黑色地毯: carpet
+Block[172] 硬化粘土: hardened_clay
+Block[173] 煤炭块: coal
+Block[198][0] 符文石 "Nul" (adamantium): obsidian
+Block[198][1] 符文石 "Quas" (adamantium): obsidian
+Block[198][2] 符文石 "Por" (adamantium): obsidian
+Block[198][3] 符文石 "An" (adamantium): obsidian
+Block[198][4] 符文石 "Nox" (adamantium): obsidian
+Block[198][5] 符文石 "Flam" (adamantium): obsidian
+Block[198][6] 符文石 "Vas" (adamantium): obsidian
+Block[198][7] 符文石 "Des" (adamantium): obsidian
+Block[198][8] 符文石 "Ort" (adamantium): obsidian
+Block[198][9] 符文石 "Tym" (adamantium): obsidian
+Block[198][10] 符文石 "Corp" (adamantium): obsidian
+Block[198][11] 符文石 "Lor" (adamantium): obsidian
+Block[198][12] 符文石 "Mani" (adamantium): obsidian
+Block[198][13] 符文石 "Jux" (adamantium): obsidian
+Block[198][14] 符文石 "Ylem" (adamantium): obsidian
+Block[198][15] 符文石 "Sanct" (adamantium): obsidian
+Block[199] 远古金属栅栏: ancient_metal
+Block[200] 铜矿: stone
+Block[201] 银矿: stone
+Block[202] 秘银矿: stone
+Block[203] 艾德曼矿: stone
+Block[204] 铜块: copper
+Block[205] 银块: silver
+Block[206] 秘银块: mithril
+Block[207] 艾德曼块: adamantium
+Block[208] 铜门: copper
+Block[209] 银门: silver
+Block[210] 金门: gold
+Block[211] 秘银门: mithril
+Block[212] 艾德曼门: adamantium
+Block[213] 铜栅栏: copper
+Block[214] 银栅栏: silver
+Block[215] 金栅栏: gold
+Block[216] 秘银栅栏: mithril
+Block[217] 艾德曼栅栏: adamantium
+Block[218] 粘土炉 (idle): clay
+Block[219] 粘土炉 (active): clay
+Block[220] 沙石炉 (idle): sand
+Block[221] 沙石炉 (active): sand
+Block[222] 黑曜石熔炉 (idle): obsidian
+Block[223] 黑曜石熔炉 (active): obsidian
+Block[224] 地狱岩熔炉 (idle): netherrack
+Block[225] 地狱岩熔炉 (active): netherrack
+Block[226] 黑曜石台阶 (double): obsidian
+Block[227] 黑曜石台阶 (single): obsidian
+Block[228] 黑曜石楼梯: obsidian
+Block[229][0] 铜砧: anvil
+Block[229][1] 轻微受损的铜砧: anvil
+Block[229][2] 严重受损的铜砧: anvil
+Block[230][0] 银砧: anvil
+Block[230][1] 轻微受损的银砧: anvil
+Block[230][2] 严重受损的银砧: anvil
+Block[231][0] 金砧: anvil
+Block[231][1] 轻微受损的金砧: anvil
+Block[231][2] 严重受损的金砧: anvil
+Block[232][0] 秘银砧: anvil
+Block[232][1] 轻微受损的秘银砧: anvil
+Block[232][2] 严重受损的秘银砧: anvil
+Block[233][0] 艾德曼砧: anvil
+Block[233][1] 轻微受损的艾德曼砧: anvil
+Block[233][2] 严重受损的艾德曼砧: anvil
+Block[234] 洋葱 (living): plants
+Block[235] 小麦 (dead): plants
+Block[236] 胡萝卜 (dead): plants
+Block[237] 马铃薯 (dead): plants
+Block[238] 洋葱 (dead): plants
+Block[239] 铜箱子: copper
+Block[240] 银箱子: silver
+Block[241] 金箱子: gold
+Block[242] 铁箱子: iron
+Block[243] 秘银箱子: mithril
+Block[244] 艾德曼箱子: adamantium
+Block[245] 附魔台 (emerald): stone
+Block[246] 火花: fire
+Block[247][0] 符文石 "Nul" (mithril): obsidian
+Block[247][1] 符文石 "Quas" (mithril): obsidian
+Block[247][2] 符文石 "Por" (mithril): obsidian
+Block[247][3] 符文石 "An" (mithril): obsidian
+Block[247][4] 符文石 "Nox" (mithril): obsidian
+Block[247][5] 符文石 "Flam" (mithril): obsidian
+Block[247][6] 符文石 "Vas" (mithril): obsidian
+Block[247][7] 符文石 "Des" (mithril): obsidian
+Block[247][8] 符文石 "Ort" (mithril): obsidian
+Block[247][9] 符文石 "Tym" (mithril): obsidian
+Block[247][10] 符文石 "Corp" (mithril): obsidian
+Block[247][11] 符文石 "Lor" (mithril): obsidian
+Block[247][12] 符文石 "Mani" (mithril): obsidian
+Block[247][13] 符文石 "Jux" (mithril): obsidian
+Block[247][14] 符文石 "Ylem" (mithril): obsidian
+Block[247][15] 符文石 "Sanct" (mithril): obsidian
+Block[248] 花盆: circuits
+Block[249][12] 蓝莓丛: plants
+Block[250] 硬化粘土炉 (idle): hardened_clay
+Block[251] 硬化粘土炉 (active): hardened_clay
+Block[252] 远古金属块: ancient_metal
+Block[253] 远古金属门: ancient_metal
+Block[254][0] 远古金属砧: anvil
+Block[254][1] 轻微受损的远古金属砧: anvil
+Block[254][2] 严重受损的远古金属砧: anvil
+Block[255] 远古金属箱子: ancient_metal

@@ -1,0 +1,32 @@
+[18:44:40] [ERROR] [FishModLoader/]: Uncaught exception in thread "main"
+java.lang.RuntimeException: Mixin transformation of net.minecraft.client.main.Main failed
+	at net.xiaoyu233.fml.classloading.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:432)
+	at net.xiaoyu233.fml.classloading.KnotClassDelegate.tryLoadClass(KnotClassDelegate.java:331)
+	at net.xiaoyu233.fml.classloading.KnotClassDelegate.loadClass(KnotClassDelegate.java:226)
+	at net.xiaoyu233.fml.classloading.KnotClassLoader.loadClass(KnotClassLoader.java:104)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:525)
+	at net.xiaoyu233.fml.relaunch.Launch.launch(Launch.java:76)
+	at net.xiaoyu233.fml.relaunch.LaunchDelegate.delegateLaunch(LaunchDelegate.java:50)
+	at net.xiaoyu233.fml.relaunch.client.Main.main(Main.java:12)
+	at net.xiaoyu233.fml.relaunch.DevLaunchInjector.main(DevLaunchInjector.java:57)
+Caused by: org.spongepowered.asm.mixin.throwables.MixinApplyError: Mixin [Hwite.mixins.json:RaycastCollisionMixin] from phase [DEFAULT] in config [Hwite.mixins.json] FAILED during PREPARE
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinError(MixinProcessor.java:587)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.handleMixinPrepareError(MixinProcessor.java:535)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:450)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.select(MixinProcessor.java:346)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.checkSelect(MixinProcessor.java:407)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.applyMixins(MixinProcessor.java:222)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClass(MixinTransformer.java:227)
+	at org.spongepowered.asm.mixin.transformer.MixinTransformer.transformClassBytes(MixinTransformer.java:195)
+	at net.xiaoyu233.fml.classloading.KnotClassDelegate.getPostMixinClassByteArray(KnotClassDelegate.java:427)
+	... 8 more
+Caused by: org.spongepowered.asm.mixin.transformer.throwables.InvalidMixinException: The specified mixin 'cn.xylose.mitemod.hwite.mixin.RaycastCollisionMixin' was not found
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.<init>(MixinInfo.java:358)
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepareMixins(MixinConfig.java:777)
+	at org.spongepowered.asm.mixin.transformer.MixinConfig.prepare(MixinConfig.java:677)
+	at org.spongepowered.asm.mixin.transformer.MixinProcessor.prepareConfigs(MixinProcessor.java:447)
+	... 14 more
+Caused by: java.lang.ClassNotFoundException: The specified mixin 'cn.xylose.mitemod.hwite.mixin.RaycastCollisionMixin' was not found
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.loadMixinClass(MixinInfo.java:838)
+	at org.spongepowered.asm.mixin.transformer.MixinInfo.<init>(MixinInfo.java:351)
+	... 17 more
