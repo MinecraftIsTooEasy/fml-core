@@ -91,7 +91,7 @@ public class GameRegistry
      */
     public static void generateWorld(int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider)
     {
-        long worldSeed = world.func_72905_C();
+        long worldSeed = world.getSeed();
         Random fmlRandom = new Random(worldSeed);
         long xSeed = fmlRandom.nextLong() >> 2 + 1L;
         long zSeed = fmlRandom.nextLong() >> 2 + 1L;
@@ -212,7 +212,7 @@ public class GameRegistry
         {
             assert block != null : "registerBlock: block cannot be null";
             assert itemclass != null : "registerBlock: itemclass cannot be null";
-            int blockItemId = block.field_71990_ca - 256;
+            int blockItemId = block.blockID - 256;
             Constructor<? extends ItemBlock> itemCtor;
             Item i;
             try
@@ -242,27 +242,27 @@ public class GameRegistry
 
     public static IRecipe addShapedRecipe(ItemStack output, Object... params)
     {
-        return CraftingManager.func_77594_a().func_92103_a(output, params);
+        return CraftingManager.getInstance().addRecipe(output, params);
     }
 
     public static void addShapelessRecipe(ItemStack output, Object... params)
     {
-        CraftingManager.func_77594_a().func_77596_b(output, params);
+        CraftingManager.getInstance().addShapelessRecipe(output, params);
     }
 
     public static void addRecipe(IRecipe recipe)
     {
-        CraftingManager.func_77594_a().func_77592_b().add(recipe);
+        CraftingManager.getInstance().getRecipeList().add(recipe);
     }
 
-    public static void addSmelting(int input, ItemStack output, float xp)
+    public static void addSmelting(int input, ItemStack output)
     {
-        FurnaceRecipes.func_77602_a().func_77600_a(input, output, xp);
+        FurnaceRecipes.smelting().getSmeltingList().put(input, output);
     }
 
     public static void registerTileEntity(Class<? extends TileEntity> tileEntityClass, String id)
     {
-        TileEntity.func_70306_a(tileEntityClass, id);
+        TileEntity.addMapping(tileEntityClass, id);
     }
 
     /**
@@ -275,7 +275,7 @@ public class GameRegistry
      */
     public static void registerTileEntityWithAlternatives(Class<? extends TileEntity> tileEntityClass, String id, String... alternatives)
     {
-        TileEntity.func_70306_a(tileEntityClass, id);
+        TileEntity.addMapping(tileEntityClass, id);
         Map<String,Class> teMappings = ObfuscationReflectionHelper.getPrivateValue(TileEntity.class, null, "field_" + "70326_a", "field_70326_a", "a");
         for (String s: alternatives)
         {
@@ -287,13 +287,14 @@ public class GameRegistry
     }
 
     public static void addBiome(BiomeGenBase biome)
-    {
-        WorldType.field_77137_b.addNewBiome(biome);
+    {            //need player
+//        WorldType.DEFAULT.addNewBiome(biome);
     }
 
     public static void removeBiome(BiomeGenBase biome)
     {
-        WorldType.field_77137_b.removeBiome(biome);
+        //need player
+//        WorldType.DEFAULT.removeBiome(biome);
     }
 
     public static void registerFuelHandler(IFuelHandler handler)
@@ -454,8 +455,8 @@ public class GameRegistry
 	    ItemStack foundStack = GameData.findItemStack(modId, name);
 	    if (foundStack != null)
 	    {
-            ItemStack is = foundStack.func_77946_l();
-    	    is.field_77994_a = Math.min(stackSize, is.func_77976_d());
+            ItemStack is = foundStack.copy();
+    	    is.stackSize = Math.min(stackSize, is.getMaxStackSize());
     	    return is;
 	    }
 	    return null;

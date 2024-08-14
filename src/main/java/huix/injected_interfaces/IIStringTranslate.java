@@ -1,4 +1,4 @@
-package huix.mixins.util;
+package huix.injected_interfaces;
 
 import java.io.InputStream;
 

@@ -1,5 +1,6 @@
 package huix.mixins.client.multiplayer;
 
+import huix.injected_interfaces.IIGuiConnecting;
 import net.minecraft.client.multiplayer.GuiConnecting;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;

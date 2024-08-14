@@ -1,6 +1,4 @@
-package huix.mixins.client.multiplayer;
-
-import net.minecraft.client.multiplayer.GuiConnecting;
+package huix.injected_interfaces;
 
 public interface IIGuiConnecting {
 

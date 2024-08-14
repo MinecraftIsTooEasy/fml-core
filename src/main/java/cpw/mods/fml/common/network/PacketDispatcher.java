@@ -40,10 +40,10 @@ public class PacketDispatcher
 
     public static void sendPacketToPlayer(Packet packet, Player player)
     {
-        if (player instanceof EntityPlayerMP)
-        {
-            ((EntityPlayerMP)player).field_71135_a.func_72567_b(packet);
-        }
+//        if (player instanceof EntityPlayerMP)
+//        {
+//            ((EntityPlayerMP)player).field_71135_a.func_72567_b(packet);
+//        }
     }
 
     public static void sendPacketToAllAround(double X, double Y, double Z, double range, int dimensionId, Packet packet)
@@ -51,7 +51,7 @@ public class PacketDispatcher
         MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
         if (server != null)
         {
-            server.func_71203_ab().func_72393_a(X, Y, Z, range, dimensionId, packet);
+            server.getConfigurationManager().sendToAllNear(X, Y, Z, range, dimensionId, packet);
         }
         else
         {
@@ -64,7 +64,7 @@ public class PacketDispatcher
         MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
         if (server != null)
         {
-            server.func_71203_ab().func_72396_a(packet, dimId);
+            server.getConfigurationManager().sendPacketToAllPlayersInDimension(packet, dimId);
         }
         else
         {
@@ -77,7 +77,7 @@ public class PacketDispatcher
         MinecraftServer server = FMLCommonHandler.instance().getMinecraftServerInstance();
         if (server != null)
         {
-            server.func_71203_ab().func_72384_a(packet);
+            server.getConfigurationManager().sendPacketToAllPlayers(packet);
         }
         else
         {

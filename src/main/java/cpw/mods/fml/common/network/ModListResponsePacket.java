@@ -119,30 +119,30 @@ public class ModListResponsePacket extends FMLPacket
         }
 
         Packet250CustomPayload pkt = new Packet250CustomPayload();
-        pkt.field_73630_a = "FML";
+        pkt.channel = "FML";
         if (missingClientMods.size()>0 || versionIncorrectMods.size() > 0)
         {
-            pkt.field_73629_c = FMLPacket.makePacket(MOD_MISSING, missingClientMods, versionIncorrectMods);
+            pkt.data = FMLPacket.makePacket(MOD_MISSING, missingClientMods, versionIncorrectMods);
             Logger.getLogger("Minecraft").info(String.format("User %s connection failed: missing %s, bad versions %s", userName, missingClientMods, versionIncorrectMods));
             FMLLog.info("User %s connection failed: missing %s, bad versions %s", userName, missingClientMods, versionIncorrectMods);
             // Mark this as bad
             FMLNetworkHandler.setHandlerState((NetLoginHandler) netHandler, FMLNetworkHandler.MISSING_MODS_OR_VERSIONS);
-            pkt.field_73628_b = pkt.field_73629_c.length;
-            network.func_74429_a(pkt);
+            pkt.length = pkt.data.length;
+            network.addToSendQueue(pkt);
         }
         else
         {
-            pkt.field_73629_c = FMLPacket.makePacket(MOD_IDENTIFIERS, netHandler);
+            pkt.data = FMLPacket.makePacket(MOD_IDENTIFIERS, netHandler);
             Logger.getLogger("Minecraft").info(String.format("User %s connecting with mods %s", userName, modVersions.keySet()));
             FMLLog.info("User %s connecting with mods %s", userName, modVersions.keySet());
-            pkt.field_73628_b = pkt.field_73629_c.length;
-            network.func_74429_a(pkt);
+            pkt.length = pkt.data.length;
+            network.addToSendQueue(pkt);
             NBTTagList itemList = new NBTTagList();
             GameData.writeItemData(itemList);
             byte[][] registryPackets = FMLPacket.makePacketSet(MOD_IDMAP, itemList);
             for (int i = 0; i < registryPackets.length; i++)
             {
-                network.func_74429_a(PacketDispatcher.getPacket("FML", registryPackets[i]));
+                network.addToSendQueue(PacketDispatcher.getPacket("FML", registryPackets[i]));
             }
         }
 

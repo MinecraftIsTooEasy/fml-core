@@ -62,12 +62,13 @@ public class ModAnnotation
     @Override
     public String toString()
     {
-        return Objects.toStringHelper("Annotation")
-                .add("type",type)
-                .add("name",asmType.getClassName())
-                .add("member",member)
-                .add("values", values)
-                .toString();
+        return "Annotation BY huix";
+//        return Objects.toStringHelper("Annotation")
+//                .add("type",type)
+//                .add("name",asmType.getClassName())
+//                .add("member",member)
+//                .add("values", values)
+//                .toString();
     }
     public AnnotationType getType()
     {

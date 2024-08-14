@@ -14,7 +14,6 @@ package cpw.mods.fml.server;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
@@ -23,7 +22,7 @@ import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import org.apache.commons.io.IOUtils;
+import huix.injected_interfaces.IIStringTranslate;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.MapDifference;
@@ -35,19 +34,16 @@ import net.minecraft.network.packet.Packet;
 import net.minecraft.network.packet.Packet131MapData;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.StringTranslate;
-import net.minecraft.world.World;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.FMLLog;
 import cpw.mods.fml.common.IFMLSidedHandler;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.ModContainer;
-import cpw.mods.fml.common.ObfuscationReflectionHelper;
 import cpw.mods.fml.common.network.EntitySpawnAdjustmentPacket;
 import cpw.mods.fml.common.network.EntitySpawnPacket;
 import cpw.mods.fml.common.network.ModMissingPacket;
 import cpw.mods.fml.common.registry.EntityRegistry.EntityRegistration;
 import cpw.mods.fml.common.registry.GameData;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.ItemData;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
@@ -233,7 +229,7 @@ public class FMLServerHandler implements IFMLSidedHandler
             if (matcher.matches())
             {
                 FMLLog.fine("Injecting found translation data in zip file %s at %s into language system", source.getName(), ze.getName());
-                StringTranslate.inject(zf.getInputStream(ze));
+                ((IIStringTranslate) new StringTranslate()).localInject(zf.getInputStream(ze));
             }
         }
         zf.close();
@@ -251,7 +247,7 @@ public class FMLServerHandler implements IFMLSidedHandler
             if (matcher.matches())
             {
                 FMLLog.fine("Injecting found translation data at %s into language system", currPath);
-                StringTranslate.inject(new FileInputStream(file));
+                ((IIStringTranslate) new StringTranslate()).localInject(new FileInputStream(file));
             }
         }
     }

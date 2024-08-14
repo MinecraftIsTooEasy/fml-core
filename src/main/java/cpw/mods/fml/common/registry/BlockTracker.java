@@ -25,9 +25,9 @@ class BlockTracker
     {
         allocatedBlocks = new BitSet(4096);
         allocatedBlocks.set(0, 4096);
-        for (int i = 0; i < Block.field_71973_m.length; i++)
+        for (int i = 0; i < Block.blocksList.length; i++)
         {
-            if (Block.field_71973_m[i]!=null)
+            if (Block.blocksList[i]!=null)
             {
                 allocatedBlocks.clear(i);
             }

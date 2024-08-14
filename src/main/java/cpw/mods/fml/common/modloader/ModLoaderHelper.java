@@ -23,6 +23,7 @@ import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Maps;
 import com.google.common.collect.SetMultimap;
 
+import cpw.mods.fml.common.network.*;
 import net.minecraft.command.ICommand;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.passive.IAnimals;
@@ -39,11 +40,6 @@ import cpw.mods.fml.common.IPickupNotifier;
 import cpw.mods.fml.common.IWorldGenerator;
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.TickType;
-import cpw.mods.fml.common.network.IChatListener;
-import cpw.mods.fml.common.network.IConnectionHandler;
-import cpw.mods.fml.common.network.IGuiHandler;
-import cpw.mods.fml.common.network.IPacketHandler;
-import cpw.mods.fml.common.network.NetworkRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry.EntityRegistration;
 import cpw.mods.fml.common.registry.VillagerRegistry.IVillageTradeHandler;
@@ -175,7 +171,7 @@ public class ModLoaderHelper
     {
         ModLoaderGuiHelper helper = guiIDs.get(id);
         helper.injectContainerAndID(container, id);
-        player.openGui(helper.getMod(), id, player.field_70170_p, x, y, z);
+        ((Player) player).openGui(helper.getMod(), id, player.worldObj, x, y, z);
     }
 
     public static Object getClientSideGui(BaseModProxy mod, EntityPlayer player, int ID, int x, int y, int z)

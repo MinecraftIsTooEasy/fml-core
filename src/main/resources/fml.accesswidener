@@ -7,4 +7,26 @@ accessible method net/minecraft/network/NetLoginHandler func_72531_a (Lnet/minec
 accessible field net/minecraft/client/resources/Locale field_135032_a Ljava/util/Map;
 accessible class net/minecraft/crash/CallableSuspiciousClasses
 accessible class net/minecraft/crash/CallableMinecraftVersion
-accessible class net/minecraft/logging/LogFormatter
+accessible class net/minecraft/world/gen/structure/ComponentVillage
+accessible field net/minecraft/client/renderer/entity/RenderManager entityRenderMap Ljava/util/Map;
+accessible method net/minecraft/client/resources/AbstractResourcePack readMetadata (Lnet/minecraft/client/resources/data/MetadataSerializer;Ljava/io/InputStream;Ljava/lang/String;)Lnet/minecraft/client/resources/data/MetadataSection;
+accessible field net/minecraft/client/Minecraft renderEngine Lnet/minecraft/client/renderer/texture/TextureManager;
+accessible field net/minecraft/client/renderer/tileentity/TileEntityRenderer specialRendererMap Ljava/util/Map;
+accessible field net/minecraft/client/renderer/entity/RenderBiped field_110859_k Ljava/util/Map;
+accessible method net/minecraft/nbt/NBTTagCompound getTagMap (Lnet/minecraft/nbt/NBTTagCompound;)Ljava/util/Map;
+accessible field net/minecraft/entity/EntityList classToStringMapping Ljava/util/Map;
+accessible field net/minecraft/util/WeightedRandomItem itemWeight I
+accessible field net/minecraft/entity/EntityList stringToClassMapping Ljava/util/Map;
+accessible method net/minecraft/entity/EntityList addMapping (Ljava/lang/Class;Ljava/lang/String;I)V
+accessible method net/minecraft/entity/EntityList addMapping (Ljava/lang/Class;Ljava/lang/String;III)V
+
+accessible method net/minecraft/entity/player/EntityPlayerMP incrementWindowID ()V
+accessible field net/minecraft/entity/player/EntityPlayerMP currentWindowId I
+accessible method net/minecraft/item/crafting/CraftingManager addRecipe (Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)Lnet/minecraft/item/crafting/ShapedRecipes;
+accessible method net/minecraft/item/crafting/CraftingManager addShapelessRecipe (Lnet/minecraft/item/ItemStack;[Ljava/lang/Object;)Lnet/minecraft/item/crafting/ShapelessRecipes;
+accessible method net/minecraft/tileentity/TileEntity addMapping (Ljava/lang/Class;Ljava/lang/String;)V
+accessible field net/minecraft/item/crafting/FurnaceRecipes smeltingBase Lnet/minecraft/item/crafting/FurnaceRecipes;
+accessible method net/minecraft/entity/passive/EntityVillager addMerchantItem (Lnet/minecraft/village/MerchantRecipeList;ILjava/util/Random;F)V
+accessible field net/minecraft/entity/passive/EntityVillager villagerStockList Ljava/util/Map;
+accessible method net/minecraft/entity/passive/EntityVillager addBlacksmithItem (Lnet/minecraft/village/MerchantRecipeList;ILjava/util/Random;F)V
+accessible field net/minecraft/entity/passive/EntityVillager blacksmithSellingList Ljava/util/Map;

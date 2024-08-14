@@ -41,10 +41,10 @@ public class ItemData {
 
     public ItemData(Item item, ModContainer mc)
     {
-        this.itemId = item.field_77779_bT;
+        this.itemId = item.itemID;
         if (item.getClass().equals(ItemBlock.class))
         {
-            this.itemType =  Block.field_71973_m[this.getItemId()].getClass().getName();
+            this.itemType =  Block.blocksList[this.getItemId()].getClass().getName();
         }
         else
         {
@@ -60,12 +60,12 @@ public class ItemData {
 
     public ItemData(NBTTagCompound tag)
     {
-        this.modId = tag.func_74779_i("ModId");
-        this.itemType = tag.func_74779_i("ItemType");
-        this.itemId = tag.func_74762_e("ItemId");
-        this.ordinal = tag.func_74762_e("ordinal");
-        this.forcedModId = tag.func_74764_b("ForcedModId") ? tag.func_74779_i("ForcedModId") : null;
-        this.forcedName = tag.func_74764_b("ForcedName") ? tag.func_74779_i("ForcedName") : null;
+        this.modId = tag.getString("ModId");
+        this.itemType = tag.getString("ItemType");
+        this.itemId = tag.getInteger("ItemId");
+        this.ordinal = tag.getInteger("ordinal");
+        this.forcedModId = tag.hasKey("ForcedModId") ? tag.getString("ForcedModId") : null;
+        this.forcedName = tag.hasKey("ForcedName") ? tag.getString("ForcedName") : null;
     }
 
     public String getItemType()
@@ -91,17 +91,17 @@ public class ItemData {
     public NBTTagCompound toNBT()
     {
         NBTTagCompound tag = new NBTTagCompound();
-        tag.func_74778_a("ModId", modId);
-        tag.func_74778_a("ItemType", itemType);
-        tag.func_74768_a("ItemId", itemId);
-        tag.func_74768_a("ordinal", ordinal);
+        tag.setString("ModId", modId);
+        tag.setString("ItemType", itemType);
+        tag.setInteger("ItemId", itemId);
+        tag.setInteger("ordinal", ordinal);
         if (forcedModId != null)
         {
-            tag.func_74778_a("ForcedModId", forcedModId);
+            tag.setString("ForcedModId", forcedModId);
         }
         if (forcedName != null)
         {
-            tag.func_74778_a("ForcedName", forcedName);
+            tag.setString("ForcedName", forcedName);
         }
         return tag;
     }

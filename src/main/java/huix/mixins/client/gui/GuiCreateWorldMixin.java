@@ -1,8 +1,8 @@
 package huix.mixins.client.gui;
 
+import huix.injected_interfaces.IIWorldType;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiCreateWorld;
-import net.minecraft.client.resources.ResourceManager;
 import net.minecraft.world.WorldType;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -20,6 +20,6 @@ public class GuiCreateWorldMixin {
     @Inject(method = "actionPerformed", at = @At(value = "INVOKE",
             target = "Lnet/minecraft/world/EnumGameType;getByName(Ljava/lang/String;)Lnet/minecraft/world/EnumGameType;", shift = At.Shift.BEFORE))
     private void injectActionPerformed(GuiButton par1GuiButton, CallbackInfo ci) {
-        WorldType.worldTypes[this.worldTypeId].onGUICreateWorldPress();
+        ((IIWorldType) WorldType.worldTypes[this.worldTypeId]).onGUICreateWorldPress();
     }
 }

@@ -33,7 +33,7 @@ public class ModLoaderConnectionHandler implements IConnectionHandler
     @Override
     public void playerLoggedIn(Player player, NetHandler netHandler, INetworkManager manager)
     {
-        mod.onClientLogin((EntityPlayer)player);
+        mod.onClientLogin((EntityPlayer) player);
     }
 
     @Override

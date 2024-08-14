@@ -49,10 +49,10 @@ public class ModIdMapPacket extends FMLPacket {
     {
         NBTTagList completeList = (NBTTagList) data[0];
         NBTTagCompound wrap = new NBTTagCompound();
-        wrap.func_74782_a("List", completeList);
+        wrap.setTag("List", completeList);
         try
         {
-            return CompressedStreamTools.func_74798_a(wrap);
+            return CompressedStreamTools.compress(wrap);
         }
         catch (Exception e)
         {
@@ -89,21 +89,15 @@ public class ModIdMapPacket extends FMLPacket {
     {
         byte[] allData = Bytes.concat(partials);
         GameData.initializeServerGate(1);
-        try
+        NBTTagCompound serverList = CompressedStreamTools.decompress(allData);
+        NBTTagList list = serverList.getTagList("List");
+        Set<ItemData> itemData = GameData.buildWorldItemData(list);
+        GameData.validateWorldSave(itemData);
+        MapDifference<Integer, ItemData> serverDifference = GameData.gateWorldLoadingForValidation();
+        if (serverDifference!=null)
         {
-            NBTTagCompound serverList = CompressedStreamTools.func_74792_a(allData);
-            NBTTagList list = serverList.func_74761_m("List");
-            Set<ItemData> itemData = GameData.buildWorldItemData(list);
-            GameData.validateWorldSave(itemData);
-            MapDifference<Integer, ItemData> serverDifference = GameData.gateWorldLoadingForValidation();
-            if (serverDifference!=null)
-            {
-                FMLCommonHandler.instance().disconnectIDMismatch(serverDifference, netHandler, network);
+            FMLCommonHandler.instance().disconnectIDMismatch(serverDifference, netHandler, network);
 
-            }
-        }
-        catch (IOException e)
-        {
         }
     }
 

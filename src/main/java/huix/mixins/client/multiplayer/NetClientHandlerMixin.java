@@ -3,13 +3,15 @@ package huix.mixins.client.multiplayer;
 
 import com.google.common.base.Charsets;
 import cpw.mods.fml.common.network.FMLNetworkHandler;
+import huix.injected_interfaces.IINetClientHandler;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiMerchant;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.multiplayer.NetClientHandler;
-import net.minecraft.client.resources.ResourceManager;
 import net.minecraft.entity.IMerchant;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemMap;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.*;
 import net.minecraft.server.integrated.IntegratedServer;
@@ -28,15 +30,12 @@ import java.io.DataInputStream;
 import java.io.IOException;
 
 @Mixin( NetClientHandler.class )
-public class NetClientHandlerMixin implements IINetClientHandler{
+public class NetClientHandlerMixin implements IINetClientHandler {
 
     @Shadow
     private Minecraft mc;
     @Shadow
     private INetworkManager netManager;
-
-    @Unique
-    private static byte connectionCompatibilityLevel;
 
 
     @Inject(method = "<init>(Lnet/minecraft/client/Minecraft;Ljava/lang/String;I)V", at = @At("RETURN"))
@@ -94,6 +93,17 @@ public class NetClientHandlerMixin implements IINetClientHandler{
         ci.cancel();
     }
 
+    @Unique
+    @Override
+    public void fmlPacket131Callback(Packet131MapData par1Packet131MapData) {
+        if (par1Packet131MapData.itemID == Item.map.itemID) {
+            ItemMap.getMPMapData(par1Packet131MapData.uniqueID, this.mc.theWorld).updateMPMapData(par1Packet131MapData.itemData);
+        } else {
+            this.mc.getLogAgent().logWarning("Unknown itemid: " + par1Packet131MapData.uniqueID);
+        }
+
+    }
+
     @Inject(method = "handleCustomPayload", at = @At(value = "HEAD"), cancellable = true)
     private void injectHandleCustomPayload(Packet250CustomPayload par1Packet250CustomPayload, CallbackInfo ci) {
         FMLNetworkHandler.handlePacket250Packet(par1Packet250CustomPayload, this.netManager, ReflectHelper.dyCast(this));
@@ -128,12 +138,5 @@ public class NetClientHandlerMixin implements IINetClientHandler{
         return this.mc.thePlayer;
     }
 
-//    public static void setConnectionCompatibilityLevel(byte connectionCompatibilityLevel) {
-//        NetClientHandler.connectionCompatibilityLevel = connectionCompatibilityLevel;
-//    }
-//
-//    public static byte getConnectionCompatibilityLevel() {
-//        return connectionCompatibilityLevel;
-//    }
 
 }

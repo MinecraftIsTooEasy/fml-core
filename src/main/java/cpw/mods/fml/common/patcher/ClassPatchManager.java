@@ -1,11 +1,6 @@
 package cpw.mods.fml.common.patcher;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.net.URISyntaxException;
 import java.security.CodeSource;
 import java.util.Collections;
@@ -16,13 +11,14 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.jar.JarInputStream;
 import java.util.jar.JarOutputStream;
-import java.util.jar.Pack200;
 import java.util.logging.Level;
 import java.util.regex.Pattern;
+import java.util.zip.GZIPOutputStream;
 
+import net.contrapunctus.lzma.LzmaInputStream;
 import net.minecraft.launchwrapper.LaunchClassLoader;
 
-import LZMA.LzmaInputStream;
+
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Strings;
@@ -162,7 +158,7 @@ public class ClassPatchManager {
             LzmaInputStream binpatchesDecompressed = new LzmaInputStream(binpatchesCompressed);
             ByteArrayOutputStream jarBytes = new ByteArrayOutputStream();
             JarOutputStream jos = new JarOutputStream(jarBytes);
-            Pack200.newUnpacker().unpack(binpatchesDecompressed, jos);
+            compressJar(binpatchesDecompressed, jos);
             jis = new JarInputStream(new ByteArrayInputStream(jarBytes.toByteArray()));
         }
         catch (Exception e)
@@ -231,5 +227,16 @@ public class ClassPatchManager {
         input.readFully(patchBytes);
 
         return new ClassPatch(name, sourceClassName, targetClassName, exists, inputChecksum, patchBytes);
+    }
+
+    public static void compressJar(InputStream inputStream, OutputStream outputStream) throws IOException {
+        try (GZIPOutputStream gzipOS = new GZIPOutputStream(outputStream)) {
+
+            byte[] buffer = new byte[1024];
+            int len;
+            while ((len = inputStream.read(buffer)) != -1) {
+                gzipOS.write(buffer, 0, len);
+            }
+        }
     }
 }

@@ -13,15 +13,18 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import java.util.Random;
+
 @Mixin( EntityVillager.class )
 public class EntityVillagerMixin {
     @Shadow
     private int randomTickDivider;
 
-    @Inject(method = "addDefaultEquipmentAndRecipies", at = @At(value = "NEW", target = "()Lnet/minecraft/village/MerchantRecipeList;", ordinal = 0, shift = At.Shift.AFTER))
-    private void injectAddDefaultEquipmentAndRecipies(CallbackInfo ci, @Local(ordinal = 0) MerchantRecipeList merchantRecipeList) {
-        //need fix
-        VillagerRegistry.manageVillagerTrades(merchantrecipelist, ReflectHelper.dyCast(this), this.getProfession(), this.randomTickDivider);
+    private Random random = new Random();
+
+    @Inject(method = "addDefaultEquipmentAndRecipies", at = @At(value = "INVOKE", target = "Lnet/minecraft/entity/passive/EntityVillager;getProfession()I", shift = At.Shift.BEFORE))
+    private void injectAddDefaultEquipmentAndRecipies(CallbackInfo ci, @Local MerchantRecipeList merchantRecipeList) {
+        VillagerRegistry.manageVillagerTrades(merchantRecipeList, ReflectHelper.dyCast(this), this.getProfession(), this.random);
     }
 
     @Shadow

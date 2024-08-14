@@ -33,26 +33,22 @@ public class GuiDupesFound extends GuiErrorScreen
         this.dupes = dupes;
     }
 
+
     @Override
-    public void func_73866_w_()
+    public void drawScreen(int p_73863_1_, int p_73863_2_, float p_73863_3_)
     {
-        super.func_73866_w_();
-    }
-    @Override
-    public void func_73863_a(int p_73863_1_, int p_73863_2_, float p_73863_3_)
-    {
-        this.func_73873_v_();
+        this.drawDefaultBackground();
         int offset = Math.max(85 - dupes.dupes.size() * 10, 10);
-        this.func_73732_a(this.field_73886_k, "Forge Mod Loader has found a problem with your minecraft installation", this.field_73880_f / 2, offset, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "Forge Mod Loader has found a problem with your minecraft installation", this.width / 2, offset, 0xFFFFFF);
         offset+=10;
-        this.func_73732_a(this.field_73886_k, "You have mod sources that are duplicate within your system", this.field_73880_f / 2, offset, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "You have mod sources that are duplicate within your system", this.width / 2, offset, 0xFFFFFF);
         offset+=10;
-        this.func_73732_a(this.field_73886_k, "Mod Id : File name", this.field_73880_f / 2, offset, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "Mod Id : File name", this.width / 2, offset, 0xFFFFFF);
         offset+=5;
         for (Entry<ModContainer, File> mc : dupes.dupes.entries())
         {
             offset+=10;
-            this.func_73732_a(this.field_73886_k, String.format("%s : %s", mc.getKey().getModId(), mc.getValue().getName()), this.field_73880_f / 2, offset, 0xEEEEEE);
+            this.drawCenteredString(this.fontRenderer, String.format("%s : %s", mc.getKey().getModId(), mc.getValue().getName()), this.width / 2, offset, 0xEEEEEE);
         }
     }
 }

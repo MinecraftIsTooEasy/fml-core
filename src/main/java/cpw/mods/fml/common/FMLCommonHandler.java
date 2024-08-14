@@ -12,11 +12,8 @@
 
 package cpw.mods.fml.common;
 
-import java.util.EnumSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
+import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -39,7 +36,6 @@ import net.minecraft.world.storage.SaveHandler;
 import net.minecraft.world.storage.WorldInfo;
 
 import com.google.common.base.Joiner;
-import com.google.common.base.Objects;
 import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableList.Builder;
@@ -115,7 +111,7 @@ public class FMLCommonHandler
         }
         for (IScheduledTickHandler ticker : scheduledTicks)
         {
-            EnumSet<TickType> ticksToRun = EnumSet.copyOf(Objects.firstNonNull(ticker.ticks(), EnumSet.noneOf(TickType.class)));
+            EnumSet<TickType> ticksToRun = EnumSet.copyOf(Optional.of(ticker.ticks()).orElse( EnumSet.noneOf(TickType.class)));
             ticksToRun.retainAll(ticks);
             if (!ticksToRun.isEmpty())
             {
@@ -134,7 +130,7 @@ public class FMLCommonHandler
         }
         for (IScheduledTickHandler ticker : scheduledTicks)
         {
-            EnumSet<TickType> ticksToRun = EnumSet.copyOf(Objects.firstNonNull(ticker.ticks(), EnumSet.noneOf(TickType.class)));
+            EnumSet<TickType> ticksToRun = EnumSet.copyOf(Optional.of(ticker.ticks()).orElse( EnumSet.noneOf(TickType.class)));
             ticksToRun.retainAll(ticks);
             if (!ticksToRun.isEmpty())
             {
@@ -398,7 +394,7 @@ public class FMLCommonHandler
     {
         for (ICrashCallable call: crashCallables)
         {
-            category.func_71500_a(call.getLabel(), call);
+            category.addCrashSectionCallable(call.getLabel(), call);
         }
     }
 
@@ -417,7 +413,7 @@ public class FMLCommonHandler
                 if (wac != null)
                 {
                     NBTTagCompound dataForWriting = wac.getDataForWriting(handler, worldInfo);
-                    tagCompound.func_74766_a(mc.getModId(), dataForWriting);
+                    tagCompound.setCompoundTag(mc.getModId(), dataForWriting);
                 }
             }
         }
@@ -435,7 +431,8 @@ public class FMLCommonHandler
         }
         handlerSet.add(handler);
         Map<String,NBTBase> additionalProperties = Maps.newHashMap();
-        worldInfo.setAdditionalProperties(additionalProperties);
+        //需要 fix
+//        ((IIWorldInfo) worldInfo).setAdditionalProperties(additionalProperties);
         for (ModContainer mc : Loader.instance().getModList())
         {
             if (mc instanceof InjectedModContainer)
@@ -443,7 +440,7 @@ public class FMLCommonHandler
                 WorldAccessContainer wac = ((InjectedModContainer)mc).getWrappedWorldAccessContainer();
                 if (wac != null)
                 {
-                    wac.readData(handler, worldInfo, additionalProperties, tagCompound.func_74775_l(mc.getModId()));
+                    wac.readData(handler, worldInfo, additionalProperties, tagCompound.getCompoundTag(mc.getModId()));
                 }
             }
         }

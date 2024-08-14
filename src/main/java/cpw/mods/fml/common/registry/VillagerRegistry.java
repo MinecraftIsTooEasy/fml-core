@@ -21,6 +21,7 @@ import java.util.Random;
 
 import net.minecraft.entity.passive.EntityVillager;
 import net.minecraft.item.Item;
+import net.minecraft.util.EnumQuality;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Tuple;
 import net.minecraft.village.MerchantRecipeList;
@@ -217,7 +218,7 @@ public class VillagerRegistry
     public static Object getVillageComponent(StructureVillagePieceWeight villagePiece, ComponentVillageStartPiece startPiece, List pieces, Random random,
             int p1, int p2, int p3, int p4, int p5)
     {
-        return instance().villageCreationHandlers.get(villagePiece.field_75090_a).buildComponent(villagePiece, startPiece, pieces, random, p1, p2, p3, p4, p5);
+        return instance().villageCreationHandlers.get(villagePiece.villagePieceClass).buildComponent(villagePiece, startPiece, pieces, random, p1, p2, p3, p4, p5);
     }
 
 
@@ -225,24 +226,24 @@ public class VillagerRegistry
     {
         if (min > 0 && max > 0)
         {
-            EntityVillager.field_70958_bB.put(item.field_77779_bT, new Tuple(min, max));
+            EntityVillager.villagerStockList.put(item.itemID, new Tuple(min, max));
         }
-        villager.func_70948_a(list, item.func_77612_l(), random, chance);
+        villager.addMerchantItem(list, item.getMaxDamage(EnumQuality.average), random, chance);
     }
 
     public static void addEmeraldSellRecipe(EntityVillager villager, MerchantRecipeList list, Random random, Item item, float chance, int min, int max)
     {
         if (min > 0 && max > 0)
         {
-            EntityVillager.field_70960_bC.put(item.field_77779_bT, new Tuple(min, max));
+            EntityVillager.blacksmithSellingList.put(item.itemID, new Tuple(min, max));
         }
-        villager.func_70949_b(list, item.func_77612_l(), random, chance);
+        villager.addBlacksmithItem(list, item.getMaxDamage(EnumQuality.average), random, chance);
     }
 
     public static void applyRandomTrade(EntityVillager villager, Random rand)
     {
         int extra = instance().newVillagerIds.size();
         int trade = rand.nextInt(5 + extra);
-        villager.func_70938_b(trade < 5 ? trade : instance().newVillagerIds.get(trade - 5));
+        villager.setProfession(trade < 5 ? trade : instance().newVillagerIds.get(trade - 5));
     }
 }

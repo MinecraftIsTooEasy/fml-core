@@ -124,6 +124,6 @@ public class ModListRequestPacket extends FMLPacket
         FMLLog.fine("The huix.mixins.server has compatibility level %d", compatibilityLevel);
         FMLCommonHandler.instance().getSidedDelegate().setClientCompatibilityLevel(compatibilityLevel);
 
-        mgr.func_74429_a(PacketDispatcher.getPacket("FML", FMLPacket.makePacket(MOD_LIST_RESPONSE, modVersions, missingMods)));
+        mgr.addToSendQueue(PacketDispatcher.getPacket("FML", FMLPacket.makePacket(MOD_LIST_RESPONSE, modVersions, missingMods)));
     }
 }

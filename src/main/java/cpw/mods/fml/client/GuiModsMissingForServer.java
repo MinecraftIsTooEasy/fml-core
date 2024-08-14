@@ -30,35 +30,36 @@ public class GuiModsMissingForServer extends GuiScreen
     }
 
     @Override
-    public void func_73866_w_()
+    public void initGui()
     {
-        this.field_73887_h.add(new GuiSmallButton(1, this.field_73880_f / 2 - 75, this.field_73881_g - 38, I18n.func_135053_a("gui.done")));
+        this.buttonList.add(new GuiSmallButton(1, this.width / 2 - 75, this.height - 38, I18n.getString("gui.done")));
     }
 
     @Override
-    protected void func_73875_a(GuiButton p_73875_1_)
+    protected void actionPerformed(GuiButton p_73875_1_)
     {
-        if (p_73875_1_.field_73742_g && p_73875_1_.field_73741_f == 1)
+        if (p_73875_1_.enabled && p_73875_1_.id == 1)
         {
-            FMLClientHandler.instance().getClient().func_71373_a(null);
+            FMLClientHandler.instance().getClient().displayGuiScreen(null);
         }
     }
+
     @Override
-    public void func_73863_a(int p_73863_1_, int p_73863_2_, float p_73863_3_)
+    public void drawScreen(int p_73863_1_, int p_73863_2_, float p_73863_3_)
     {
-        this.func_73873_v_();
+        this.drawDefaultBackground();
         int offset = Math.max(85 - modsMissing.getModList().size() * 10, 10);
-        this.func_73732_a(this.field_73886_k, "Forge Mod Loader could not connect to this huix.mixins.server", this.field_73880_f / 2, offset, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "Forge Mod Loader could not connect to this huix.mixins.server", this.width / 2, offset, 0xFFFFFF);
         offset += 10;
-        this.func_73732_a(this.field_73886_k, "The mods and versions listed below could not be found", this.field_73880_f / 2, offset, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "The mods and versions listed below could not be found", this.width / 2, offset, 0xFFFFFF);
         offset += 10;
-        this.func_73732_a(this.field_73886_k, "They are required to play on this huix.mixins.server", this.field_73880_f / 2, offset, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "They are required to play on this huix.mixins.server", this.width / 2, offset, 0xFFFFFF);
         offset += 5;
         for (ArtifactVersion v : modsMissing.getModList())
         {
             offset += 10;
-            this.func_73732_a(this.field_73886_k, String.format("%s : %s", v.getLabel(), v.getRangeString()), this.field_73880_f / 2, offset, 0xEEEEEE);
+            this.drawCenteredString(this.fontRenderer, String.format("%s : %s", v.getLabel(), v.getRangeString()), this.width / 2, offset, 0xEEEEEE);
         }
-        super.func_73863_a(p_73863_1_, p_73863_2_, p_73863_3_);
+        super.drawScreen(p_73863_1_, p_73863_2_, p_73863_3_);
     }
 }

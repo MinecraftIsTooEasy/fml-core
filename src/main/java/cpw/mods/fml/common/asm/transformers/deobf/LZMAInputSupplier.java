@@ -14,14 +14,23 @@ package cpw.mods.fml.common.asm.transformers.deobf;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.CharBuffer;
+import java.util.Iterator;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipFile;
 
-import LZMA.LzmaInputStream;
 
+import com.google.common.base.Splitter;
+import com.google.common.collect.AbstractIterator;
+import com.google.common.io.Closer;
 import com.google.common.io.InputSupplier;
+import net.contrapunctus.lzma.LzmaInputStream;
+import org.jetbrains.annotations.NotNull;
 
-public class LZMAInputSupplier implements InputSupplier<InputStream> {
+import static com.google.common.base.Preconditions.checkNotNull;
+
+public class LZMAInputSupplier implements InputSupplier<InputStream>  {
     private InputStream compressedData;
 
     public LZMAInputSupplier(InputStream compressedData)
@@ -30,9 +39,9 @@ public class LZMAInputSupplier implements InputSupplier<InputStream> {
     }
 
     @Override
-    public InputStream getInput() throws IOException
-    {
+    public InputStream getInput() {
         return new LzmaInputStream(this.compressedData);
     }
+
 
 }

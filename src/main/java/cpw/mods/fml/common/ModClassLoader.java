@@ -31,6 +31,7 @@ import cpw.mods.fml.common.asm.transformers.AccessTransformer;
 import cpw.mods.fml.common.asm.transformers.ModAPITransformer;
 import cpw.mods.fml.common.discovery.ASMDataTable;
 import cpw.mods.fml.common.modloader.BaseModProxy;
+import net.xiaoyu233.fml.classloading.KnotClassLoader;
 
 /**
  * A simple delegating class loader used to load mods into the system
@@ -39,30 +40,27 @@ import cpw.mods.fml.common.modloader.BaseModProxy;
  * @author cpw
  *
  */
-public class ModClassLoader extends URLClassLoader
+public class ModClassLoader extends KnotClassLoader
 {
     private static final List<String> STANDARD_LIBRARIES = ImmutableList.of("jinput.jar", "lwjgl.jar", "lwjgl_util.jar");
-    private LaunchClassLoader mainClassLoader;
 
-    public ModClassLoader(ClassLoader parent) {
-        super(new URL[0], null);
-        this.mainClassLoader = (LaunchClassLoader)parent;
+    public ModClassLoader() {
     }
 
     public void addFile(File modFile) throws MalformedURLException
     {
         URL url = modFile.toURI().toURL();
-        mainClassLoader.addURL(url);
+        super.addURL(url);
     }
 
     @Override
     public Class<?> loadClass(String name) throws ClassNotFoundException
     {
-        return mainClassLoader.loadClass(name);
+        return super.loadClass(name);
     }
 
     public File[] getParentSources() {
-        List<URL> urls=mainClassLoader.getSources();
+        List<URL> urls=super.getSources();
         File[] sources=new File[urls.size()];
         try
         {
@@ -87,7 +85,7 @@ public class ModClassLoader extends URLClassLoader
     public Class<? extends BaseModProxy> loadBaseModClass(String modClazzName) throws Exception
     {
         AccessTransformer accessTransformer = null;
-        for (IClassTransformer transformer : mainClassLoader.getTransformers())
+        for (IClassTransformer transformer : super.getTransformers())
         {
             if (transformer instanceof AccessTransformer)
             {
@@ -106,13 +104,13 @@ public class ModClassLoader extends URLClassLoader
 
     public void clearNegativeCacheFor(Set<String> classList)
     {
-        mainClassLoader.clearNegativeEntries(classList);
+        super.clearNegativeEntries(classList);
     }
 
     public ModAPITransformer addModAPITransformer(ASMDataTable dataTable)
     {
-        mainClassLoader.registerTransformer("cpw.mods.fml.common.asm.transformers.ModAPITransformer");
-        List<IClassTransformer> transformers = mainClassLoader.getTransformers();
+        super.registerTransformer("cpw.mods.fml.common.asm.transformers.ModAPITransformer");
+        List<IClassTransformer> transformers = super.getTransformers();
         ModAPITransformer modAPI = (ModAPITransformer) transformers.get(transformers.size()-1);
         modAPI.initTable(dataTable);
         return modAPI;

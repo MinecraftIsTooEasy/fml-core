@@ -72,7 +72,7 @@ public class ModLoaderClientHelper implements IModLoaderSidedHelper
         FMLLog.log(mc.getModId(), Level.FINE, "Handling post startup activities for ModLoader mod %s", mc.getModId());
         BaseMod mod = (BaseMod) mc.getMod();
 
-        Map<Class<? extends Entity>, Render> renderers = Maps.newHashMap(RenderManager.instance.m);
+        Map<Class<? extends Entity>, Render> renderers = Maps.newHashMap(RenderManager.instance.entityRenderMap);
 
         try
         {
@@ -85,7 +85,7 @@ public class ModLoaderClientHelper implements IModLoaderSidedHelper
             FMLLog.log(mc.getModId(), Level.SEVERE, e, "A severe problem was detected with the mod %s during the addRenderer call. Continuing, but expect odd results", mc.getModId());
         }
 
-        MapDifference<Class<? extends Entity>, Render> difference = Maps.difference(RenderManager.field_78727_a.field_78729_o, renderers, Equivalence.identity());
+        MapDifference<Class<? extends Entity>, Render> difference = Maps.difference(RenderManager.instance.entityRenderMap, renderers, Equivalence.identity());
 
         for ( Entry<Class<? extends Entity>, Render> e : difference.entriesOnlyOnLeft().entrySet())
         {

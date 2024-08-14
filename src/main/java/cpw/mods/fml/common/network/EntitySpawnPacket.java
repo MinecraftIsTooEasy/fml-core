@@ -75,21 +75,21 @@ public class EntitySpawnPacket extends FMLPacket
         dat.writeInt(handler.getNetworkId());
         dat.writeInt(er.getModEntityId());
         // entity id
-        dat.writeInt(ent.field_70157_k);
+        dat.writeInt(ent.entityId);
 
         // entity pos x,y,z
-        dat.writeInt(MathHelper.func_76128_c(ent.field_70165_t * 32D));
-        dat.writeInt(MathHelper.func_76128_c(ent.field_70163_u * 32D));
-        dat.writeInt(MathHelper.func_76128_c(ent.field_70161_v * 32D));
+        dat.writeInt(MathHelper.floor_double(ent.posX * 32D));
+        dat.writeInt(MathHelper.floor_double(ent.posY * 32D));
+        dat.writeInt(MathHelper.floor_double(ent.posZ * 32D));
 
         // yaw, pitch
-        dat.writeByte((byte) (ent.field_70177_z * 256.0F / 360.0F));
-        dat.writeByte((byte) (ent.field_70125_A * 256.0F / 360.0F));
+        dat.writeByte((byte) (ent.rotationYaw * 256.0F / 360.0F));
+        dat.writeByte((byte) (ent.rotationPitch * 256.0F / 360.0F));
 
         // head yaw
         if (ent instanceof EntityLiving)
         {
-            dat.writeByte((byte) (((EntityLiving)ent).field_70759_as * 256.0F / 360.0F));
+            dat.writeByte((byte) (((EntityLiving)ent).rotationYawHead * 256.0F / 360.0F));
         }
         else
         {
@@ -99,7 +99,7 @@ public class EntitySpawnPacket extends FMLPacket
         DataOutputStream dos = new DataOutputStream(bos);
         try
         {
-            ent.func_70096_w().func_75689_a(dos);
+            ent.getDataWatcher().writeWatchableObjects(dos);
         }
         catch (IOException e)
         {
@@ -111,11 +111,11 @@ public class EntitySpawnPacket extends FMLPacket
         if (ent instanceof IThrowableEntity)
         {
             Entity owner = ((IThrowableEntity)ent).getThrower();
-            dat.writeInt(owner == null ? ent.field_70157_k : owner.field_70157_k);
+            dat.writeInt(owner == null ? ent.entityId : owner.entityId);
             double maxVel = 3.9D;
-            double mX = ent.field_70159_w;
-            double mY = ent.field_70181_x;
-            double mZ = ent.field_70179_y;
+            double mX = ent.motionX;
+            double mY = ent.motionY;
+            double mZ = ent.motionZ;
             if (mX < -maxVel) mX = -maxVel;
             if (mY < -maxVel) mY = -maxVel;
             if (mZ < -maxVel) mZ = -maxVel;
@@ -158,7 +158,7 @@ public class EntitySpawnPacket extends FMLPacket
         DataInputStream dis = new DataInputStream(bis);
         try
         {
-            metadata = DataWatcher.func_75686_a(dis);
+            metadata = DataWatcher.readWatchableObjects(dis);
         }
         catch (IOException e)
         {

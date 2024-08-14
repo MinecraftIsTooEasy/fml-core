@@ -29,14 +29,14 @@ public class ModLoaderChatListener implements IChatListener
     @Override
     public Packet3Chat serverChat(NetHandler handler, Packet3Chat message)
     {
-        mod.serverChat((NetServerHandler)handler, message.field_73476_b);
+        mod.serverChat((NetServerHandler)handler, message.message);
         return message;
     }
 
     @Override
     public Packet3Chat clientChat(NetHandler handler, Packet3Chat message)
     {
-        mod.clientChat(message.field_73476_b);
+        mod.clientChat(message.message);
         return message;
     }
 

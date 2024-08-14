@@ -2,6 +2,7 @@ package huix.mixins.util;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Iterables;
+import huix.injected_interfaces.IIStringTranslate;
 import net.minecraft.util.StringTranslate;
 import org.apache.commons.io.Charsets;
 import org.apache.commons.io.IOUtils;
@@ -12,12 +13,11 @@ import org.spongepowered.asm.mixin.Unique;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.regex.Pattern;
 
 @Mixin( StringTranslate.class )
-public class StringTranslateMixin implements IIStringTranslate{
+public class StringTranslateMixin implements IIStringTranslate {
 
     @Shadow
     @Final

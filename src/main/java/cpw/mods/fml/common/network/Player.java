@@ -12,6 +12,8 @@
 
 package cpw.mods.fml.common.network;
 
+import net.minecraft.world.World;
+
 /**
  *
  * @author cpw
@@ -20,4 +22,7 @@ package cpw.mods.fml.common.network;
 public interface Player
 {
 
+    default void openGui(Object mod, int modGuiId, World world, int x, int y, int z) {
+
+    }
 }

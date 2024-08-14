@@ -21,8 +21,9 @@ public class ItemMixin {
 
     @Shadow public static Item itemFrame;
 
-    @Inject(method = "<init>(ILjava/lang/String;I)V", at = @At(value = "FIELD", target = "Lnet/minecraft/item/Item;itemsList:[Lnet/minecraft/item/Item;", ordinal = 1, shift = At.Shift.AFTER))
-    private void injectInit(int par1, String texture, int num_subtypes, CallbackInfo ci)   {
+
+    @Inject(method = "<init>(ILjava/lang/String;I)V", at = @At(value = "RETURN"))
+    private void injectItemAdd(int par1, String texture, int num_subtypes, CallbackInfo ci)   {
         GameData.newItemAdded(ReflectHelper.dyCast(this));
     }
 

@@ -1,4 +1,4 @@
-package huix.mixins.client.audio;
+package huix.injected_interfaces;
 
 public interface IISoundManager {
     default boolean getLOAD_SOUND_SYSTEM() {

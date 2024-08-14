@@ -74,14 +74,14 @@ public class FMLDummyContainer extends DummyModContainer implements WorldAccessC
         for (ModContainer mc : Loader.instance().getActiveModList())
         {
             NBTTagCompound mod = new NBTTagCompound();
-            mod.func_74778_a("ModId", mc.getModId());
-            mod.func_74778_a("ModVersion", mc.getVersion());
-            list.func_74742_a(mod);
+            mod.setString("ModId", mc.getModId());
+            mod.setString("ModVersion", mc.getVersion());
+            list.appendTag(mod);
         }
-        fmlData.func_74782_a("ModList", list);
+        fmlData.setTag("ModList", list);
         NBTTagList itemList = new NBTTagList();
         GameData.writeItemData(itemList);
-        fmlData.func_74782_a("ModItemData", itemList);
+        fmlData.setTag("ModItemData", itemList);
         return fmlData;
     }
 
@@ -90,12 +90,12 @@ public class FMLDummyContainer extends DummyModContainer implements WorldAccessC
     {
         if (tag.hasKey("ModList"))
         {
-            NBTTagList modList = tag.func_74761_m("ModList");
-            for (int i = 0; i < modList.func_74745_c(); i++)
+            NBTTagList modList = tag.getTagList("ModList");
+            for (int i = 0; i < modList.tagCount(); i++)
             {
-                NBTTagCompound mod = (NBTTagCompound) modList.func_74743_b(i);
-                String modId = mod.func_74779_i("ModId");
-                String modVersion = mod.func_74779_i("ModVersion");
+                NBTTagCompound mod = (NBTTagCompound) modList.tagAt(i);
+                String modId = mod.getString("ModId");
+                String modVersion = mod.getString("ModVersion");
                 ModContainer container = Loader.instance().getIndexedModList().get(modId);
                 if (container == null)
                 {
@@ -108,9 +108,9 @@ public class FMLDummyContainer extends DummyModContainer implements WorldAccessC
                 }
             }
         }
-        if (tag.func_74764_b("ModItemData"))
+        if (tag.hasKey("ModItemData"))
         {
-            NBTTagList modList = tag.func_74761_m("ModItemData");
+            NBTTagList modList = tag.getTagList("ModItemData");
             Set<ItemData> worldSaveItems = GameData.buildWorldItemData(modList);
             GameData.validateWorldSave(worldSaveItems);
         }

@@ -17,12 +17,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.Callable;
 import java.util.logging.Level;
 
@@ -115,12 +110,12 @@ public class Loader
     /**
      * Build information for tracking purposes.
      */
-    private static String major;
-    private static String minor;
-    private static String rev;
-    private static String build;
-    private static String mccversion;
-    private static String mcpversion;
+    private static String major = "Huix";
+    private static String minor = "Huix";
+    private static String rev = "Huix";
+    private static String build = "Huix";
+    private static String mccversion = "1.6.4-MITE";
+    private static String mcpversion = "8.11";
 
     /**
      * The class loader we load the mods into.
@@ -152,7 +147,7 @@ public class Loader
     private MCPDummyContainer mcp;
 
     private static File minecraftDir;
-    private static List<String> injectedContainers;
+    private static List<String> injectedContainers = new ArrayList<>();
     private File loggingProperties;
     private ImmutableMap<String, String> fmlBrandingProperties;
 
@@ -166,22 +161,22 @@ public class Loader
         return instance;
     }
 
-    public static void injectData(Object... data)
-    {
-        major = (String) data[0];
-        minor = (String) data[1];
-        rev = (String) data[2];
-        build = (String) data[3];
-        mccversion = (String) data[4];
-        mcpversion = (String) data[5];
-        minecraftDir = (File) data[6];
-        injectedContainers = (List<String>)data[7];
-    }
+//    public static void injectData(Object... data)
+//    {
+//        major = (String) data[0];
+//        minor = (String) data[1];
+//        rev = (String) data[2];
+//        build = (String) data[3];
+//        mccversion = (String) data[4];
+//        mcpversion = (String) data[5];
+//        minecraftDir = (File) data[6];
+//        injectedContainers = (List<String>)data[7];
+//    }
 
     private Loader()
     {
-        modClassLoader = new ModClassLoader(getClass().getClassLoader());
-        String actualMCVersion = new CallableMinecraftVersion(null).func_71493_a();
+        modClassLoader = new ModClassLoader();
+        String actualMCVersion = "1.6.4-MITE";
         if (!mccversion.equals(actualMCVersion))
         {
             FMLLog.severe("This version of FML is built for Minecraft %s, we have detected Minecraft %s in your minecraft jar file", mccversion, actualMCVersion);
@@ -189,7 +184,8 @@ public class Loader
         }
 
         minecraft = new MinecraftDummyContainer(actualMCVersion);
-        mcp = new MCPDummyContainer(MetadataCollection.from(getClass().getResourceAsStream("/mcpmod.info"), "MCP").getMetadataForId("mcp", null));
+        mcp = new MCPDummyContainer(MetadataCollection.from(getClass().getResourceAsStream("/mcpmod.info"), "MCP")
+                .getMetadataForId("mcp", null));
     }
 
     /**
@@ -319,6 +315,7 @@ public class Loader
      */
     private ModDiscoverer identifyMods()
     {
+        injectedContainers.add("Forge");
         FMLLog.fine("Building injected Mod Containers %s", injectedContainers);
         // Add in the MCP mod container
         mods.add(new InjectedModContainer(mcp,new File("minecraft.jar")));

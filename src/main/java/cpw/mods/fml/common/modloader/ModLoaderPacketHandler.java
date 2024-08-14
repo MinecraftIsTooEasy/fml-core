@@ -30,11 +30,11 @@ public class ModLoaderPacketHandler implements IPacketHandler
     @Override
     public void onPacketData(INetworkManager manager, Packet250CustomPayload packet, Player player)
     {
-        if (player instanceof EntityPlayerMP)
-        {
-            mod.serverCustomPayload(((EntityPlayerMP)player).field_71135_a, packet);
-        }
-        else
+//        if (player instanceof EntityPlayerMP)
+//        {
+//            mod.serverCustomPayload(((EntityPlayerMP)player).field_71135_a, packet);
+//        }
+//        else
         {
             ModLoaderHelper.sidedHelper.sendClientPacket(mod, packet);
         }

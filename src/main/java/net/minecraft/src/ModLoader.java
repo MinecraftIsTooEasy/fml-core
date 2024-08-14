@@ -20,6 +20,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
+import huix.mixins.world.WorldTypeHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.client.*;
@@ -296,7 +297,7 @@ public class ModLoader
     @Deprecated
     public static void addSmelting(int input, ItemStack output)
     {
-        GameRegistry.addSmelting(input, output, 1.0f);
+        GameRegistry.addSmelting(input, output);
     }
 
     /**
@@ -305,11 +306,11 @@ public class ModLoader
      * @param input
      * @param output
      */
-    @Deprecated
-    public static void addSmelting(int input, ItemStack output, float experience)
-    {
-        GameRegistry.addSmelting(input, output, experience);
-    }
+//    @Deprecated
+//    public static void addSmelting(int input, ItemStack output)
+//    {
+//        GameRegistry.addSmelting(input, output);
+//    }
     /**
      * Add a mob to the spawn list
      *
@@ -322,7 +323,7 @@ public class ModLoader
     @Deprecated
     public static void addSpawn(Class<? extends EntityLiving> entityClass, int weightedProb, int min, int max, EnumCreatureType spawnList)
     {
-        EntityRegistry.addSpawn(entityClass, weightedProb, min, max, spawnList, WorldType.base12Biomes);
+        EntityRegistry.addSpawn(entityClass, weightedProb, min, max, spawnList, WorldTypeHelper.base12Biomes);
     }
 
     /**
@@ -353,7 +354,7 @@ public class ModLoader
     @Deprecated
     public static void addSpawn(String entityName, int weightedProb, int min, int max, EnumCreatureType spawnList)
     {
-        EntityRegistry.addSpawn(entityName, weightedProb, min, max, spawnList, WorldType.base12Biomes);
+        EntityRegistry.addSpawn(entityName, weightedProb, min, max, spawnList, WorldTypeHelper.base12Biomes);
     }
 
     /**
@@ -778,7 +779,7 @@ public class ModLoader
     @Deprecated
     public static void removeSpawn(Class<? extends EntityLiving> entityClass, EnumCreatureType spawnList)
     {
-        EntityRegistry.removeSpawn(entityClass, spawnList, WorldType.base12Biomes);
+        EntityRegistry.removeSpawn(entityClass, spawnList, WorldTypeHelper.base12Biomes);
     }
 
     /**
@@ -803,7 +804,7 @@ public class ModLoader
     @Deprecated
     public static void removeSpawn(String entityName, EnumCreatureType spawnList)
     {
-        EntityRegistry.removeSpawn(entityName, spawnList, WorldType.base12Biomes);
+        EntityRegistry.removeSpawn(entityName, spawnList, WorldTypeHelper.base12Biomes);
     }
 
     /**
@@ -877,10 +878,11 @@ public class ModLoader
     @Deprecated
     public static void serverSendPacket(NetServerHandler handler, Packet packet)
     {
-        if (handler != null)
-        {
-            PacketDispatcher.sendPacketToPlayer(packet, (Player)handler.playerEntity);
-        }
+        //need player
+//        if (handler != null)
+//        {
+//            PacketDispatcher.sendPacketToPlayer(packet, ((Player) handler.playerEntity));
+//        }
     }
     @Deprecated
     public static void serverOpenWindow(EntityPlayerMP player, Container container, int ID, int x, int y, int z)

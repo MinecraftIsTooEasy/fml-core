@@ -14,12 +14,8 @@ package cpw.mods.fml.common;
 
 import static argo.jdom.JsonNodeBuilders.aStringBuilder;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.Optional;
 import java.util.logging.Level;
 
 import argo.jdom.JsonNode;
@@ -27,8 +23,6 @@ import argo.jdom.JsonStringNode;
 
 import com.google.common.base.Function;
 import com.google.common.base.Joiner;
-import com.google.common.base.Objects;
-import com.google.common.base.Optional;
 import com.google.common.base.Strings;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
@@ -106,7 +100,8 @@ public class ModMetadata
         version = Strings.nullToEmpty((String)processedFields.get(aStringBuilder("version")));
         credits = Strings.nullToEmpty((String)processedFields.get(aStringBuilder("credits")));
         parent =  Strings.nullToEmpty((String)processedFields.get(aStringBuilder("parent")));
-        authorList = Objects.firstNonNull(((List<String>)processedFields.get(aStringBuilder("authors"))),Objects.firstNonNull(((List<String>)processedFields.get(aStringBuilder("authorList"))), authorList));
+        authorList = Optional.of(((List<String>)processedFields.get(aStringBuilder("authors"))))
+                .orElse(Optional.of(((List<String>)processedFields.get(aStringBuilder("authorList")))).orElse(authorList));
         requiredMods = processReferences(processedFields.get(aStringBuilder("requiredMods")), HashSet.class);
         dependencies = processReferences(processedFields.get(aStringBuilder("dependencies")), ArrayList.class);
         dependants = processReferences(processedFields.get(aStringBuilder("dependants")), ArrayList.class);

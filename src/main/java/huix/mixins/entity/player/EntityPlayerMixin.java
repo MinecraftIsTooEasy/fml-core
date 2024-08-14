@@ -3,6 +3,7 @@ package huix.mixins.entity.player;
 import com.llamalad7.mixinextras.sugar.Local;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.FMLNetworkHandler;
+import cpw.mods.fml.common.network.Player;
 import cpw.mods.fml.common.registry.VillagerRegistry;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.village.MerchantRecipeList;
@@ -15,7 +16,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin( EntityPlayer.class )
-public class EntityPlayerMixin implements IIEntityPlayer {
+public class EntityPlayerMixin implements Player {
 
     @Inject(method = "onLivingUpdate", at = @At(value = "HEAD"))
     private void injectPlayerPreTick(CallbackInfo ci)   {

@@ -85,43 +85,43 @@ public class GuiModList extends GuiScreen
     }
 
     @Override
-    public void func_73866_w_()
+    public void initGui()
     {
         for (ModContainer mod : mods) {
-            listWidth=Math.max(listWidth,getFontRenderer().func_78256_a(mod.getName()) + 10);
-            listWidth=Math.max(listWidth,getFontRenderer().func_78256_a(mod.getVersion()) + 10);
+            listWidth=Math.max(listWidth,getFontRenderer().getStringWidth(mod.getName()) + 10);
+            listWidth=Math.max(listWidth,getFontRenderer().getStringWidth(mod.getVersion()) + 10);
         }
         listWidth=Math.min(listWidth, 150);
-        this.field_73887_h.add(new GuiSmallButton(6, this.field_73880_f / 2 - 75, this.field_73881_g - 38, I18n.func_135053_a("gui.done")));
+        this.buttonList.add(new GuiSmallButton(6, this.width / 2 - 75, this.height - 38, I18n.getString("gui.done")));
         this.modList=new GuiSlotModList(this, mods, listWidth);
-        this.modList.registerScrollButtons(this.field_73887_h, 7, 8);
+        this.modList.registerScrollButtons(this.buttonList, 7, 8);
     }
 
     @Override
-    protected void func_73875_a(GuiButton button) {
-        if (button.field_73742_g)
+    protected void actionPerformed(GuiButton button) {
+        if (button.enabled)
         {
-            switch (button.field_73741_f)
+            switch (button.id)
             {
                 case 6:
-                    this.field_73882_e.func_71373_a(this.mainMenu);
+                    this.mc.displayGuiScreen(this.mainMenu);
                     return;
             }
         }
-        super.func_73875_a(button);
+        super.actionPerformed(button);
     }
 
     public int drawLine(String line, int offset, int shifty)
     {
-        int r = this.field_73886_k.func_78276_b(line, offset, shifty, 0xd7edea);
+        int r = this.fontRenderer.drawString(line, offset, shifty, 0xd7edea);
         return shifty + 10;
     }
 
     @Override
-    public void func_73863_a(int p_571_1_, int p_571_2_, float p_571_3_)
+    public void drawScreen(int p_571_1_, int p_571_2_, float p_571_3_)
     {
         this.modList.drawScreen(p_571_1_, p_571_2_, p_571_3_);
-        this.func_73732_a(this.field_73886_k, "Mod List", this.field_73880_f / 2, 16, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "Mod List", this.width / 2, 16, 0xFFFFFF);
         int offset = this.listWidth  + 20;
         if (selectedMod != null) {
             GL11.glEnable(GL11.GL_BLEND);
@@ -131,14 +131,14 @@ public class GuiModList extends GuiScreen
                 if (!logoFile.isEmpty())
                 {
                     GL11.glColor4f(1.0F, 1.0F, 1.0F, 1.0F);
-                    TextureManager tm = field_73882_e.func_110434_K();
+                    TextureManager tm = mc.getTextureManager();
                     ResourcePack pack = FMLClientHandler.instance().getResourcePackFor(selectedMod.getModId());
                     try
                     {
                         BufferedImage logo = null;
                         if (pack!=null)
                         {
-                            logo = pack.func_110586_a();
+                            logo = pack.getPackImage();
                         }
                         else
                         {
@@ -150,8 +150,8 @@ public class GuiModList extends GuiScreen
                         }
                         if (logo != null)
                         {
-                            ResourceLocation rl = tm.func_110578_a("modlogo", new DynamicTexture(logo));
-                            this.field_73882_e.field_71446_o.func_110577_a(rl);
+                            ResourceLocation rl = tm.getDynamicTextureLocation("modlogo", new DynamicTexture(logo));
+                            this.mc.renderEngine.bindTexture(rl);
                             Dimension dim = new Dimension(logo.getWidth(), logo.getHeight());
                             double scaleX = dim.width / 200.0;
                             double scaleY = dim.height / 65.0;
@@ -163,13 +163,13 @@ public class GuiModList extends GuiScreen
                             dim.width *= scale;
                             dim.height *= scale;
                             int top = 32;
-                            Tessellator tess = Tessellator.field_78398_a;
-                            tess.func_78382_b();
-                            tess.func_78374_a(offset,             top + dim.height, field_73735_i, 0, 1);
-                            tess.func_78374_a(offset + dim.width, top + dim.height, field_73735_i, 1, 1);
-                            tess.func_78374_a(offset + dim.width, top,              field_73735_i, 1, 0);
-                            tess.func_78374_a(offset,             top,              field_73735_i, 0, 0);
-                            tess.func_78381_a();
+                            Tessellator tess = Tessellator.instance;
+                            tess.startDrawingQuads();
+                            tess.addVertexWithUV(offset,             top + dim.height, zLevel, 0, 1);
+                            tess.addVertexWithUV(offset + dim.width, top + dim.height, zLevel, 1, 1);
+                            tess.addVertexWithUV(offset + dim.width, top,              zLevel, 1, 0);
+                            tess.addVertexWithUV(offset,             top,              zLevel, 0, 0);
+                            tess.draw();
 
                             shifty += 65;
                         }
@@ -179,7 +179,7 @@ public class GuiModList extends GuiScreen
                         ;
                     }
                 }
-                this.field_73886_k.func_78261_a(selectedMod.getMetadata().name, offset, shifty, 0xFFFFFF);
+                this.fontRenderer.drawStringWithShadow(selectedMod.getMetadata().name, offset, shifty, 0xFFFFFF);
                 shifty += 12;
 
                 shifty = drawLine(String.format("Version: %s (%s)", selectedMod.getDisplayVersion(), selectedMod.getVersion()), offset, shifty);
@@ -190,30 +190,30 @@ public class GuiModList extends GuiScreen
                 shifty = drawLine(String.format("Authors: %s", selectedMod.getMetadata().getAuthorList()), offset, shifty);
                 shifty = drawLine(String.format("URL: %s", selectedMod.getMetadata().url), offset, shifty);
                 shifty = drawLine(selectedMod.getMetadata().childMods.isEmpty() ? "No child mods for this mod" : String.format("Child mods: %s", selectedMod.getMetadata().getChildModList()), offset, shifty);
-                int rightSide = this.field_73880_f - offset - 20;
+                int rightSide = this.width - offset - 20;
                 if (rightSide > 20)
                 {
-                    this.getFontRenderer().func_78279_b(selectedMod.getMetadata().description, offset, shifty + 10, rightSide, 0xDDDDDD);
+                    this.getFontRenderer().drawSplitString(selectedMod.getMetadata().description, offset, shifty + 10, rightSide, 0xDDDDDD);
                 }
             } else {
-                offset = ( this.listWidth + this.field_73880_f ) / 2;
-                this.func_73732_a(this.field_73886_k, selectedMod.getName(), offset, 35, 0xFFFFFF);
-                this.func_73732_a(this.field_73886_k, String.format("Version: %s",selectedMod.getVersion()), offset, 45, 0xFFFFFF);
-                this.func_73732_a(this.field_73886_k, String.format("Mod State: %s",Loader.instance().getModState(selectedMod)), offset, 55, 0xFFFFFF);
-                this.func_73732_a(this.field_73886_k, "No mod information found", offset, 65, 0xDDDDDD);
-                this.func_73732_a(this.field_73886_k, "Ask your mod author to provide a mod mcmod.info file", offset, 75, 0xDDDDDD);
+                offset = ( this.listWidth + this.width ) / 2;
+                this.drawCenteredString(this.fontRenderer, selectedMod.getName(), offset, 35, 0xFFFFFF);
+                this.drawCenteredString(this.fontRenderer, String.format("Version: %s",selectedMod.getVersion()), offset, 45, 0xFFFFFF);
+                this.drawCenteredString(this.fontRenderer, String.format("Mod State: %s",Loader.instance().getModState(selectedMod)), offset, 55, 0xFFFFFF);
+                this.drawCenteredString(this.fontRenderer, "No mod information found", offset, 65, 0xDDDDDD);
+                this.drawCenteredString(this.fontRenderer, "Ask your mod author to provide a mod mcmod.info file", offset, 75, 0xDDDDDD);
             }
             GL11.glDisable(GL11.GL_BLEND);
         }
-        super.func_73863_a(p_571_1_, p_571_2_, p_571_3_);
+        super.drawScreen(p_571_1_, p_571_2_, p_571_3_);
     }
 
     Minecraft getMinecraftInstance() {
-        return field_73882_e;
+        return mc;
     }
 
     FontRenderer getFontRenderer() {
-        return field_73886_k;
+        return fontRenderer;
     }
 
     /**

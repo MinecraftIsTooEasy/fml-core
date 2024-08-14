@@ -1,5 +1,5 @@
 plugins {
-	id 'fml-loom' version '1.4.5'
+	id 'fml-loom' version '1.5.1'
 }
 
 version = project.mod_version
@@ -31,13 +31,13 @@ dependencies {
 	// FishModLoader API. And I probably want it anyway.
 	implementation files(loom.getFML().toPath())
 
-	implementation files("libs\\launchwrapper-1.8.jar")
+//	implementation files("libs\\launchwrapper-1.8.jar")
 }
 
 processResources {
 	inputs.property "version", project.version
 
-	filesMatching("fml.mod.json") {
+	filesMatching("loli.mod.json") {
 		expand "version": project.version
 	}
 }

@@ -35,7 +35,7 @@ public class ClientRegistry
     
     public static void bindTileEntitySpecialRenderer(Class <? extends TileEntity> tileEntityClass, TileEntitySpecialRenderer specialRenderer)
     {
-        TileEntityRenderer.instance..put(tileEntityClass, specialRenderer);
-        specialRenderer.func_76893_a(TileEntityRenderer.field_76963_a);
+        TileEntityRenderer.instance.specialRendererMap.put(tileEntityClass, specialRenderer);
+        specialRenderer.setTileEntityRenderer(TileEntityRenderer.instance);
     }
 }

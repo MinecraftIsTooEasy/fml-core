@@ -1,12 +1,11 @@
 package huix.mixins.entity.monster;
 
+import huix.injected_interfaces.IIWorldType;
 import net.minecraft.block.Block;
 import net.minecraft.entity.EntityCubic;
 import net.minecraft.entity.EntityLiving;
-import net.minecraft.entity.monster.EntitySlime;
 import net.minecraft.util.MathHelper;
 import net.minecraft.world.World;
-import net.minecraft.world.WorldType;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import org.spongepowered.asm.mixin.Final;
@@ -31,7 +30,7 @@ public class EntityCubicMixin extends EntityLiving {
             }
         } else {
             Chunk var1 = this.worldObj.getChunkFromBlockCoords(MathHelper.floor_double(this.posX), MathHelper.floor_double(this.posZ));
-            if (this.worldObj.getWorldInfo().getTerrainType().handleSlimeSpawnReduction(field_70146_Z, field_70170_p)) {
+            if (((IIWorldType) this.worldObj.getWorldInfo().getTerrainType()).handleSlimeSpawnReduction(rand, worldObj)) {
                 return false;
             } else {
                 if (this.getSize() == 1 || this.worldObj.difficultySetting > 0) {

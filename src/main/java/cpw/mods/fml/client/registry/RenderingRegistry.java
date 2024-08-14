@@ -19,6 +19,7 @@ import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderBlocks;
 import net.minecraft.client.renderer.entity.*;
 import net.minecraft.entity.Entity;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.IBlockAccess;
 
 import com.google.common.collect.Lists;
@@ -48,8 +49,12 @@ public class RenderingRegistry
      */
     public static int addNewArmourRendererPrefix(String armor)
     {
-        RenderBiped.field_82424_k = ObjectArrays.concat(RenderBiped.field_82424_k, armor);
-        return RenderBiped.field_82424_k.length - 1;
+        ResourceLocation var4 = (ResourceLocation) RenderBiped.field_110859_k.get(armor);
+        if (var4 == null) {
+            var4 = new ResourceLocation(armor);
+            RenderBiped.field_110859_k.put(armor, var4);
+        }
+        return RenderBiped.field_110859_k.size() - 1;
     }
 
     /**

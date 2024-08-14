@@ -13,10 +13,10 @@
 package cpw.mods.fml.common.asm.transformers.deobf;
 
 import org.objectweb.asm.ClassVisitor;
+import org.objectweb.asm.commons.ClassRemapper;
 import org.objectweb.asm.commons.Remapper;
-import org.objectweb.asm.commons.RemappingClassAdapter;
 
-public class FMLRemappingAdapter extends RemappingClassAdapter {
+public class FMLRemappingAdapter extends ClassRemapper {
     public FMLRemappingAdapter(ClassVisitor cv)
     {
         super(cv, FMLDeobfuscatingRemapper.INSTANCE);

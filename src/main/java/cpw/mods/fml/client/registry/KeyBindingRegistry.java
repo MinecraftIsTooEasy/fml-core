@@ -194,10 +194,10 @@ public class KeyBindingRegistry
             }
         }
         KeyBinding[] modKeyBindings = harvestedBindings.toArray(new KeyBinding[harvestedBindings.size()]);
-        KeyBinding[] allKeys = new KeyBinding[settings.field_74324_K.length + modKeyBindings.length];
-        System.arraycopy(settings.field_74324_K, 0, allKeys, 0, settings.field_74324_K.length);
-        System.arraycopy(modKeyBindings, 0, allKeys, settings.field_74324_K.length, modKeyBindings.length);
-        settings.field_74324_K = allKeys;
-        settings.func_74300_a();
+        KeyBinding[] allKeys = new KeyBinding[settings.keyBindings.length + modKeyBindings.length];
+        System.arraycopy(settings.keyBindings, 0, allKeys, 0, settings.keyBindings.length);
+        System.arraycopy(modKeyBindings, 0, allKeys, settings.keyBindings.length, modKeyBindings.length);
+        settings.keyBindings = allKeys;
+        settings.loadOptions();
     }
 }

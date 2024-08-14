@@ -1,7 +1,6 @@
 package cpw.mods.fml.common;
 
 import java.io.File;
-import java.security.acl.Owner;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;

@@ -12,6 +12,7 @@
 
 package cpw.mods.fml.common.network;
 
+import huix.injected_interfaces.IINetHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.network.INetworkManager;
 import net.minecraft.network.packet.NetHandler;
@@ -63,9 +64,9 @@ public class OpenGuiPacket extends FMLPacket
     @Override
     public void execute(INetworkManager network, FMLNetworkHandler handler, NetHandler netHandler, String userName)
     {
-        EntityPlayer player = netHandler.getPlayer();
-        player.openGui(networkId, modGuiId, player.field_70170_p, x, y, z);
-        player.field_71070_bA.field_75152_c = windowId;
+        EntityPlayer player = ((IINetHandler) netHandler).getPlayer();
+        ((Player) player).openGui(networkId, modGuiId, player.worldObj, x, y, z);
+        player.openContainer.windowId = this.windowId;;
     }
 
 }

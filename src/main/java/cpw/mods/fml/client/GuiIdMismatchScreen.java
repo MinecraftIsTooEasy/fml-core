@@ -35,7 +35,7 @@ public class GuiIdMismatchScreen extends GuiYesNo {
     public GuiIdMismatchScreen(MapDifference<Integer, ItemData> idDifferences, boolean allowContinue)
     {
         super(null,"ID mismatch", "Should I continue?", 1);
-        field_73942_a = this;
+        this.parentScreen = this;
         for (Entry<Integer, ItemData> entry : idDifferences.entriesOnlyOnLeft().entrySet())
         {
             missingIds.add(String.format("ID %d from Mod %s is missing", entry.getValue().getItemId(), entry.getValue().getModId(), entry.getValue().getItemType()));
@@ -50,59 +50,59 @@ public class GuiIdMismatchScreen extends GuiYesNo {
     }
 
     @Override
-    public void func_73878_a(boolean choice, int p_73878_2_)
+    public void confirmClicked(boolean choice, int p_73878_2_)
     {
         FMLClientHandler.instance().callbackIdDifferenceResponse(choice);
     }
 
     @Override
-    public void func_73863_a(int p_73863_1_, int p_73863_2_, float p_73863_3_)
+    public void drawScreen(int p_73863_1_, int p_73863_2_, float p_73863_3_)
     {
-        this.func_73873_v_();
-        if (!allowContinue && field_73887_h.size() == 2)
+        this.drawDefaultBackground();
+        if (!allowContinue && buttonList.size() == 2)
         {
-            field_73887_h.remove(0);
+            buttonList.remove(0);
         }
         int offset = Math.max(85 - (missingIds.size() + mismatchedIds.size()) * 10, 30);
-        this.func_73732_a(this.field_73886_k, "Forge Mod Loader has found ID mismatches", this.field_73880_f / 2, 10, 0xFFFFFF);
-        this.func_73732_a(this.field_73886_k, "Complete details are in the log file", this.field_73880_f / 2, 20, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "Forge Mod Loader has found ID mismatches", this.width / 2, 10, 0xFFFFFF);
+        this.drawCenteredString(this.fontRenderer, "Complete details are in the log file", this.width / 2, 20, 0xFFFFFF);
         int maxLines = 20;
         for (String s: missingIds) {
-            this.func_73732_a(this.field_73886_k, s, this.field_73880_f / 2, offset, 0xEEEEEE);
+            this.drawCenteredString(this.fontRenderer, s, this.width / 2, offset, 0xEEEEEE);
             offset += 10;
             maxLines --;
             if (maxLines < 0) break;
-            if (offset >= this.field_73881_g - 30) break;
+            if (offset >= this.height - 30) break;
         }
-        if (maxLines > 0 && offset < this.field_73881_g - 30)
+        if (maxLines > 0 && offset < this.height - 30)
         {
             for (String s: mismatchedIds) {
-                this.func_73732_a(this.field_73886_k, s, this.field_73880_f / 2, offset, 0xEEEEEE);
+                this.drawCenteredString(this.fontRenderer, s, this.width / 2, offset, 0xEEEEEE);
                 offset += 10;
                 maxLines --;
                 if (maxLines < 0) break;
-                if (offset >= this.field_73881_g - 30) break;
+                if (offset >= this.height - 30) break;
             }
         }
         if (allowContinue)
         {
-            this.func_73732_a(this.field_73886_k, "Do you wish to continue loading?", this.field_73880_f / 2, this.field_73881_g - 30, 0xFFFFFF);
+            this.drawCenteredString(this.fontRenderer, "Do you wish to continue loading?", this.width / 2, this.height - 30, 0xFFFFFF);
         }
         else
         {
-            this.func_73732_a(this.field_73886_k, "You cannot connect to this huix.mixins.server", this.field_73880_f / 2, this.field_73881_g - 30, 0xFFFFFF);
+            this.drawCenteredString(this.fontRenderer, "You cannot connect to this huix.mixins.server", this.width / 2, this.height - 30, 0xFFFFFF);
         }
         // super.super. Grrr
-        for (int var4 = 0; var4 < this.field_73887_h.size(); ++var4)
+        for (int var4 = 0; var4 < this.buttonList.size(); ++var4)
         {
-            GuiButton var5 = (GuiButton)this.field_73887_h.get(var4);
-            var5.field_73743_d = this.field_73881_g - 20;
+            GuiButton var5 = (GuiButton)this.buttonList.get(var4);
+            var5.yPosition = this.height - 20;
             if (!allowContinue)
             {
-                var5.field_73746_c = this.field_73880_f / 2 - 75;
-                var5.field_73744_e = I18n.func_135053_a("gui.done");
+                var5.xPosition = this.width / 2 - 75;
+                var5.displayString = I18n.getString("gui.done");
             }
-            var5.func_73737_a(this.field_73882_e, p_73863_1_, p_73863_2_);
+            var5.drawButton(this.mc, p_73863_1_, p_73863_2_);
         }
     }
 }

@@ -111,15 +111,15 @@ public class GameData {
         }
         String itemType = item.getClass().getName();
         ItemData itemData = new ItemData(item, mc);
-        if (idMap.containsKey(item.field_77779_bT))
+        if (idMap.containsKey(item.itemID))
         {
-            ItemData id = idMap.get(item.field_77779_bT);
+            ItemData id = idMap.get(item.itemID);
             FMLLog.log("fml.ItemTracker", Level.INFO, "The mod %s is overwriting existing item at %d (%s from %s) with %s", mc.getModId(), id.getItemId(), id.getItemType(), id.getModId(), itemType);
         }
-        idMap.put(item.field_77779_bT, itemData);
+        idMap.put(item.itemID, itemData);
         if (!"Minecraft".equals(mc.getModId()))
         {
-            FMLLog.log("fml.ItemTracker",Level.FINE, "Adding item %s(%d) owned by %s", item.getClass().getName(), item.field_77779_bT, mc.getModId());
+            FMLLog.log("fml.ItemTracker",Level.FINE, "Adding item %s(%d) owned by %s", item.getClass().getName(), item.itemID, mc.getModId());
         }
     }
 
@@ -199,7 +199,7 @@ public class GameData {
     {
         for (ItemData dat : idMap.values())
         {
-            itemList.func_74742_a(dat.toNBT());
+            itemList.appendTag(dat.toNBT());
         }
     }
 
@@ -241,9 +241,9 @@ public class GameData {
     public static Set<ItemData> buildWorldItemData(NBTTagList modList)
     {
         Set<ItemData> worldSaveItems = Sets.newHashSet();
-        for (int i = 0; i < modList.func_74745_c(); i++)
+        for (int i = 0; i < modList.tagCount(); i++)
         {
-            NBTTagCompound mod = (NBTTagCompound) modList.func_74743_b(i);
+            NBTTagCompound mod = (NBTTagCompound) modList.tagAt(i);
             ItemData dat = new ItemData(mod);
             worldSaveItems.add(dat);
         }
@@ -252,7 +252,7 @@ public class GameData {
 
     static void setName(Item item, String name, String modId)
     {
-        int id = item.field_77779_bT;
+        int id = item.itemID;
         ItemData itemData = idMap.get(id);
         itemData.setName(name,modId);
     }
@@ -292,7 +292,7 @@ public class GameData {
             return null;
         }
 
-        return Item.field_77698_e[modObjectTable.get(modId, name)];
+        return Item.itemsList[modObjectTable.get(modId, name)];
     }
 
     static Block findBlock(String modId, String name)
@@ -303,11 +303,11 @@ public class GameData {
         }
 
         Integer blockId = modObjectTable.get(modId, name);
-        if (blockId == null || blockId >= Block.field_71973_m.length)
+        if (blockId == null || blockId >= Block.blocksList.length)
         {
             return null;
         }
-        return Block.field_71973_m[blockId];
+        return Block.blocksList[blockId];
     }
 
     static ItemStack findItemStack(String modId, String name)
@@ -368,7 +368,7 @@ public class GameData {
     static UniqueIdentifier getUniqueName(Block block)
     {
         if (block == null) return null;
-        ItemData itemData = idMap.get(block.field_71990_ca);
+        ItemData itemData = idMap.get(block.blockID);
         if (itemData == null || !itemData.isOveridden() || customItemStacks.contains(itemData.getModId(), itemData.getItemType()))
         {
             return null;
@@ -380,7 +380,7 @@ public class GameData {
     static UniqueIdentifier getUniqueName(Item item)
     {
         if (item == null) return null;
-        ItemData itemData = idMap.get(item.field_77779_bT);
+        ItemData itemData = idMap.get(item.itemID);
         if (itemData == null || !itemData.isOveridden() || customItemStacks.contains(itemData.getModId(), itemData.getItemType()))
         {
             return null;
@@ -391,18 +391,18 @@ public class GameData {
 
     public static void validateRegistry()
     {
-        for (int i = 0; i < Item.field_77698_e.length; i++)
+        for (int i = 0; i < Item.itemsList.length; i++)
         {
-            if (Item.field_77698_e[i] != null)
+            if (Item.itemsList[i] != null)
             {
                 ItemData itemData = idMap.get(i);
                 if (itemData == null)
                 {
-                    FMLLog.severe("Found completely unknown item of class %s with ID %d, this will NOT work for a 1.7 upgrade", Item.field_77698_e[i].getClass().getName(), i);
+                    FMLLog.severe("Found completely unknown item of class %s with ID %d, this will NOT work for a 1.7 upgrade", Item.itemsList[i].getClass().getName(), i);
                 }
                 else if (!itemData.isOveridden() && !"Minecraft".equals(itemData.getModId()))
                 {
-                    FMLLog.severe("Found anonymous item of class %s with ID %d owned by mod %s, this item will NOT survive a 1.7 upgrade!", Item.field_77698_e[i].getClass().getName(), i, itemData.getModId());
+                    FMLLog.severe("Found anonymous item of class %s with ID %d owned by mod %s, this item will NOT survive a 1.7 upgrade!", Item.itemsList[i].getClass().getName(), i, itemData.getModId());
                 }
             }
         }

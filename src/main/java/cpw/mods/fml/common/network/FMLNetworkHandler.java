@@ -24,7 +24,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import huix.mixins.client.multiplayer.IINetClientHandler;
+import huix.injected_interfaces.IINetClientHandler;
+import huix.injected_interfaces.IINetHandler;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -132,7 +133,7 @@ public class FMLNetworkHandler
             {
                 // No FML on the client
                 FMLLog.fine("Connection from %s rejected - no FML packet received from client", userName);
-                netLoginHandler.completeConnection("You don't have FML installed, you cannot connect to this huix.mixins.server");
+                ((IINetHandler) netLoginHandler).completeConnection("You don't have FML installed, you cannot connect to this huix.mixins.server");
                 return;
             }
             else
@@ -147,10 +148,10 @@ public class FMLNetworkHandler
         {
         case LOGIN_RECEIVED:
             // mods can try and kick undesireables here
-            String modKick = NetworkRegistry.instance().connectionReceived(netLoginHandler, netLoginHandler.field_72538_b);
+            String modKick = NetworkRegistry.instance().connectionReceived(netLoginHandler, netLoginHandler.getNetManager());
             if (modKick != null)
             {
-                netLoginHandler.completeConnection(modKick);
+                ((IINetHandler) netLoginHandler).completeConnection(modKick);
                 loginStates.remove(netLoginHandler);
                 return;
             }
@@ -167,19 +168,19 @@ public class FMLNetworkHandler
             loginStates.put(netLoginHandler, CONNECTION_VALID);
             break;
         case CONNECTION_VALID:
-            netLoginHandler.completeConnection(null);
+            ((IINetHandler) netLoginHandler).completeConnection(null);
             loginStates.remove(netLoginHandler);
             break;
         case MISSING_MODS_OR_VERSIONS:
-            netLoginHandler.completeConnection("The huix.mixins.server requires mods that are absent or out of date on your client");
+            ((IINetHandler) netLoginHandler).completeConnection("The huix.mixins.server requires mods that are absent or out of date on your client");
             loginStates.remove(netLoginHandler);
             break;
         case FML_OUT_OF_DATE:
-            netLoginHandler.completeConnection("Your client is not running a new enough version of FML to connect to this huix.mixins.server");
+            ((IINetHandler) netLoginHandler).completeConnection("Your client is not running a new enough version of FML to connect to this huix.mixins.server");
             loginStates.remove(netLoginHandler);
             break;
         default:
-            netLoginHandler.completeConnection("There was a problem during FML negotiation");
+            ((IINetHandler) netLoginHandler).completeConnection("There was a problem during FML negotiation");
             loginStates.remove(netLoginHandler);
             break;
         }
@@ -208,30 +209,30 @@ public class FMLNetworkHandler
 
         if (kickReason != null)
         {
-            netLoginHandler.completeConnection(kickReason);
+            ((IINetHandler) netLoginHandler).completeConnection(kickReason);
         }
         return kickReason == null;
     }
 
     public static void handleLoginPacketOnServer(NetLoginHandler handler, Packet1Login login)
     {
-        if (login.field_73561_a == FML_HASH)
+        if (login.clientEntityId == FML_HASH)
         {
-            if (login.field_73558_e == PROTOCOL_VERSION)
+            if (login.dimension == PROTOCOL_VERSION)
             {
-                FMLLog.finest("Received valid FML login packet from %s", handler.field_72538_b.func_74430_c());
+                FMLLog.finest("Received valid FML login packet from %s", handler.myTCPConnection.getSocketAddress());
                 instance().loginStates.put(handler, LOGIN_RECEIVED);
             }
-            else if (login.field_73558_e != PROTOCOL_VERSION)
+            else if (login.dimension != PROTOCOL_VERSION)
             {
-                FMLLog.finest("Received incorrect FML (%x) login packet from %s", login.field_73558_e, handler.field_72538_b.func_74430_c());
+                FMLLog.finest("Received incorrect FML (%x) login packet from %s", login.dimension, handler.myTCPConnection.getSocketAddress());
                 instance().loginStates.put(handler, FML_OUT_OF_DATE);
             }
         }
         else
         {
-            FMLLog.fine("Received invalid login packet (%x, %x) from %s", login.field_73561_a, login.field_73558_e,
-                    handler.field_72538_b.func_74430_c());
+            FMLLog.fine("Received invalid login packet (%x, %x) from %s", login.clientEntityId, login.dimension,
+                    handler.myTCPConnection.getSocketAddress());
         }
     }
 
@@ -251,11 +252,11 @@ public class FMLNetworkHandler
         FMLCommonHandler.instance().getSidedDelegate().setClientCompatibilityLevel((byte) 0);
         Packet1Login fake = new Packet1Login();
         // Hash FML using a simple function
-        fake.field_73561_a = FML_HASH;
+        fake.clientEntityId = FML_HASH;
         // The FML protocol version
-        fake.field_73558_e = PROTOCOL_VERSION;
-        fake.field_73557_d = EnumGameType.NOT_SET;
-        fake.field_73559_b = WorldType.field_77139_a[0];
+        fake.dimension = PROTOCOL_VERSION;
+        fake.gameType = EnumGameType.NOT_SET;
+        fake.terrainType = WorldType.worldTypes[0];
         return fake;
     }
 
@@ -390,7 +391,7 @@ public class FMLNetworkHandler
     public static void makeEntitySpawnAdjustment(int entityId, EntityPlayerMP player, int serverX, int serverY, int serverZ)
     {
         Packet250CustomPayload pkt = PacketDispatcher.getPacket("FML", FMLPacket.makePacket(Type.ENTITYSPAWNADJUSTMENT, entityId, serverX, serverY, serverZ));
-        player.field_71135_a.func_72567_b(pkt);
+        player.playerNetServerHandler.sendPacketToPlayer(pkt);
     }
 
     public static InetAddress computeLocalHost() throws IOException
@@ -435,7 +436,7 @@ public class FMLNetworkHandler
 
     public static void handlePacket131Packet(NetHandler handler, Packet131MapData mapData)
     {
-        if (handler instanceof NetServerHandler || mapData.field_73438_a != Item.field_77744_bd.field_77779_bT)
+        if (handler instanceof NetServerHandler || mapData.itemID != Item.expBottle.itemID)
         {
             // Server side and not "map" packets are always handled by us
             NetworkRegistry.instance().handleTinyPacket(handler, mapData);

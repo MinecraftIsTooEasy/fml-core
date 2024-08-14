@@ -26,37 +26,42 @@ public class FMLFolderResourcePack extends FolderResourcePack {
     }
 
     @Override
-    public String func_130077_b()
-    {
+    public String getPackName() {
         return "FMLFileResourcePack:"+container.getName();
     }
+
+//    @Override
+//    protected InputStream func_110591_a(String resourceName) throws IOException
+//    {
+//        try
+//        {
+//            return super.func_110591_a(resourceName);
+//        }
+//        catch (IOException ioe)
+//        {
+//            if ("pack.mcmeta".equals(resourceName))
+//            {
+//                FMLLog.log(container.getName(), Level.WARNING, "Mod %s is missing a pack.mcmeta file, things may not work well", container.getName());
+//                return new ByteArrayInputStream(("{\n" +
+//                        " \"pack\": {\n"+
+//                        "   \"description\": \"dummy FML pack for "+container.getName()+"\",\n"+
+//                        "   \"pack_format\": 1\n"+
+//                        "}\n" +
+//                        "}").getBytes(Charsets.UTF_8));
+//            }
+//            else throw ioe;
+//        }
+//    }
+
+
     @Override
-    protected InputStream func_110591_a(String resourceName) throws IOException
-    {
-        try
-        {
-            return super.func_110591_a(resourceName);
-        }
-        catch (IOException ioe)
-        {
-            if ("pack.mcmeta".equals(resourceName))
-            {
-                FMLLog.log(container.getName(), Level.WARNING, "Mod %s is missing a pack.mcmeta file, things may not work well", container.getName());
-                return new ByteArrayInputStream(("{\n" +
-                        " \"pack\": {\n"+
-                        "   \"description\": \"dummy FML pack for "+container.getName()+"\",\n"+
-                        "   \"pack_format\": 1\n"+
-                        "}\n" +
-                        "}").getBytes(Charsets.UTF_8));
-            }
-            else throw ioe;
+    public BufferedImage getPackImage() {
+        try {
+            return ImageIO.read(getInputStreamByName(container.getMetadata().logoFile));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
-    @Override
-    public BufferedImage func_110586_a() throws IOException
-    {
-        return ImageIO.read(func_110591_a(container.getMetadata().logoFile));
-    }
 
 }

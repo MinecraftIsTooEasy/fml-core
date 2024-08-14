@@ -18,6 +18,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.logging.Level;
 
+import huix.injected_interfaces.IINetHandler;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.inventory.Container;
@@ -170,7 +171,8 @@ public class NetworkRegistry
         generateChannelRegistration(player, netHandler, manager);
         for (IConnectionHandler handler : connectionHandlers)
         {
-            handler.playerLoggedIn((Player)player, netHandler, manager);
+            //need player
+//            handler.playerLoggedIn((Player) player, netHandler, manager);
         }
     }
 
@@ -205,7 +207,7 @@ public class NetworkRegistry
 
     void clientLoggedIn(NetHandler clientHandler, INetworkManager manager, Packet1Login login)
     {
-        generateChannelRegistration(clientHandler.getPlayer(), clientHandler, manager);
+        generateChannelRegistration(((IINetHandler) clientHandler).getPlayer(), clientHandler, manager);
         for (IConnectionHandler handler : connectionHandlers)
         {
             handler.clientLoggedIn(clientHandler, manager, login);
@@ -224,36 +226,37 @@ public class NetworkRegistry
     void generateChannelRegistration(EntityPlayer player, NetHandler netHandler, INetworkManager manager)
     {
         Packet250CustomPayload pkt = new Packet250CustomPayload();
-        pkt.field_73630_a = "REGISTER";
-        pkt.field_73629_c = getPacketRegistry(player instanceof EntityPlayerMP ? Side.SERVER : Side.CLIENT);
-        pkt.field_73628_b = pkt.field_73629_c.length;
-        manager.func_74429_a(pkt);
+        pkt.channel = "REGISTER";
+        pkt.data = getPacketRegistry(player instanceof EntityPlayerMP ? Side.SERVER : Side.CLIENT);
+        pkt.length = pkt.data.length;
+        manager.addToSendQueue(pkt);
     }
 
     void handleCustomPacket(Packet250CustomPayload packet, INetworkManager network, NetHandler handler)
     {
-        if ("REGISTER".equals(packet.field_73630_a))
+        if ("REGISTER".equals(packet.channel))
         {
-            handleRegistrationPacket(packet, (Player)handler.getPlayer());
+            handleRegistrationPacket(packet, (Player) ((IINetHandler) handler).getPlayer());
         }
-        else if ("UNREGISTER".equals(packet.field_73630_a))
+        else if ("UNREGISTER".equals(packet.channel))
         {
-            handleUnregistrationPacket(packet, (Player)handler.getPlayer());
+            handleUnregistrationPacket(packet, (Player) ((IINetHandler) handler).getPlayer());
         }
         else
         {
-            handlePacket(packet, network, (Player)handler.getPlayer());
+            handlePacket(packet, network, (Player) ((IINetHandler) handler).getPlayer());
         }
     }
 
 
     private void handlePacket(Packet250CustomPayload packet, INetworkManager network, Player player)
     {
-        String channel = packet.field_73630_a;
-        for (IPacketHandler handler : Iterables.concat(universalPacketHandlers.get(channel), player instanceof EntityPlayerMP ? serverPacketHandlers.get(channel) : clientPacketHandlers.get(channel)))
-        {
-            handler.onPacketData(network, packet, player);
-        }
+        String channel = packet.channel;
+//        for (IPacketHandler handler : Iterables.concat(universalPacketHandlers.get(channel),
+//                player instanceof EntityPlayerMP ? serverPacketHandlers.get(channel) : clientPacketHandlers.get(channel)))
+//        {
+//            handler.onPacketData(network, packet, player);
+//        }
     }
 
     private void handleRegistrationPacket(Packet250CustomPayload packet, Player player)
@@ -275,7 +278,7 @@ public class NetworkRegistry
 
     private List<String> extractChannelList(Packet250CustomPayload packet)
     {
-        String request = new String(packet.field_73629_c, Charsets.UTF_8);
+        String request = new String(packet.data, Charsets.UTF_8);
         List<String> channels = Lists.newArrayList(Splitter.on('\0').split(request));
         return channels;
     }
@@ -308,17 +311,17 @@ public class NetworkRegistry
             Container container = (Container)handler.getServerGuiElement(modGuiId, player, world, x, y, z);
             if (container != null)
             {
-                player.func_71117_bO();
-                player.func_71128_l();
-                int windowId = player.field_71139_cq;
+                player.incrementWindowID();
+                player.closeContainer();
+                int windowId = player.currentWindowId;
                 Packet250CustomPayload pkt = new Packet250CustomPayload();
-                pkt.field_73630_a = "FML";
-                pkt.field_73629_c = FMLPacket.makePacket(Type.GUIOPEN, windowId, nmh.getNetworkId(), modGuiId, x, y, z);
-                pkt.field_73628_b = pkt.field_73629_c.length;
-                player.field_71135_a.func_72567_b(pkt);
-                player.field_71070_bA = container;
-                player.field_71070_bA.field_75152_c = windowId;
-                player.field_71070_bA.func_75132_a(player);
+                pkt.channel = "FML";
+                pkt.data = FMLPacket.makePacket(Type.GUIOPEN, windowId, nmh.getNetworkId(), modGuiId, x, y, z);
+                pkt.length = pkt.data.length;
+                player.playerNetServerHandler.sendPacketToPlayer(pkt);
+                player.openContainer = container;
+                player.openContainer.windowId = windowId;
+                player.openContainer.canInteractWith(player);
             }
         }
     }
@@ -343,10 +346,10 @@ public class NetworkRegistry
     }
     public void handleTinyPacket(NetHandler handler, Packet131MapData mapData)
     {
-        NetworkModHandler nmh = FMLNetworkHandler.instance().findNetworkModHandler((int)mapData.field_73438_a);
+        NetworkModHandler nmh = FMLNetworkHandler.instance().findNetworkModHandler((int)mapData.itemID);
         if (nmh == null)
         {
-            FMLLog.info("Received a tiny packet for network id %d that is not recognised here", mapData.field_73438_a);
+            FMLLog.info("Received a tiny packet for network id %d that is not recognised here", mapData.itemID);
             return;
         }
         if (nmh.hasTinyPacketHandler())

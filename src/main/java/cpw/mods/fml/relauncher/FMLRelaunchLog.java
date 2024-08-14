@@ -230,6 +230,10 @@ public class FMLRelaunchLog
     }
     public static void log(String logChannel, Level level, String format, Object... data)
     {
+        if (!configured)
+        {
+            configureLogging();
+        }
         makeLog(logChannel);
         Logger.getLogger(logChannel).log(level, String.format(format, data));
     }
@@ -291,6 +295,7 @@ public class FMLRelaunchLog
     {
         return myLog;
     }
+
     public static void makeLog(String logChannel)
     {
         Logger l = Logger.getLogger(logChannel);

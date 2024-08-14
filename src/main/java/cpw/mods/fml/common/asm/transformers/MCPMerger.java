@@ -531,7 +531,8 @@ public class MCPMerger
         @Override
         public String toString()
         {
-            return Objects.toStringHelper(this).add("name", node.name).add("desc",node.desc).add("server",server).add("client",client).toString();
+            return "MCP METGER BY huix";
+//            return Objects.toStringHelper(this).add("name", node.name).add("desc",node.desc).add("server",server).add("client",client).toString();
         }
     }
     private static void processMethods(ClassNode cClass, ClassNode sClass, ClassInfo info)

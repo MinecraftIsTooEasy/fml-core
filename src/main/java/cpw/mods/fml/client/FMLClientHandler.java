@@ -12,18 +12,18 @@
  */
 package cpw.mods.fml.client;
 
-import java.io.File;
-import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import huix.mixins.client.audio.IISoundManager;
+import huix.injected_interfaces.IISoundManager;
+import huix.mixins.client.multiplayer.GuiConnectingHelper;
+import huix.injected_interfaces.IINetClientHandler;
+import huix.mixins.client.multiplayer.NetClientHandlerHelper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.client.main.Main;
@@ -32,11 +32,8 @@ import net.minecraft.client.multiplayer.NetClientHandler;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.resources.FileResourcePack;
-import net.minecraft.client.resources.FolderResourcePack;
 import net.minecraft.client.resources.ReloadableResourceManager;
 import net.minecraft.client.resources.ResourcePack;
-import net.minecraft.client.resources.SimpleReloadableResourceManager;
 import net.minecraft.crash.CrashReport;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -52,7 +49,6 @@ import net.minecraft.world.World;
 import com.google.common.base.Throwables;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import com.google.common.collect.Lists;
 import com.google.common.collect.MapDifference;
 import com.google.common.collect.MapDifference.ValueDifference;
 import com.google.common.collect.Maps;
@@ -78,11 +74,9 @@ import cpw.mods.fml.common.network.EntitySpawnPacket;
 import cpw.mods.fml.common.network.ModMissingPacket;
 import cpw.mods.fml.common.registry.EntityRegistry.EntityRegistration;
 import cpw.mods.fml.common.registry.GameData;
-import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.IEntityAdditionalSpawnData;
 import cpw.mods.fml.common.registry.IThrowableEntity;
 import cpw.mods.fml.common.registry.ItemData;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.common.toposort.ModSortingException;
 import cpw.mods.fml.relauncher.Side;
 
@@ -265,10 +259,10 @@ public class FMLClientHandler implements IFMLSidedHandler
         ((IISoundManager) client.sndManager).setLOAD_SOUND_SYSTEM(true);
         // Reload resources
         client.refreshResources();
-        RenderingRegistry.instance().loadEntityRenderers((Map<Class<? extends Entity>, Render>)RenderManager.instance.);
+        RenderingRegistry.instance().loadEntityRenderers((Map<Class<? extends Entity>, Render>)RenderManager.instance.entityRenderMap);
 
         loading = false;
-        KeyBindingRegistry.instance().uploadKeyBindingsToGame(client.field_71474_y);
+        KeyBindingRegistry.instance().uploadKeyBindingsToGame(client.gameSettings);
     }
 
     public void extendModList()
@@ -300,23 +294,23 @@ public class FMLClientHandler implements IFMLSidedHandler
     {
         if (wrongMC != null)
         {
-            client.func_71373_a(new GuiWrongMinecraft(wrongMC));
+            client.displayGuiScreen(new GuiWrongMinecraft(wrongMC));
         }
         else if (modsMissing != null)
         {
-            client.func_71373_a(new GuiModsMissing(modsMissing));
+            client.displayGuiScreen(new GuiModsMissing(modsMissing));
         }
         else if (dupesFound != null)
         {
-        	client.func_71373_a(new GuiDupesFound(dupesFound));
+        	client.displayGuiScreen(new GuiDupesFound(dupesFound));
         }
         else if (modSorting != null)
         {
-            client.func_71373_a(new GuiSortingProblem(modSorting));
+            client.displayGuiScreen(new GuiSortingProblem(modSorting));
         }
 		else if (customError != null)
         {
-            client.func_71373_a(new GuiCustomModLoadingErrorScreen(customError));
+            client.displayGuiScreen(new GuiCustomModLoadingErrorScreen(customError));
         }
         else
         {
@@ -356,8 +350,8 @@ public class FMLClientHandler implements IFMLSidedHandler
      */
     public void displayGuiScreen(EntityPlayer player, GuiScreen gui)
     {
-        if (client.field_71439_g==player && gui != null) {
-            client.func_71373_a(gui);
+        if (client.thePlayer==player && gui != null) {
+            client.displayGuiScreen(gui);
         }
     }
 
@@ -397,13 +391,13 @@ public class FMLClientHandler implements IFMLSidedHandler
     public void showGuiScreen(Object clientGuiElement)
     {
         GuiScreen gui = (GuiScreen) clientGuiElement;
-        client.func_71373_a(gui);
+        client.displayGuiScreen(gui);
     }
 
     @Override
     public Entity spawnEntityIntoClientWorld(EntityRegistration er, EntitySpawnPacket packet)
     {
-        WorldClient wc = client.field_71441_e;
+        WorldClient wc = client.theWorld;
 
         Class<? extends Entity> cls = er.getEntityClass();
 
@@ -417,42 +411,42 @@ public class FMLClientHandler implements IFMLSidedHandler
             else
             {
                 entity = (Entity)(cls.getConstructor(World.class).newInstance(wc));
-                int offset = packet.entityId - entity.field_70157_k;
-                entity.field_70157_k = packet.entityId;
-                entity.func_70012_b(packet.scaledX, packet.scaledY, packet.scaledZ, packet.scaledYaw, packet.scaledPitch);
+                int offset = packet.entityId - entity.entityId;
+                entity.entityId = packet.entityId;
+                entity.setLocationAndAngles(packet.scaledX, packet.scaledY, packet.scaledZ, packet.scaledYaw, packet.scaledPitch);
                 if (entity instanceof EntityLiving)
                 {
-                    ((EntityLiving)entity).field_70759_as = packet.scaledHeadYaw;
+                    ((EntityLiving)entity).rotationYawHead = packet.scaledHeadYaw;
                 }
 
-                Entity parts[] = entity.func_70021_al();
+                Entity parts[] = entity.getParts();
                 if (parts != null)
                 {
                     for (int j = 0; j < parts.length; j++)
                     {
-                        parts[j].field_70157_k += offset;
+                        parts[j].entityId += offset;
                     }
                 }
             }
 
-            entity.field_70118_ct = packet.rawX;
-            entity.field_70117_cu = packet.rawY;
-            entity.field_70116_cv = packet.rawZ;
+            entity.posX = packet.rawX;
+            entity.posY = packet.rawY;
+            entity.posZ = packet.rawZ;
 
             if (entity instanceof IThrowableEntity)
             {
-                Entity thrower = client.field_71439_g.field_70157_k == packet.throwerId ? client.field_71439_g : wc.func_73045_a(packet.throwerId);
+                Entity thrower = client.thePlayer.entityId == packet.throwerId ? client.thePlayer : wc.getEntityByID(packet.throwerId);
                 ((IThrowableEntity)entity).setThrower(thrower);
             }
 
             if (packet.metadata != null)
             {
-                entity.func_70096_w().func_75687_a((List)packet.metadata);
+                entity.getDataWatcher().updateWatchedObjectsFromList((List)packet.metadata);
             }
 
             if (packet.throwerId > 0)
             {
-                entity.func_70016_h(packet.speedScaledX, packet.speedScaledY, packet.speedScaledZ);
+                entity.setVelocity(packet.speedScaledX, packet.speedScaledY, packet.speedScaledZ);
             }
 
             if (entity instanceof IEntityAdditionalSpawnData)
@@ -460,7 +454,7 @@ public class FMLClientHandler implements IFMLSidedHandler
                 ((IEntityAdditionalSpawnData)entity).readSpawnData(packet.dataStream);
             }
 
-            wc.func_73027_a(packet.entityId, entity);
+            wc.addEntityToWorld(packet.entityId, entity);
             return entity;
         }
         catch (Exception e)
@@ -473,12 +467,12 @@ public class FMLClientHandler implements IFMLSidedHandler
     @Override
     public void adjustEntityLocationOnClient(EntitySpawnAdjustmentPacket packet)
     {
-        Entity ent = client.field_71441_e.func_73045_a(packet.entityId);
+        Entity ent = client.theWorld.getEntityByID(packet.entityId);
         if (ent != null)
         {
-            ent.field_70118_ct = packet.serverX;
-            ent.field_70117_cu = packet.serverY;
-            ent.field_70116_cv = packet.serverZ;
+            ent.posX = packet.serverX;
+            ent.posY = packet.serverY;
+            ent.posZ = packet.serverZ;
         }
         else
         {
@@ -502,22 +496,22 @@ public class FMLClientHandler implements IFMLSidedHandler
     @Override
     public MinecraftServer getServer()
     {
-        return client.func_71401_C();
+        return client.getIntegratedServer();
     }
 
     @Override
     public void sendPacket(Packet packet)
     {
-        if(client.field_71439_g != null)
+        if(client.thePlayer != null)
         {
-            client.field_71439_g.field_71174_a.func_72552_c(packet);
+            client.thePlayer.sendQueue.addToSendQueue(packet);
         }
     }
 
     @Override
     public void displayMissingMods(ModMissingPacket modMissingPacket)
     {
-        client.func_71373_a(new GuiModsMissingForServer(modMissingPacket));
+        client.displayGuiScreen(new GuiModsMissingForServer(modMissingPacket));
     }
 
     /**
@@ -531,25 +525,25 @@ public class FMLClientHandler implements IFMLSidedHandler
     @Override
     public void handleTinyPacket(NetHandler handler, Packet131MapData mapData)
     {
-        ((NetClientHandler)handler).fmlPacket131Callback(mapData);
+        ((IINetClientHandler) handler).fmlPacket131Callback(mapData);
     }
 
     @Override
     public void setClientCompatibilityLevel(byte compatibilityLevel)
     {
-        NetClientHandler.setConnectionCompatibilityLevel(compatibilityLevel);
+        NetClientHandlerHelper.setConnectionCompatibilityLevel(compatibilityLevel);
     }
 
     @Override
     public byte getClientCompatibilityLevel()
     {
-        return NetClientHandler.getConnectionCompatibilityLevel();
+        return NetClientHandlerHelper.getConnectionCompatibilityLevel();
     }
 
     public void warnIDMismatch(MapDifference<Integer, ItemData> idDifferences, boolean mayContinue)
     {
         GuiIdMismatchScreen mismatch = new GuiIdMismatchScreen(idDifferences, mayContinue);
-        client.func_71373_a(mismatch);
+        client.displayGuiScreen(mismatch);
     }
 
     public void callbackIdDifferenceResponse(boolean response)
@@ -558,15 +552,16 @@ public class FMLClientHandler implements IFMLSidedHandler
         {
             serverShouldBeKilledQuietly = false;
             GameData.releaseGate(true);
-            client.continueWorldLoading();
+            //需要fix
+//            ((IIMinecraft) client).continueWorldLoading();
         }
         else
         {
             serverShouldBeKilledQuietly = true;
             GameData.releaseGate(false);
             // Reset and clear the client state
-            client.func_71403_a((WorldClient)null);
-            client.func_71373_a(null);
+            client.loadWorld((WorldClient)null);
+            client.displayGuiScreen(null);
         }
     }
 
@@ -595,13 +590,13 @@ public class FMLClientHandler implements IFMLSidedHandler
             return;
         }
         // Nuke the connection
-        ((NetClientHandler)toKill).func_72553_e();
+        ((NetClientHandler)toKill).disconnect();
         // Stop GuiConnecting
-        GuiConnecting.forceTermination((GuiConnecting)client.field_71462_r);
+        GuiConnectingHelper.forceTermination((GuiConnecting)client.currentScreen);
         // pulse the network manager queue to clear cruft
-        mgr.func_74428_b();
+        mgr.processReadPackets();
         // Nuke the world client
-        client.func_71403_a((WorldClient)null);
+        client.loadWorld((WorldClient)null);
         // Show error screen
         warnIDMismatch(s, false);
     }
@@ -614,7 +609,7 @@ public class FMLClientHandler implements IFMLSidedHandler
      */
     public boolean isGUIOpen(Class<? extends GuiScreen> gui)
     {
-        return client.field_71462_r != null && client.field_71462_r.getClass().equals(gui);
+        return client.currentScreen != null && client.currentScreen.getClass().equals(gui);
     }
 
 
@@ -646,7 +641,7 @@ public class FMLClientHandler implements IFMLSidedHandler
     @Override
     public void updateResourcePackList()
     {
-        client.func_110436_a();
+        client.refreshResources();
     }
 
     public ResourcePack getResourcePackFor(String modId)
@@ -657,7 +652,7 @@ public class FMLClientHandler implements IFMLSidedHandler
     @Override
     public String getCurrentLanguage()
     {
-        return client.func_135016_M().func_135041_c().func_135034_a();
+        return client.getLanguageManager().getCurrentLanguage().getLanguageCode();
     }
 
     @Override
@@ -666,7 +661,7 @@ public class FMLClientHandler implements IFMLSidedHandler
         // If the huix.mixins.server crashes during startup, it might hang the client- reset the client so it can abend properly.
         MinecraftServer server = getServer();
 
-        if (server != null && !server.func_71200_ad())
+        if (server != null && !server.serverIsInRunLoop())
         {
             ObfuscationReflectionHelper.setPrivateValue(MinecraftServer.class, server, true, "field_71296"+"_Q","serverIs"+"Running");
         }

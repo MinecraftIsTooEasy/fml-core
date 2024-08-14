@@ -18,7 +18,7 @@ import net.minecraft.launchwrapper.IClassTransformer;
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.Opcodes;
-import org.objectweb.asm.commons.RemappingClassAdapter;
+import org.objectweb.asm.commons.ClassRemapper;
 import org.objectweb.asm.tree.ClassNode;
 
 import cpw.mods.fml.common.asm.transformers.deobf.FMLDeobfuscatingRemapper;
@@ -35,7 +35,7 @@ public class DeobfuscationTransformer implements IClassTransformer, IClassNameTr
         }
         ClassReader classReader = new ClassReader(bytes);
         ClassWriter classWriter = new ClassWriter(ClassWriter.COMPUTE_MAXS);
-        RemappingClassAdapter remapAdapter = new FMLRemappingAdapter(classWriter);
+        ClassRemapper remapAdapter = new FMLRemappingAdapter(classWriter);
         classReader.accept(remapAdapter, ClassReader.EXPAND_FRAMES);
         return classWriter.toByteArray();
     }

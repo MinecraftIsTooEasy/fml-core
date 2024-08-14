@@ -59,7 +59,7 @@ public class NetworkModHandler
         this.localId = assignedIds++;
         this.networkId = this.localId;
         // Skip over the map object because it has special network id meaning
-        if (Item.field_77744_bd.field_77779_bT == assignedIds)
+        if (Item.map.itemID == assignedIds)
         {
             assignedIds++;
         }

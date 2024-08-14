@@ -1,6 +1,7 @@
 package huix.mixins.client.audio;
 
 
+import huix.injected_interfaces.IISoundManager;
 import net.minecraft.client.audio.SoundManager;
 import net.minecraft.client.resources.ResourceManager;
 import org.spongepowered.asm.mixin.Mixin;
@@ -10,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin( SoundManager.class )
-public class SoundManagerMixin implements IISoundManager{
+public class SoundManagerMixin implements IISoundManager {
 
     @Unique
     public boolean LOAD_SOUND_SYSTEM = true;

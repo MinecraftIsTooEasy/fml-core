@@ -5,19 +5,19 @@ import cpw.mods.fml.client.FMLClientHandler;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.registry.GameData;
 import cpw.mods.fml.common.registry.ItemData;
-import cpw.mods.fml.common.registry.LanguageRegistry;
 import cpw.mods.fml.relauncher.Side;
-import huix.mixins.client.audio.IISoundManager;
+import huix.injected_interfaces.IIMinecraft;
+import huix.injected_interfaces.IISoundManager;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.audio.SoundManager;
 import net.minecraft.client.gui.LoadingScreenRenderer;
 import net.minecraft.client.resources.I18n;
 import net.minecraft.client.resources.ReloadableResourceManager;
-import net.minecraft.client.resources.ResourceManager;
 import net.minecraft.util.Timer;
 import net.xiaoyu233.fml.util.ReflectHelper;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -25,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import java.util.List;
 
 @Mixin( Minecraft.class )
-public class MinecraftMixin {
+public class MinecraftMixin implements IIMinecraft {
 
     @Shadow
     public SoundManager sndManager;
@@ -44,11 +44,14 @@ public class MinecraftMixin {
     @Inject(method = "startGame", at = @At(value = "NEW", target = "(Lnet/minecraft/client/resources/ResourceManager;Lnet/minecraft/client/settings/GameSettings;Ljava/io/File;)Lnet/minecraft/client/audio/SoundManager;"
                                             , shift = At.Shift.AFTER))
     private void injectSoundSystem(CallbackInfo ci) {
-        ((IISoundManager) this.sndManager).setLOAD_SOUND_SYSTEM(false);
+        if (this.sndManager != null) {
+            ((IISoundManager) this.sndManager).setLOAD_SOUND_SYSTEM(false);
+        }
+
     }
 
-    @Inject(method = "startGame", at = @At(value = "NEW", target = "(Lnet/minecraft/client/settings/GameSettings;Lnet/minecraft/util/ResourceLocation;Lnet/minecraft/client/renderer/texture/TextureManager;Z)Lnet/minecraft/client/gui/FontRenderer;"
-            , ordinal = 0, shift = At.Shift.AFTER))
+    @Inject(method = "startGame", at = @At(value = "INVOKE", target = "Lnet/minecraft/client/Minecraft;loadScreen()V"
+            , shift = At.Shift.AFTER))
     private void injectStartLoading(CallbackInfo ci) {
         FMLClientHandler.instance().beginMinecraftLoading(ReflectHelper.dyCast(this), this.defaultResourcePacks, this.mcResourceManager);
     }
@@ -58,6 +61,8 @@ public class MinecraftMixin {
     private void injectFinishedLoading(CallbackInfo ci) {
         FMLClientHandler.instance().finishMinecraftLoading();
     }
+
+
 
     @Inject(method = "startGame", at = @At(value = "RETURN"))
     private void injectInitializationComplete(CallbackInfo ci) {
@@ -93,7 +98,9 @@ public class MinecraftMixin {
         FMLCommonHandler.instance().onPostClientTick();
     }
 
-    @Inject(method = "launchIntegratedServer", at = @At(value = "NEW", target = "(Lnet/minecraft/client/Minecraft;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/WorldSettings;)Lnet/minecraft/huix.mixins.server/integrated/IntegratedServer;", shift = At.Shift.BEFORE))
+    @Inject(method = "launchIntegratedServer", at = @At(value = "NEW",
+            target = "(Lnet/minecraft/client/Minecraft;Ljava/lang/String;Ljava/lang/String;Lnet/minecraft/world/WorldSettings;)Lnet/minecraft/server/integrated/IntegratedServer;",
+            shift = At.Shift.BEFORE))
     private void injectInitializeServerGate(CallbackInfo ci) {
         GameData.initializeServerGate(2);
     }
@@ -109,15 +116,16 @@ public class MinecraftMixin {
         else
         {
             GameData.releaseGate(true);
-            /*
-                public void continueWorldLoading()
-    {
-        this.field_71455_al = true;
-        this.field_71461_s.func_73720_a(I18n.func_135053_a("menu.loadingLevel"));
-             */
-            this.integratedServerIsRunning = true;
-            this.loadingScreen.displayProgressMessage(I18n.getString("menu.loadingLevel"));
+            this.continueWorldLoading();
         }
+    }
+
+
+    @Unique
+    @Override
+    public void continueWorldLoading() {
+        this.integratedServerIsRunning = true;
+        this.loadingScreen.displayProgressMessage(I18n.getString("menu.loadingLevel"));
     }
 
 }
