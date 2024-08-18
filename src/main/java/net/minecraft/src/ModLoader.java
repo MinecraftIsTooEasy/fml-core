@@ -20,7 +20,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import huix.mixins.world.WorldTypeHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDispenser;
 import net.minecraft.client.*;
@@ -323,7 +322,7 @@ public class ModLoader
     @Deprecated
     public static void addSpawn(Class<? extends EntityLiving> entityClass, int weightedProb, int min, int max, EnumCreatureType spawnList)
     {
-        EntityRegistry.addSpawn(entityClass, weightedProb, min, max, spawnList, WorldTypeHelper.base12Biomes);
+        EntityRegistry.addSpawn(entityClass, weightedProb, min, max, spawnList, WorldType.base12Biomes);
     }
 
     /**
@@ -354,7 +353,7 @@ public class ModLoader
     @Deprecated
     public static void addSpawn(String entityName, int weightedProb, int min, int max, EnumCreatureType spawnList)
     {
-        EntityRegistry.addSpawn(entityName, weightedProb, min, max, spawnList, WorldTypeHelper.base12Biomes);
+        EntityRegistry.addSpawn(entityName, weightedProb, min, max, spawnList, WorldType.base12Biomes);
     }
 
     /**
@@ -729,7 +728,7 @@ public class ModLoader
 
     /**
      * Register the mod for packets on this channel.
-     * {@link NetworkRegistry#registerChannel(IPacketHandler, String)}
+     * { NetworkRegistry#registerChannel(IPacketHandler, String)}
      *
      * @param mod
      * @param channel
@@ -779,7 +778,7 @@ public class ModLoader
     @Deprecated
     public static void removeSpawn(Class<? extends EntityLiving> entityClass, EnumCreatureType spawnList)
     {
-        EntityRegistry.removeSpawn(entityClass, spawnList, WorldTypeHelper.base12Biomes);
+        EntityRegistry.removeSpawn(entityClass, spawnList, WorldType.base12Biomes);
     }
 
     /**
@@ -804,7 +803,7 @@ public class ModLoader
     @Deprecated
     public static void removeSpawn(String entityName, EnumCreatureType spawnList)
     {
-        EntityRegistry.removeSpawn(entityName, spawnList, WorldTypeHelper.base12Biomes);
+        EntityRegistry.removeSpawn(entityName, spawnList, WorldType.base12Biomes);
     }
 
     /**
@@ -878,7 +877,7 @@ public class ModLoader
     @Deprecated
     public static void serverSendPacket(NetServerHandler handler, Packet packet)
     {
-        //need player
+//        need player
 //        if (handler != null)
 //        {
 //            PacketDispatcher.sendPacketToPlayer(packet, ((Player) handler.playerEntity));

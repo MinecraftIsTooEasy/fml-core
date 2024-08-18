@@ -5,7 +5,8 @@
   "name": "FML",
   "description": "fml core on mite",
   "authors": [
-    "Huix!"
+    "MinecraftForge",
+    "Huix"
   ],
   "license": "CC0-1.0",
   "environment": "*",
@@ -14,24 +15,8 @@
       "huix.Main"
     ]
   },
-  "mixins": [
-    "fml.mixins.json"
-  ],
   "accessWidener": "fml.accesswidener",
   "depends": {
     "lolimodloader": ">=4.0.0"
-  },
-  "custom": {
-    "loom:injected_interfaces": {
-      "net/minecraft/client/Minecraft": ["huix/injected_interfaces/IIMinecraft"],
-      "net/minecraft/client/audio/SoundManager": ["huix/injected_interfaces/IISoundManager"],
-      "net/minecraft/client/multiplayer/GuiConnecting": ["huix/injected_interfaces/IIGuiConnecting"],
-      "net/minecraft/client/multiplayer/NetClientHandler": ["huix/injected_interfaces/IINetClientHandler"],
-      "net/minecraft/entity/player/EntityPlayer": ["cpw/mods/fml/common/network/Player"],
-      "net/minecraft/entity/player/EntityPlayerMP": ["cpw/mods/fml/common/network/Player"],
-      "net/minecraft/util/StringTranslate": ["huix/injected_interfaces/IIStringTranslate"],
-      "net/minecraft/network/packet/NetHandler": ["huix/injected_interfaces/IINetHandler"],
-      "net/minecraft/world/chunk/storage/WorldInfo": ["huix/injected_interfaces/IIWorldInfo"]
-    }
   }
 }

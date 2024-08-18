@@ -1,5 +1,5 @@
-plugins {
-	id 'fml-loom' version '1.5.1'
+	plugins {
+	id 'fml-loom' version '1.6.5'
 }
 
 version = project.mod_version
@@ -12,15 +12,20 @@ base {
 
 loom {
 	accessWidenerPath = file("src/main/resources/fml.accesswidener")
-	mergedMinecraftJar()
 	setFML(file("LoliModLoader.jar"))
+	mergedMinecraftJar()
 	mods {
 		"FML" {
 			sourceSet sourceSets.main
 		}
 	}
-
 }
+
+runClient {
+	args("--username", "Huix_", "--session", "a.a.a.a", "--width", 854, "--height", 480)
+}
+
+
 
 dependencies {
 	// To change the versions see the gradle.properties file
@@ -30,8 +35,6 @@ dependencies {
 
 	// FishModLoader API. And I probably want it anyway.
 	implementation files(loom.getFML().toPath())
-
-//	implementation files("libs\\launchwrapper-1.8.jar")
 }
 
 processResources {
